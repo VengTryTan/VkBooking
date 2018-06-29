@@ -1,3 +1,3 @@
 @include('header.header')
-9Thank you!
+Thank you!
 @include('footer.footer')
