@@ -21,6 +21,16 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/type','TypeController@type')->name('type');
 Route::resource('item', 'ImageController');
 
+Route::get('welcome', function () {
+    return view('welcome');
+});
+
+Route::get('checkin', function() {
+    return view('checkin');
+});
+
+Route::resource('reservation','CheckinController');
+
 /*
 Route::get('/search/{id}', 'RoomController@show')->name('search');
 
