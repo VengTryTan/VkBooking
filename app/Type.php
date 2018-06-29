@@ -1,0 +1,23 @@
+<?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+use App\Room;
+
+class Type extends Model
+{
+    public function guest(){
+        return $this->belongsTo('App\Guest');
+    }
+
+    public function rate(){
+        return $this->belongsTo('App\Rate');
+    }
+
+    public function image(){
+        return $this->belongsTo('App\Image');
+    }
+
+
+}
