@@ -25,6 +25,8 @@ Route::get('welcome', function () {
     return view('welcome');
 });
 
+Route::get('/go','ImageController@index1');
+
 Route::get('checkin', function() {
     return view('checkin');
 });

@@ -1,12 +1,9 @@
-
-
 @section('content')
     <div class="content">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
                     <a href="{{ route('item.create') }}" class="btn btn-primary">Add New</a>
-                    ('user.settings') 
                     <div class="card">
                         <div class="card-header" data-background-color="purple">
                             <h4 class="title">All Image</h4>
