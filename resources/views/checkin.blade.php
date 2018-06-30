@@ -36,22 +36,50 @@
                             <i class="fa fa-cc-amex" style="color:blue;"></i>
                             <i class="fa fa-cc-mastercard" style="color:red;"></i>
                             <i class="fa fa-cc-discover" style="color:orange;"></i>
-                            <!-- <i class="fa fa-cc-visa"></i> -->
                         </div>
-                        <label for="cname">Card holder name</label>
-                        <input type="text" name="cardname" placeholder="Soksan Serey">
-                        <label for="ccnum">Credit card number</label>
-                        <input type="text" name="cardnumber" placeholder="1111-2222-3333-4444">
-                        <label for="exp_month">Exp Month</label>
-                        <input type="text" name="expmonth" placeholder="September">
                         <div class="row">
                             <div class="col-50">
-                                <label for="exp_year">Exp Year</label>
-                                <input type="text" name="expyear" placeholder="2020">
+                                <label for="cname">Card holder name</label>
+                                <input type="text" name="cardname" placeholder="Soksan Serey">
                             </div>
                             <div class="col-50">
                                 <label for="cvv">CVV</label>
-                                <input type="text" name="cvv" placeholder="123">
+                                <input max="9999" type="text" id="secretCode" name="cvv" placeholder="123">
+                            </div>
+                        </div>
+                        <label for="ccnum">Credit card number</label>
+                        <input id="creditCardText" type="text" name="cardnumber" placeholder="1111-2222-3333-4444">
+                        <div class="row">
+                            <div class="col-50">
+                                <label for="exp_month">Exp Month</label>
+                                <select name="month">
+                                    <option value="January">January</option>
+                                    <option value="February">February </option>
+                                    <option value="March">March</option>
+                                    <option value="April">April</option>
+                                    <option value="May">May</option>
+                                    <option value="June">June</option>
+                                    <option value="July">July</option>
+                                    <option value="August">August</option>
+                                    <option value="September">September</option>
+                                    <option value="October">October</option>
+                                    <option value="November">November</option>
+                                    <option value="December">December</option>
+                                </select>
+                            </div>
+                            <div class="col-50">
+                                <label for="exp_year">Exp Year</label>
+                                <select name="year">
+                                    <option value="2018">2018</option>
+                                    <option value="2019">2019</option>
+                                    <option value="2020">2020</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2025">2025</option>
+                                    <option value="2026">2026</option>
+                                </select>
                             </div>
                         </div>
                     </div>
@@ -83,17 +111,16 @@
                 <p>Checkout : <span class="date" style="color:black">27-June-2018</span></p>
             </div>
         </div>
-        <!-- <div class="col-25">
-            <div class="container">
-                <h4>Date
-                    <span class="date" style="color:black">
-                        <i class="fa fa-calendar"/></i>
-                    </span>
-                </h4>
-                <p>Checkin <span class="date" style="color:black"><b>27-June-2018</b></p>
-            </div>
-        </div> -->
     </div>
+    <script>
+        $('#creditCardText').keyup(function() {
+        var foo = $(this).val().split("-").join(""); // remove hyphens
+        if (foo.length > 0) {
+            foo = foo.match(new RegExp('.{1,4}', 'g')).join("-");
+        }
+            $(this).val(foo);
+        });
+    </script>
 @include('footer.footer')
 </body>
 </html>
