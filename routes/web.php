@@ -31,6 +31,12 @@ Route::get('checkin', function() {
 
 Route::resource('reservation','CheckinController');
 
+
+/*superadmin route*/
+Route::resource('superadmin', 'SuperadminController');
+Route::get('billing', 'BillingController@handle_billing');
+Route::get('rate', 'RateController@handle_rate');
+
 /*
 Route::get('/search/{id}', 'RoomController@show')->name('search');
 
