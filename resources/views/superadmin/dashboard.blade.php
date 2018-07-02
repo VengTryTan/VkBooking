@@ -161,43 +161,6 @@
               </div>
             </div>
             @endforeach
-            <!-- <div class="col-md-4">
-              <div class="card card-inverse card-info">
-                <img class="card-img-top" src="{{asset('uploads/image/logo.png')}}">
-                  <div class="card-block">
-                    <h4 class="card-title mt-3">Bungalow</h4>
-                    <div class="meta card-text">
-                      <a>Description</a>
-                    </div>
-                    <div class="card-text">
-                      lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem 
-                    </div>
-                  </div>
-                  <div class="card-footer">
-                    <button class="btn btn-info float-right btn-sm"><i class="material-icons">edit</i> Edit</button>
-                  </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card card-inverse card-info">
-                <img class="card-img-top" src="{{asset('uploads/image/logo.png')}}">
-                  <div class="card-block">
-                    <h4 class="card-title mt-3">Bungalow</h4>
-                    <div class="meta card-text">
-                      <a>Description</a>
-                    </div>
-                    <div class="card-text">
-                      lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem 
-                    </div>
-                  </div>
-                  <div class="card-footer">
-                    <button class="btn btn-info float-right btn-sm"><i class="material-icons">edit</i> Edit</button>
-                  </div>
-              </div>
-            </div>
- -->
-          
       <footer class="footer">
         <div class="container-fluid">
         </div>
