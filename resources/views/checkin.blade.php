@@ -18,40 +18,35 @@
                     <div class="col-50">
                         <h3 id="bill">User Information</h3>
                         <label for="fname"><i class="fa fa-user"></i> Full Name</label>
-                        <input type="text" name="fname" placeholder="Soksan Serey">
+                        <input type="text" id="fname" name="fname" placeholder="Soksan Serey">
                         <label for="phone"><i class="fa fa-phone"></i> Phone</label>
-                        <input type="text" name="phone" placeholder="0987654321">
+                        <input type="text" id="phone" name="phone" placeholder="0987654321">
                         <label for="email"><i class="fa fa-envelope"></i> Email</label>
-                        <input type="text" name="email" placeholder="soksan@example.com">
+                        <input type="text" id="email" name="email" placeholder="soksan@example.com">
                         <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
-                        <input type="text" name="address" placeholder="123 Street">
+                        <input type="text" id="adr" name="address" placeholder="123 Street">
                         <label for="city"><i class="fa fa-institution"></i> City</label>
-                        <input type="text" name="city" placeholder="Kratie">
+                        <input type="text" id="city" name="city" placeholder="Kratie">
                     </div>
                     <div class="col-50">
-                        <h3 id="bill">Payment</h3>
-                        <label for="ac">Accepted Cards</label>
-                        <div class="icon-container">
-                            <i class="fa fa-cc-visa" style="color:navy;"></i>
-                            <i class="fa fa-cc-amex" style="color:blue;"></i>
-                            <i class="fa fa-cc-mastercard" style="color:red;"></i>
-                            <i class="fa fa-cc-discover" style="color:orange;"></i>
-                        </div>
+                        <h3 id="bill"> Payment</h3>
                         <div class="row">
                             <div class="col-50">
-                                <label for="cname">Card holder name</label>
-                                <input type="text" name="cardname" placeholder="Soksan Serey">
+                                <label for="owner">Card owner name</label>
+                                <input type="text" name="cardname" id="owner">
                             </div>
                             <div class="col-50">
                                 <label for="cvv">CVV</label>
-                                <input max="9999" type="text" id="secretCode" name="cvv" placeholder="123">
+                                <input type="text" name="cvv" id="cvv">
                             </div>
                         </div>
-                        <label for="ccnum">Credit card number</label>
-                        <input id="creditCardText" type="text" name="cardnumber" placeholder="1111-2222-3333-4444">
+                        <div class="form-group" id="card-number-field">
+                            <label for="cardNumber">Card Number</label>
+                            <input type="text" name="cardnumber" id="cardNumber">
+                        </div>
                         <div class="row">
-                            <div class="col-50">
-                                <label for="exp_month">Exp Month</label>
+                            <div class="col-50" id="expiration-date">
+                                <label>Expiration month</label>
                                 <select name="month">
                                     <option value="January">January</option>
                                     <option value="February">February </option>
@@ -68,26 +63,26 @@
                                 </select>
                             </div>
                             <div class="col-50">
-                                <label for="exp_year">Exp Year</label>
+                                <label>Expiration year</label>
                                 <select name="year">
-                                    <option value="2018">2018</option>
-                                    <option value="2019">2019</option>
-                                    <option value="2020">2020</option>
-                                    <option value="2021">2021</option>
-                                    <option value="2022">2022</option>
-                                    <option value="2023">2023</option>
-                                    <option value="2024">2024</option>
-                                    <option value="2025">2025</option>
-                                    <option value="2026">2026</option>
+                                    <option value="2018"> 2018</option>
+                                    <option value="2019"> 2019</option>
+                                    <option value="2020"> 2020</option>
+                                    <option value="2021"> 2021</option>
+                                    <option value="2022"> 2022</option>
+                                    <option value="2023"> 2023</option>
                                 </select>
                             </div>
                         </div>
+                        <div class="form-group" id="credit_cards">
+                            <img src="{{asset('frontend/images/visa.jpg')}}" id="visa">
+                            <img src="{{asset('frontend/images/mastercard.jpg')}}" id="mastercard">
+                            <img src="{{asset('frontend/images/amex.jpg')}}" id="amex">
+                        </div>
                     </div>
                 </div>
-                <!-- <label>
-                    <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
-                </label> -->
-                <input type="submit" value="Continue to checkout" class="btn">
+
+                <input type="submit" value="Continue to checkout" class="btn" id="confirm-purchase">
             </form>
             </div>
         </div>
@@ -113,7 +108,7 @@
         </div>
     </div>
     <script>
-        $('#creditCardText').keyup(function() {
+        $('#cardNumber').keyup(function() {
         var foo = $(this).val().split("-").join(""); // remove hyphens
         if (foo.length > 0) {
             foo = foo.match(new RegExp('.{1,4}', 'g')).join("-");
@@ -121,6 +116,10 @@
             $(this).val(foo);
         });
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{{asset('frontend/js/script.js')}}"></script>
+    <script type="text/javascript" src="{{asset('frontend/js/jquery.payform.min.js')}}"></script>
 @include('footer.footer')
 </body>
 </html>

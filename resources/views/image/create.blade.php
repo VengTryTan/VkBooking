@@ -11,7 +11,7 @@
                             <h4 class="title">Add New Image</h4>
                         </div>
                         <div class="card-content">
-                            <form method="POST" action="{{ route('item.store') }}" enctype="multipart/form-data">
+                            <form method="POST" action="{{ route('image.store') }}" enctype="multipart/form-data">
                             {{ csrf_field() }}
 
                             <div class="row">
@@ -30,7 +30,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group label-floating">
-                                        <label class="control-label">Type Image</label>
+                                        <label class="control-label">Image Picture</label>
                                         <input type="file" name="image">
                                     </div>
                                 </div>
@@ -39,7 +39,7 @@
                                 
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <a href="{{ route('item.index') }}" class="btn btn-danger">Back</a>
+                                        <a href="{{ route('image.index') }}" class="btn btn-danger">Back</a>
                                         <button type="submit" class="btn btn-primary">Save</button>
                                     </div>
                                 </div>

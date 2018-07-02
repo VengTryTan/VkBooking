@@ -18,6 +18,15 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::get('welcome', function () {
+    return view('welcome');
+});
+
+Route::get('/go','ImageController@index1');
+
+
 Route::post('/type','TypeController@type')->name('type');
 Route::resource('item', 'ImageController');
 Route::get('welcome', function () {
@@ -27,6 +36,8 @@ Route::get('checkin', function() {
     return view('checkin');
 });
 Route::resource('reservation','CheckinController');
+Route::resource('type','TypeController');
+Route::resource('image', 'ImageController');
 
 
 /*superadmin route*/

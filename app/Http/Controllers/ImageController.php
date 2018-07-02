@@ -56,10 +56,10 @@ class ImageController extends Controller
             $imagename = "default.png";
         }
          $item = new Image();
-         $item->type_ID = $request->type;
+         $item->type_ID = $request->type_ID;
          $item->image = $imagename;
          $item->save();
-        return redirect()->route('item.index');
+        return redirect()->route('image.index');
     }
 
     /**
@@ -105,5 +105,11 @@ class ImageController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function index1()
+    {
+        $items = Image::all();
+        return view('go', compact('items'));
     }
 }

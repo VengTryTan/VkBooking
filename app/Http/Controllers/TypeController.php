@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Type;
+use App\Image;
 
-class TypeContorller extends Controller
+class TypeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +15,8 @@ class TypeContorller extends Controller
      */
     public function index()
     {
-       //       
+        $types = Type::all();
+        return view('type.index', compact('types'));    
     }
 
     /**
@@ -24,9 +26,9 @@ class TypeContorller extends Controller
      */
     public function create()
     {
-        //
+        $images = Image::all();
+        return view('type.create', compact('types'));
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -35,26 +37,12 @@ class TypeContorller extends Controller
      */
     public function store(Request $request)
     {
-        $image = $request->file('image');
-        $slug = str_slug($request->name);
-        if (isset($image))
-        {
-            $currentDate = Carbon::now()->toDateString();
-            $imagename = $slug.'-'.$currentDate.'-'. uniqid() .'.'. $image->getClientOriginalExtension();
-
-            if (!file_exists('uploads/image'))
-            {
-                mkdir('uploads/image',0777,true);
-            }
-            $image->move('uploads/image',$imagename);
-        }else{
-            $imagename = "default.png";
-        }
-        $image = new Image();
-        $image->type_ID = $request->type_ID;
-        $image->image = $imagename;
-        $image->save();
-        return redirect()->route('room.index')->with('successMsg','room Successfully Saved');
+        $item = new Type();
+        $item->image_id = $request->image_id;
+        $item->name = $request->name;
+        // $item->discription = $request->discription;
+        $item->save();
+        return redirect()->route('type.index');
     }
 
     /**
