@@ -145,7 +145,7 @@
           @foreach($types as $type)
             <div class="col-md-4">
               <div class="card card-inverse card-info">
-                <img class="card-img-top" src="{{$type['']}}">
+                <img class="card-img-top" src="{{$type['img_Id']['image']}}">
                   <div class="card-block">
                     <h4 class="card-title mt-3">{{$type['name']}}</h4>
                     <div class="meta card-text">

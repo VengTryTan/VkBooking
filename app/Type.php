@@ -14,9 +14,8 @@ class Type extends Model
         return $this->belongsTo('App\Rate');
     }
 
-    public function image(){
-        return $this->belongsTo('App\Image');
+    public function Image(){
+        return $this->hasMany('App\Image','img_Id');
     }
-
 
 }
