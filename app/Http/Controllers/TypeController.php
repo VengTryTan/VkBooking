@@ -27,7 +27,7 @@ class TypeController extends Controller
     public function create()
     {
         $images = Image::all();
-        return view('type.create', compact('images'));
+        return view('type.create', compact('types'));
     }
     /**
      * Store a newly created resource in storage.

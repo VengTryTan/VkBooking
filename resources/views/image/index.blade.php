@@ -11,16 +11,14 @@
                         <div class="card-content table-responsive">
                             <table id="table" class="table"  cellspacing="0" width="100%">
                                 <thead class="text-primary">
-                                <th>Image ID</th>
-                                <th>Image Name</th>
+                                <th>Type ID</th>
                                 <th>Image Picture</th>
                                 
                                 </thead>
                                 <tbody>
                                     @foreach($items as $key=>$link)
                                         <tr>
-                                            <td>{{ $link->id }}</td>
-                                            <td>{{ $link->name }}</td>
+                                            <td>{{ $link->type_ID }}</td>
                                             <td> <img src="{{ asset('uploads/image/'.$link->image)}}" height="150" width="200"></td>
                                         </tr>
                                     @endforeach

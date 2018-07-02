@@ -17,8 +17,12 @@
                             <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group label-floating">
-                                        <label class="control-label">Image Name</label>
-                                        <input type="text" name="name">
+                                        <label class="control-label">Type ID</label>
+                                        <select class="form-control" name="type_ID">
+                                            @foreach($types as $type)
+                                                <option value="{{ $type->id }}">{{ $type->name }}</option>
+                                            @endforeach
+                                        </select>
                                     </div>
                                 </div>
                             </div>
