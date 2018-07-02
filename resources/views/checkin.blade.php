@@ -107,19 +107,19 @@
             </div>
         </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="{{asset('frontend/js/script.js')}}"></script>
-    <script type="text/javascript" src="{{asset('frontend/js/jquery.payform.min.js')}}"></script>
-    <!-- <script>
-        $('#creditCardNumber').keyup(function() {
+    <script>
+        $('#cardNumber').keyup(function() {
         var foo = $(this).val().split("-").join(""); // remove hyphens
         if (foo.length > 0) {
             foo = foo.match(new RegExp('.{1,4}', 'g')).join("-");
         }
             $(this).val(foo);
         });
-    </script> -->
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{{asset('frontend/js/script.js')}}"></script>
+    <script type="text/javascript" src="{{asset('frontend/js/jquery.payform.min.js')}}"></script>
 @include('footer.footer')
 </body>
 </html>
