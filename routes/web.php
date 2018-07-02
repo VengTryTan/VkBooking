@@ -26,13 +26,24 @@ Route::get('welcome', function () {
 
 Route::get('/go','ImageController@index1');
 
+
+Route::post('/type','TypeController@type')->name('type');
+Route::resource('item', 'ImageController');
+Route::get('welcome', function () {
+    return view('welcome');
+});
 Route::get('checkin', function() {
     return view('checkin');
 });
-
 Route::resource('reservation','CheckinController');
 Route::resource('type','TypeController');
 Route::resource('image', 'ImageController');
+
+
+/*superadmin route*/
+Route::resource('superadmin', 'SuperadminController');
+Route::get('billing', 'BillingController@handle_billing');
+Route::get('rate', 'RateController@handle_rate');
 
 /*
 Route::get('/search/{id}', 'RoomController@show')->name('search');
