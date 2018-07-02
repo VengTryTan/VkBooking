@@ -56,10 +56,10 @@ class ImageController extends Controller
             $imagename = "default.png";
         }
          $item = new Image();
-         $item->type_ID = $request->type_ID;
+         $item->name = $request->name;
          $item->image = $imagename;
          $item->save();
-        return redirect()->route('item.index');
+        return redirect()->route('image.index');
     }
 
     /**

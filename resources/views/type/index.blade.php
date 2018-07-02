@@ -3,25 +3,24 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <a href="{{ route('image.create') }}" class="btn btn-primary">Add New</a>
+                    <a href="{{ route('type.create') }}" class="btn btn-primary">Add New</a>
                     <div class="card">
                         <div class="card-header" data-background-color="purple">
-                            <h4 style="text-align: center" class="title">All Image</h4>
+                            <h4  style="text-align: center" class="title">All Type</h4>
                         </div>
                         <div class="card-content table-responsive">
                             <table id="table" class="table"  cellspacing="0" width="100%">
                                 <thead class="text-primary">
-                                <th>Image ID</th>
-                                <th>Image Name</th>
-                                <th>Image Picture</th>
+                                <th>Type ID</th>
+                                <th>Type Name</th>
+                                <th>Type Image</th>
                                 
                                 </thead>
                                 <tbody>
-                                    @foreach($items as $key=>$link)
+                                    @foreach($types as $key=>$type)
                                         <tr>
-                                            <td>{{ $link->id }}</td>
-                                            <td>{{ $link->name }}</td>
-                                            <td> <img src="{{ asset('uploads/image/'.$link->image)}}" height="150" width="200"></td>
+                                            <td>{{($type->name)}}</td>
+                                            <td> <img src="{{ asset('uploads/image/'.$type->image)}}" height="150" width="200"></td>
                                         </tr>
                                     @endforeach
                                 </tbody>
