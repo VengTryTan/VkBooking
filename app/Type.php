@@ -15,7 +15,7 @@ class Type extends Model
     }
 
     public function image(){
-        return $this->hasMany('App\Image', 'id');
+        return $this->belongsTo('App\Image');
     }
 
 
