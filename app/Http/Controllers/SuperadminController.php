@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Type;
+use App\Image;
 
 class SuperadminController extends Controller
 {
@@ -14,8 +15,8 @@ class SuperadminController extends Controller
      */
     public function index()
     {
-        $types = Type::all();
-        return view('superadmin/dashboard',compact('types'))->with(['types' => $types]);
+        $images = Image::all();
+        return view('superadmin/dashboard',compact('images'))->with(['images' => $images]);
     }
 
     /**

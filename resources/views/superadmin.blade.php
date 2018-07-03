@@ -37,13 +37,19 @@
     </thead>
     <tbody>
       
-      @foreach($types as $type)
+      @foreach($images as $image)
       <tr>
-        <td>{{$type['id']}}</td>
-        <td>{{$type['name']}}</td>
-        <td>{{$type['description']}}</td>
+
+        <td>{{$image['type_ID']}}</td>
+        <td>{{$image['type_ID']}}</td>
+        <td>{{$image['type_ID']}}</td>
+        
     
-        <td><a href="{{action('SuperadminController@edit', $type['id'])}}" class="btn btn-warning">Edit</a></td>
+        <!-- <td>{{$image['image']}}</td>
+        <td>{{$image['type_ID']['name']}}</td>
+        <td>{{$image['type_ID']['description']}}</td>
+     -->
+        <td><a href="{{action('SuperadminController@edit', $image['id'])}}" class="btn btn-warning">Edit</a></td>
       </tr>
       @endforeach
     </tbody>
