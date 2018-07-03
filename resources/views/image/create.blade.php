@@ -19,7 +19,7 @@
                                         <div class="form-group label-floating">
                                         <label class="control-label">Type ID</label>
                                         <select class="form-control" name="type_ID">
-                                            @foreach($items as $item)
+                                            @foreach($types as $item)
                                                 <option value="{{ $item->id }}">{{ $item->name }}</option>
                                             @endforeach
                                         </select>
