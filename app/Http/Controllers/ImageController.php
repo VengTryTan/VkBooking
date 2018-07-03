@@ -115,7 +115,8 @@ class ImageController extends Controller
 
         $items = DB::table('types')
         ->join('images', 'types.id', '=', 'images.type_ID')
-        ->select('types.id', 'types.name', 'images.image', 'types.description')
+        ->join('rates', 'images.type_ID', '=', 'rates.type_ID')
+        ->select('types.id', 'types.name','rates.price', 'images.image', 'types.description')
         ->get();
     return view('go', compact('items'));
     }
