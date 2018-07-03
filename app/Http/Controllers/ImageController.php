@@ -110,13 +110,10 @@ class ImageController extends Controller
 
     public function index1()
     {
-        // $items = Image::all();
-        // return view('go', compact('items'));
-
         $items = DB::table('types')
         ->join('images', 'types.id', '=', 'images.type_ID')
         ->join('rates', 'images.type_ID', '=', 'rates.type_ID')
-        ->select('types.id', 'types.name','rates.price', 'images.image', 'types.description')
+        ->select('types.id', 'types.name', 'rates.price','images.image', 'types.description')
         ->get();
     return view('go', compact('items'));
     }

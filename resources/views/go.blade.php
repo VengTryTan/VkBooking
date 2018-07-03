@@ -4,7 +4,7 @@
 <div class="row">
     <div class="col-50">
         <label for="name">Type Name:</label>
-        {{$item->name}}
+        <p>{{$item->name}}</p>
     </div>
     <div class="col-50">
         <label for="description">Description</label>
