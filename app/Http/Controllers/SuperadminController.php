@@ -58,7 +58,8 @@ class SuperadminController extends Controller
      */
     public function edit($id)
     {
-        //
+        $type = Type::find($id);
+        return view('edit', compact('type', 'id'));
     }
 
     /**
