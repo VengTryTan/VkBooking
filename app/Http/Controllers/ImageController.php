@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use DB;
 use Illuminate\Http\Request;
 use App\Image;
 use App\Type;
@@ -28,8 +29,8 @@ class ImageController extends Controller
      */
     public function create()
     {
-        $types = Type::all();
-        return view('image.create', compact('types'));
+         $types = Type::all();
+         return view('image.create', compact('types'));
     }
 
     /**
@@ -109,7 +110,13 @@ class ImageController extends Controller
 
     public function index1()
     {
-        $items = Image::all();
-        return view('go', compact('items'));
+        // $items = Image::all();
+        // return view('go', compact('items'));
+
+        $items = DB::table('types')
+        ->join('images', 'types.id', '=', 'images.type_ID')
+        ->select('types.id', 'types.name', 'images.image', 'types.description')
+        ->get();
+    return view('go', compact('items'));
     }
 }
