@@ -7,6 +7,10 @@
         <p>{{$item->name}}</p>
     </div>
     <div class="col-50">
+        <label for="total">Total:</label>
+        <p>{{$item->total}}</p>
+    </div>
+    <div class="col-50">
         <label for="description">Description</label>
         <p>{{$item->description}}</p>
     </div>
