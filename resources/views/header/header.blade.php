@@ -12,7 +12,7 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <!-- build:css mfb.css -->
     <link href="{{asset('frontend/css/mfb.css')}}" rel="stylesheet">
-    <link href="{{asset('frontend/css/checkin.css')}}" rel="stylesheet">
+    <!-- <link href="{{asset('frontend/css/checkin.css')}}" rel="stylesheet"> -->
     <!-- build:js mfb.js -->
     <script type="text/javascript" src="{{asset('frontend/js/jquery.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('frontend/js/jquery.easing.1.3.js')}}"></script>

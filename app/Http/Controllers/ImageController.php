@@ -116,6 +116,6 @@ class ImageController extends Controller
         ->join('rates', 'images.type_ID', '=', 'rates.type_ID')
         ->groupBy('rates.type_ID')
         ->get();
-    return view('go', compact('items'));
+    return view('welcome', compact('items'));
     }
 }

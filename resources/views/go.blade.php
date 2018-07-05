@@ -1,14 +1,9 @@
-@include('header.header')
 @foreach($items as $key=>$item)
 <div class="container">
 <div class="row">
     <div class="col-50">
         <label for="name">Type Name:</label>
         <p>{{$item->name}}</p>
-    </div>
-    <div class="col-50">
-        <label for="total">Total:</label>
-        <p>{{$item->total}}</p>
     </div>
     <div class="col-50">
         <label for="description">Description</label>
@@ -25,4 +20,3 @@
 </div>
 </div>
 @endforeach
-@include('footer.footer')
