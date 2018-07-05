@@ -736,7 +736,7 @@ h1, h2, h3, h4, h5, h6, figure {
   position: absolute;
   z-index: 1001;
   width: 40%;
-  right: 10%;
+  left: 5%;
   top: 50%;
   -webkit-box-shadow: 4px 11px 35px -14px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 4px 11px 35px -14px rgba(0, 0, 0, 0.5);
@@ -1303,7 +1303,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 #fh5co-footer {
-  padding: 7em 0;
+  padding: 3em 0 1em 0;
   float: left;
   width: 100%;
   position: relative;
