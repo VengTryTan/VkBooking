@@ -14,7 +14,7 @@ class CheckinController extends Controller
      */
     public function index()
     {
-        //
+        return view('checkin');
     }
 
     /**
