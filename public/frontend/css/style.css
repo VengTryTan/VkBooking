@@ -1689,30 +1689,4 @@ h1, h2, h3, h4, h5, h6, figure {
   opacity: 0;
 }
 
-.filtr-item {
-  overflow:hidden;
-  float: left;
-  position:relative;
-  margin-bottom: 30px;
-  overflow:hidden;
-}
-/*.item img*/
-.filtr-item img{
-  width:100%;
-  height:100%;
-  transition:.5s;
-  -webkit-transition: .5s;
-  -moz-transition: .5s;
-  -ms-transition: .5s;
-  -o-transition: .5s;
-  transition: .5s;
-}
-.filtr-item:hover  img{
-  -webkit-transform:scale(1.5);
-  -moz-transform:scale(1.5);
-  -ms-transform:scale(1.5);
-  -o-transform:scale(1.5);
-  transform:scale(1.5);
-}
-
 /*# sourceMappingURL=style.css.map */
