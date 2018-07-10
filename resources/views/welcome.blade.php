@@ -60,7 +60,7 @@
 									
 									<h3>Bungalow</h3>
 									<div class="price-status">
-									<span class="price">$131.8<span class="per">/night</span> <a href="#" class="tag">Avialable</a></span>
+									<span class="price">$131.8<span class="per">/night</span> <a href="#" class="tag">Available</a></span>
 								</div>
 								<p>Stay in one of our specially designed bungalows and experience the invigorating fresh air of Kirirom. Relax in our king size or twin-bed bungalows. King size or twin bed(s) / Ceiling fan / Local TV / En-suit bathroom (with hot water supply) / Electric kettle / Hair dryer / Private veranda / Free Wi-fi Internet / Safe box.</p>                      
 								</div>
@@ -75,7 +75,7 @@
 								<div class="fh5co-box">
 									<h3>Villa Jasmine</h3>
 									<div class="price-status">
-									<span class="price">$131<span class="per">/night</span> <a href="#" class="tag">Avialable</a></span>
+									<span class="price">$131<span class="per">/night</span> <a href="#" class="tag">Available</a></span>
 								</div>
 								<p>Comprising of a combined bedroom, living, dining, kitchen area and an attached toilet, these versatile homes promises lots of many pleasant experiences in the cool Kiririom mountain top. With your own private garden of about 180 sq. meters, mixed the fresh outdoor environment with the beauty of your private studio home. Jasmine hills – elevate your lifestyle today.</p>
 								</div>
@@ -106,7 +106,7 @@
 									
 									<h3>Khmer Cottage</h3>
 									<div class="price-status">
-									<span class="price">$50<span class="per">/night</span> <a href="#" class="tag">Avialable</a></span>
+									<span class="price">$50<span class="per">/night</span> <a href="#" class="tag">Available</a></span>
 								</div>
 								<p>Experience a real Khmer traditional hut with the fresh and cool breeze. Stay in a Khmer farmer's open-style house nicely decorated with natural materials. Each cottage has twin beds and is best suited to students and couples who would like to enjoy the natural fresh air of the pine forests in Kirirom Mountain. Each cottage size is 3m x 4m (12m2).</p>                      
 								</div>
@@ -122,7 +122,7 @@
 									
 									<h3>Luxury Tent</h3>
 									<div class="price-status">
-									<span class="price">$82 <span class="per">/night</span><a href="#" class="tag">Avialable</a></span>
+									<span class="price">$82 <span class="per">/night</span><a href="#" class="tag">Available</a></span>
 								</div>
 								<p>Stay in style and comfort in a high quality tent with the comfort of a hotel room. The tents come with a king size bed and en-suite bathroom. Rooms size is 5m x 4 m (20m2).Luxury Tent is a modern tent house which has a king size bed and nice bath room. Its size is 5m x 4m or 20m2.</p>                        
 								</div>
@@ -138,7 +138,7 @@
 									
 									<h3>Pipe Room</h3>
 									<div class="price-status">
-									<span class="price">$59<span class="per">/night</span> <a href="#" class="tag">Avialable</a></span>
+									<span class="price">$59<span class="per">/night</span> <a href="#" class="tag">Available</a></span>
 								</div>
 								<p>A unique design to Cambodia and other Asian countries, the Pipe Rooms are affordable but cozy. Our pipe rooms are ideal for students and couples who want to experience a creatively designed room in our beautiful, natural resort.</p>                    
 								</div>
@@ -154,7 +154,7 @@
 									
 									<h3>Orchide Hill Service Apartment</h3>
 									<div class="price-status">
-									<span class="price">$600<span class="per">/month</span> <a href="#" class="tag">Avialable</a></span>
+									<span class="price">$600<span class="per">/month</span> <a href="#" class="tag">Available</a></span>
 								</div>
 								<p>It is a condominium type building surrounded by pine tree forest which is available for customers who stay more than 1week. Furnitures are provided and equipped facilities are for use. Utilities, water, gas, wifi fees are included in the price.</p>                       
 								</div>
@@ -169,7 +169,7 @@
 								<div class="fh5co-box">                                   
 									<h3>Auto Camping</h3>
 									<div class="price-status">
-									<span class="price">$20<span class="per">/night</span> <a href="#" class="tag">Avialable</a></span>
+									<span class="price">$20<span class="per">/night</span> <a href="#" class="tag">Available</a></span>
 								</div>
 								<p>Come with your car and camp amongst nature. With your safety in mind, our campsite has a perimeter fence and 24 hours security staff on duty. Simply drive your car to Kirirom. Park and camp in one of our car camping grounds. You can rent or purchase camping equipment and tools in our resort.</p>                   
 								</div>
@@ -186,7 +186,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
-					<h2>We are fucking the Best Accommodations!</h2>
+					<h2>We are Offering the Best Accommodations!</h2>
 					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
 				</div>
 				@foreach($items as $key=>$item)
