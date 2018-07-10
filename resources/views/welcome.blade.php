@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html class="no-js">
 	<head>
@@ -49,138 +48,140 @@
 			</div>
 		</div>
 	</header>
+	
 	<aside id="fh5co-hero" clsas="js-fullheight">
 		<div class="flexslider js-fullheight">
 			<ul class="slides">
-                <li style="background-image: url(frontend/images/bungalow.jpg);">
-                    <div class="container">
-                        <div class="col-md-12 text-center js-fullheight fh5co-property-brief slider-text">
-                            <div class="fh5co-property-brief-inner">
-                                <div class="fh5co-box">
-                                    
-                                    <h3>Bungalow</h3>
-                                    <div class="price-status">
-                                    <span class="price">$131.8<span class="per">/night</span> <a href="#" class="tag">Avialable</a></span>
-                                </div>
-                                <p>Stay in one of our specially designed bungalows and experience the invigorating fresh air of Kirirom. Relax in our king size or twin-bed bungalows. King size or twin bed(s) / Ceiling fan / Local TV / En-suit bathroom (with hot water supply) / Electric kettle / Hair dryer / Private veranda / Free Wi-fi Internet / Safe box.</p>                      
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li style="background-image: url(frontend/images/boreyR1.jpg);">
-                    <div class="container">
-                        <div class="col-md-12 text-center js-fullheight fh5co-property-brief slider-text">
-                            <div class="fh5co-property-brief-inner">
-                                <div class="fh5co-box">
-                                    <h3>Villa Jasmine</h3>
-                                    <div class="price-status">
-                                    <span class="price">$131<span class="per">/night</span> <a href="#" class="tag">Avialable</a></span>
-                                </div>
-                                <p>Comprising of a combined bedroom, living, dining, kitchen area and an attached toilet, these versatile homes promises lots of many pleasant experiences in the cool Kiririom mountain top. With your own private garden of about 180 sq. meters, mixed the fresh outdoor environment with the beauty of your private studio home. Jasmine hills – elevate your lifestyle today.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li style="background-image: url(frontend/images/boreyA.jpg);">
-                    <div class="container">
-                        <div class="col-md-12 text-center js-fullheight fh5co-property-brief slider-text">
-                            <div class="fh5co-property-brief-inner">
-                                <div class="fh5co-box">
-                                    <h3>Villa Suite</h3>
-                                    <div class="price-status">
-                                    <span class="price">$272<span class="per">/night</span><a href="#" class="tag">For Sale</a></span>
-                                </div>
-                                <p>This two-bedroom villa with a mezzanine level is suitable for bigger families or group. This modern designed building has a bath and shower room with a state of the art kitchen, a wide living room and an open roof deck for BBQ party or just simply relaxing under the sun or the stars.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li style="background-image: url(frontend/images/khmercottage.jpg);">
-                    <div class="container">
-                        <div class="col-md-12 text-center js-fullheight fh5co-property-brief slider-text">
-                            <div class="fh5co-property-brief-inner">
-                                <div class="fh5co-box">
-                                    
-                                    <h3>Khmer Cottage</h3>
-                                    <div class="price-status">
-                                    <span class="price">$50<span class="per">/night</span> <a href="#" class="tag">Avialable</a></span>
-                                </div>
-                                <p>Experience a real Khmer traditional hut with the fresh and cool breeze. Stay in a Khmer farmer's open-style house nicely decorated with natural materials. Each cottage has twin beds and is best suited to students and couples who would like to enjoy the natural fresh air of the pine forests in Kirirom Mountain. Each cottage size is 3m x 4m (12m2).</p>                      
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li style="background-image: url(frontend/images/luxurytent1.jpg);">
-                    <div class="container">
-                        <div class="col-md-12 text-center js-fullheight fh5co-property-brief slider-text">
-                            <div class="fh5co-property-brief-inner">
-                                <div class="fh5co-box">
-                                    
-                                    <h3>Luxury Tent</h3>
-                                    <div class="price-status">
-                                    <span class="price">$82 <span class="per">/night</span><a href="#" class="tag">Avialable</a></span>
-                                </div>
-                                <p>Stay in style and comfort in a high quality tent with the comfort of a hotel room. The tents come with a king size bed and en-suite bathroom. Rooms size is 5m x 4 m (20m2).Luxury Tent is a modern tent house which has a king size bed and nice bath room. Its size is 5m x 4m or 20m2.</p>                        
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li style="background-image: url(frontend/images/piperoom6.jpg);">
-                    <div class="container">
-                        <div class="col-md-12 text-center js-fullheight fh5co-property-brief slider-text">
-                            <div class="fh5co-property-brief-inner">
-                                <div class="fh5co-box">
-                                    
-                                    <h3>Pipe Room</h3>
-                                    <div class="price-status">
-                                    <span class="price">$59<span class="per">/night</span> <a href="#" class="tag">Avialable</a></span>
-                                </div>
-                                <p>A unique design to Cambodia and other Asian countries, the Pipe Rooms are affordable but cozy. Our pipe rooms are ideal for students and couples who want to experience a creatively designed room in our beautiful, natural resort.</p>                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li style="background-image: url(frontend/images/TypeV-7.jpg);">
-                    <div class="container">
-                        <div class="col-md-12 text-center js-fullheight fh5co-property-brief slider-text">
-                            <div class="fh5co-property-brief-inner">
-                                <div class="fh5co-box">
-                                    
-                                    <h3>Orchide Hill Service Apartment</h3>
-                                    <div class="price-status">
-                                    <span class="price">$600<span class="per">/month</span> <a href="#" class="tag">Avialable</a></span>
-                                </div>
-                                <p>It is a condominium type building surrounded by pine tree forest which is available for customers who stay more than 1week. Furnitures are provided and equipped facilities are for use. Utilities, water, gas, wifi fees are included in the price.</p>                       
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li style="background-image: url(frontend/images/camping5.jpg);">
-                    <div class="container">
-                        <div class="col-md-12 text-center js-fullheight fh5co-property-brief slider-text">
-                            <div class="fh5co-property-brief-inner">
-                                <div class="fh5co-box">
-                                    
-                                    <h3>Auto Camping</h3>
-                                    <div class="price-status">
-                                    <span class="price">$20<span class="per">/tent</span> <a href="#" class="tag">Avialable</a></span>
-                                </div>
-                                <p>Come with your car and camp amongst nature. With your safety in mind, our campsite has a perimeter fence and 24 hours security staff on duty. Simply drive your car to Kirirom. Park and camp in one of our car camping grounds. You can rent or purchase camping equipment and tools in our resort.</p>                   
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>		   	
-		  	</ul>
-	  	</div>
+				<li style="background-image: url(frontend/images/bungalow.jpg);">
+					<div class="container">
+						<div class="col-md-12 text-center js-fullheight fh5co-property-brief slider-text">
+							<div class="fh5co-property-brief-inner">
+								<div class="fh5co-box">
+									
+									<h3>Bungalow</h3>
+									<div class="price-status">
+									<span class="price">$131.8<span class="per">/night</span> <a href="#" class="tag">Avialable</a></span>
+								</div>
+								<p>Stay in one of our specially designed bungalows and experience the invigorating fresh air of Kirirom. Relax in our king size or twin-bed bungalows. King size or twin bed(s) / Ceiling fan / Local TV / En-suit bathroom (with hot water supply) / Electric kettle / Hair dryer / Private veranda / Free Wi-fi Internet / Safe box.</p>                      
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li style="background-image: url(frontend/images/boreyR1.jpg);">
+					<div class="container">
+						<div class="col-md-12 text-center js-fullheight fh5co-property-brief slider-text">
+							<div class="fh5co-property-brief-inner">
+								<div class="fh5co-box">
+									<h3>Villa Jasmine</h3>
+									<div class="price-status">
+									<span class="price">$131<span class="per">/night</span> <a href="#" class="tag">Avialable</a></span>
+								</div>
+								<p>Comprising of a combined bedroom, living, dining, kitchen area and an attached toilet, these versatile homes promises lots of many pleasant experiences in the cool Kiririom mountain top. With your own private garden of about 180 sq. meters, mixed the fresh outdoor environment with the beauty of your private studio home. Jasmine hills – elevate your lifestyle today.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li style="background-image: url(frontend/images/boreyA.jpg);">
+					<div class="container">
+						<div class="col-md-12 text-center js-fullheight fh5co-property-brief slider-text">
+							<div class="fh5co-property-brief-inner">
+								<div class="fh5co-box">
+									<h3>Villa Suite</h3>
+									<div class="price-status">
+									<span class="price">$272<span class="per">/night</span><a href="#" class="tag">For Sale</a></span>
+								</div>
+								<p>This two-bedroom villa with a mezzanine level is suitable for bigger families or group. This modern designed building has a bath and shower room with a state of the art kitchen, a wide living room and an open roof deck for BBQ party or just simply relaxing under the sun or the stars.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li style="background-image: url(frontend/images/khmercottage.jpg);">
+					<div class="container">
+						<div class="col-md-12 text-center js-fullheight fh5co-property-brief slider-text">
+							<div class="fh5co-property-brief-inner">
+								<div class="fh5co-box">
+									
+									<h3>Khmer Cottage</h3>
+									<div class="price-status">
+									<span class="price">$50<span class="per">/night</span> <a href="#" class="tag">Avialable</a></span>
+								</div>
+								<p>Experience a real Khmer traditional hut with the fresh and cool breeze. Stay in a Khmer farmer's open-style house nicely decorated with natural materials. Each cottage has twin beds and is best suited to students and couples who would like to enjoy the natural fresh air of the pine forests in Kirirom Mountain. Each cottage size is 3m x 4m (12m2).</p>                      
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li style="background-image: url(frontend/images/luxurytent1.jpg);">
+					<div class="container">
+						<div class="col-md-12 text-center js-fullheight fh5co-property-brief slider-text">
+							<div class="fh5co-property-brief-inner">
+								<div class="fh5co-box">
+									
+									<h3>Luxury Tent</h3>
+									<div class="price-status">
+									<span class="price">$82 <span class="per">/night</span><a href="#" class="tag">Avialable</a></span>
+								</div>
+								<p>Stay in style and comfort in a high quality tent with the comfort of a hotel room. The tents come with a king size bed and en-suite bathroom. Rooms size is 5m x 4 m (20m2).Luxury Tent is a modern tent house which has a king size bed and nice bath room. Its size is 5m x 4m or 20m2.</p>                        
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li style="background-image: url(frontend/images/piperoom6.jpg);">
+					<div class="container">
+						<div class="col-md-12 text-center js-fullheight fh5co-property-brief slider-text">
+							<div class="fh5co-property-brief-inner">
+								<div class="fh5co-box">
+									
+									<h3>Pipe Room</h3>
+									<div class="price-status">
+									<span class="price">$59<span class="per">/night</span> <a href="#" class="tag">Avialable</a></span>
+								</div>
+								<p>A unique design to Cambodia and other Asian countries, the Pipe Rooms are affordable but cozy. Our pipe rooms are ideal for students and couples who want to experience a creatively designed room in our beautiful, natural resort.</p>                    
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li style="background-image: url(frontend/images/TypeV-7.jpg);">
+					<div class="container">
+						<div class="col-md-12 text-center js-fullheight fh5co-property-brief slider-text">
+							<div class="fh5co-property-brief-inner">
+								<div class="fh5co-box">
+									
+									<h3>Orchide Hill Service Apartment</h3>
+									<div class="price-status">
+									<span class="price">$600<span class="per">/month</span> <a href="#" class="tag">Avialable</a></span>
+								</div>
+								<p>It is a condominium type building surrounded by pine tree forest which is available for customers who stay more than 1week. Furnitures are provided and equipped facilities are for use. Utilities, water, gas, wifi fees are included in the price.</p>                       
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li style="background-image: url(frontend/images/camping5.jpg);">
+					<div class="container">
+						<div class="col-md-12 text-center js-fullheight fh5co-property-brief slider-text">
+							<div class="fh5co-property-brief-inner">
+								<div class="fh5co-box">                                   
+									<h3>Auto Camping</h3>
+									<div class="price-status">
+									<span class="price">$20<span class="per">/night</span> <a href="#" class="tag">Avialable</a></span>
+								</div>
+								<p>Come with your car and camp amongst nature. With your safety in mind, our campsite has a perimeter fence and 24 hours security staff on duty. Simply drive your car to Kirirom. Park and camp in one of our car camping grounds. You can rent or purchase camping equipment and tools in our resort.</p>                   
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>		   	
+			</ul>
+		</div>
 	</aside>
+	
+	<button id="myBtn" disabled="true">My Button</button>
 	<div id="best-deal">
 		<div class="container">
 			<div class="row">
@@ -192,31 +193,40 @@
 				<div class="col-md-4 item-block animate-box" data-animate-effect="fadeIn">
 					<div class="fh5co-property">
 						<figure>
-							<img src="{{asset('uploads/image/'.$item->image)}}" alt="Free Website Templates FreeHTML5.co" class="img-responsive">
+							<img src="{{asset('uploads/image/'.$item->image)}}"alt="accomodation image" class="img-responsive">
 							<a href="#" class="tag">For rental</a>
 						</figure>
 						<div class="fh5co-property-innter">
-                            <p>{{$item->name}}</p>
+							<p>{{$item->name}}</p>
 							<div class="price-status">
-                                <span class="price">${{$item->price}}<span class="per">/night</span></span>
-		               </div>
-		               <p>{{$item->description}}</p>
-	            	</div>
-	            	<p class="fh5co-property-specification">
-	            		<span><strong class="fa fa-wifi">WiFi available</strong></span>  <span><strong class="fa fa-bed"> 1 Bed</strong></span>  <span><strong class="fa fa-shower"> Bathroom</strong></span> <span><strong class="fa fa-television">TV available</strong></span>
-	            	</p>
+								<span class="price">${{$item->price}}<span class="per">/night
+								<select id="type" onchange="myFunction()">
+									<option value="0">0 Room</option>
+									<option value="1">1 Room</option>
+									<option value="2">2 Room</option>
+									<option value="3">3 Room</option>
+									<option value="4">4 Room</option>
+								</select>
+								</span>
+							</div>
+							<p>{{$item->description}}</p>
+						
+						</div>
+						<p class="fh5co-property-specification">
+							<span><strong class="fa fa-wifi">WiFi available</strong></span>  <span><strong class="fa fa-bed"> 1 Bed</strong></span>  <span><strong class="fa fa-shower"> Bathroom</strong></span> <span><strong class="fa fa-television">TV available</strong></span>
+						</p>
 					</div>					
 				</div>
 				@endforeach
 			</div>
 		</div>
-	</div>	
+	</div>
+
 	<div class="fh5co-section-with-image">		
 		<img src="{{asset('frontend/images/security.png')}}" alt="" class="img-responsive">
 		<div class="fh5co-box animate-box">
 			<h2>Security, Comfort, &amp; Convenience</h2>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque dicta magni amet atque doloremque velit unde adipisci omnis hic quaerat.</p>
-			<p><a href="#" class="btn btn-primary btn-outline with-arrow">Get started <i class="icon-arrow-right"></i></a></p>
+			<p>We provide you a good service and make sure you have satified with our resort.</p>
 		</div>		
 	</div>
 
@@ -277,20 +287,20 @@
 				<h3>About vKirirom</h3>
 				<p>vKirirom Pine Resort is located amongst the pine trees of Kirirom Mountain. Here at vKiriom, we try to preserve the natural beauty of the environment. Our building locations are properly studied so that we avoid cutting down many trees.</p>
 			</div>
-            <div class="col-md-4 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
-                <h3>Kirirom Institute of Technology</h3>
-                <div><label>KIT</label>adapts a new style of learning with an effective new educational techniques as a boarding school.</div>
-                <a href="http://www.kit.edu.kh/contact.php" target="_black">Enroll here !!</a>
-                <div>New university for the future in Kirirom Mountain under the vKririom Project. An educational approach that stands amongst the forest.</div>
-                <a href="http://www.kit.edu.kh/index.php" target="_black"> More about KIT</a>
-            </div>
+			<div class="col-md-4 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
+				<h3>Kirirom Institute of Technology</h3>
+				<div><label>KIT</label>adapts a new style of learning with an effective new educational techniques as a boarding school.</div>
+				<a href="http://www.kit.edu.kh/contact.php" target="_black">Enroll here !!</a>
+				<div>New university for the future in Kirirom Mountain under the vKririom Project. An educational approach that stands amongst the forest.</div>
+				<a href="http://www.kit.edu.kh/index.php" target="_black"> More about KIT</a>
+			</div>
 			<div class="col-md-4 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
 				<h3>THE MEANING OF OUR LOGO</h3>
 				<p>In the logo of vKirirom - you will find '<span style="color: orange;">v</span>' in orange and <span style="color: green;">'Kirirom'</span> in green. The orange colour represents the people who live in Kirirom. This is the colour of joy and creativity. It also reminds us  of the robes monks wear in Cambodia. The green represents the nature and its beauty.</p>
 			</div>					
-            <div class="col-md-12 fh5co-copyright text-center">
-                <p>&copy; 2018 Designed by <a href="http://kit.vkirirom.com/"> Kirirom Institute of Technology</a></p>
-            </div>
+			<div class="col-md-12 fh5co-copyright text-center">
+				<p>&copy; 2018 Designed by <a href="http://kit.vkirirom.com/" target="_blank"> Kirirom Institute of Technology</a></p>
+			</div>
 		</div>
 	</footer>
 	</div>		
@@ -307,6 +317,11 @@
 
 	<!-- MAIN JS -->
 	<script src="{{asset('frontend/js/main.js')}}"></script>
-
+	
+	<script>
+		function myFunction() {
+			document.getElementById("myBtn").disabled = false;
+		}
+	</script>
 	</body>
 </html>
