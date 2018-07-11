@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+<button id="myBtn" disabled="true">My Button</button>
+
+<p>Click the button below to disable the button above.</p>
+
+<!-- <button onclick="myFunction()">Try it</button> -->
+<select id="type1" onchange="myFunction()">
+	<option value="0">0</option>
+	<option value="1">1</option>
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+</select>
+<select id="type2" onchange="myFunction()">
+	<option value="0">0</option>
+	<option value="1">1</option>
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+</select>
+
+<script>
+function myFunction() {
+	//var room=1;
+	// var e = document.getElementById("room");
+	//var strUser = e.options[e.selectedIndex].value;
+
+	// console.log($('#type1').val())
+	// console.log($('#type2').val())
+	// console.log(e.value)
+
+	var type=parseInt($('#type1').val())+parseInt($('#type2').val());
+
+	console.log(type)
+
+	if(type>0)
+	{
+		$('#myBtn').attr('disabled',false)
+		//document.getElementById("myBtn").disabled = false;
+	}else{
+		$('#myBtn').attr('disabled',true)
+		//document.getElementById("myBtn").disabled = true;
+	}
+    // document.getElementById("myBtn").disabled = true;
+}
+
+</script>
+
+</body>
+</html>

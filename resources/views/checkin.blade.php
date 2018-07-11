@@ -1,14 +1,8 @@
-<!DOCTYPE HTML>
-<html lang="en" class="">
-<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="{{asset('frontend/css/checkin.css')}}" rel="stylesheet">
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
-</head>
-<body>
-@include('header.header')
     <div class="row">
         <div class="col-75">
             <div class="container">
@@ -120,6 +114,3 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="{{asset('frontend/js/script.js')}}"></script>
     <script type="text/javascript" src="{{asset('frontend/js/jquery.payform.min.js')}}"></script>
-@include('footer.footer')
-</body>
-</html>

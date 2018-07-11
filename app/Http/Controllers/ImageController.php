@@ -56,10 +56,10 @@ class ImageController extends Controller
         }else{
             $imagename = "default.png";
         }
-         $item = new Image();
-         $item->type_ID = $request->type_ID;
-         $item->image = $imagename;
-         $item->save();
+         $items = new Image();
+         $items ->type_ID = $request->type_ID;
+         $items ->image = $imagename;
+         $items ->save();
         return redirect()->route('image.index');
     }
 
@@ -110,14 +110,12 @@ class ImageController extends Controller
 
     public function index1()
     {
-        // $items = Image::all();
-        // return view('go', compact('items'));
-
         $items = DB::table('types')
+        ->select('types.id', 'types.name','rates.price', 'images.image', 'types.description', DB::raw('count(images.image) as total'))
         ->join('images', 'types.id', '=', 'images.type_ID')
         ->join('rates', 'images.type_ID', '=', 'rates.type_ID')
-        ->select('types.id', 'types.name','rates.price', 'images.image', 'types.description')
+        ->groupBy('rates.type_ID')
         ->get();
-    return view('go', compact('items'));
+    return view('welcome', compact('items'));
     }
 }

@@ -1,4 +1,3 @@
-@include('header.header')
 @foreach($items as $key=>$item)
 <div class="container">
 <div class="row">
@@ -21,4 +20,3 @@
 </div>
 </div>
 @endforeach
-@include('footer.footer')
