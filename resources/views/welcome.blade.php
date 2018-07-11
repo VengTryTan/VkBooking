@@ -183,7 +183,7 @@
 		</div>
 	</aside>
 	<!-- <button id="myBtn" disabled="true"> <a href="{{ route('checkin') }}">My Button </a></button> -->
-	<button id="myBtn" disabled="true">Button</button>
+	<button id="myBtn" disabled="true"><a href="{{ route('checkin') }}">Button</a></button>
 	<div id="best-deal">
 		<div class="container">
 			<div class="row">
