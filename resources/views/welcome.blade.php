@@ -185,8 +185,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
-					<h2>We are Offering fffff the Best Accommodations!</h2>
-					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+					<h2>We are Offering the Best Accommodations!</h2>
+					<p>Far far away, behinxd the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
 				</div>
 				@foreach($items as $key=>$item)
 				<div class="col-md-4 item-block animate-box" data-animate-effect="fadeIn">
