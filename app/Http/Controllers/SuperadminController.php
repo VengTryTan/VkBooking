@@ -44,9 +44,9 @@ class SuperadminController extends Controller
     {
          if($request->hasfile('filename'))
          {
-            // $file = $request->file('filename');
-            // $name=time().$file->getClientOriginalName();
-            // $file->move(public_path().'/images/', $name);
+            $file = $request->file('filename');
+            $name=time().$file->getClientOriginalName();
+            $file->move(public_path().'/images/', $name);
          }
     }
 
@@ -87,7 +87,7 @@ class SuperadminController extends Controller
         $img->type_ID = $request->get('type_ID');
         $img->image = $request->get('image');
         $img->save();
-        return view('superadmin')->with('success', 'Information has been added'); //link
+        return view('superadmin')->with('success', 'Information has been added'); 
     }
 
     /**

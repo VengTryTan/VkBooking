@@ -156,7 +156,7 @@
                     </div>
                   </div>
                   <div class="card-footer">
-                    <button class="btn btn-success float-right btn-sm"><a href="{{ action('SuperadminController@edit', $img->type_ID)}}"><!-- <i class="material-icons">edit</i> --> Edit</a></button>
+                    <button class="btn btn-success float-right btn-sm edit-btn"><a href="{{ action('SuperadminController@edit', $img->type_ID)}}"><!-- <i class="material-icons">edit</i> --> Edit</a></button>
                   </div>
               </div>
             </div>
