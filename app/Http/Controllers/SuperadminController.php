@@ -42,12 +42,12 @@ class SuperadminController extends Controller
      */
     public function store(Request $request)
     {
-         if($request->hasfile('filename'))
-         {
-            $file = $request->file('filename');
-            $name=time().$file->getClientOriginalName();
-            $file->move(public_path().'/images/', $name);
-         }
+         // if($request->hasfile('filename'))
+         // {
+         //    $file = $request->file('filename');
+         //    $name=time().$file->getClientOriginalName();
+         //    $file->move(public_path().'/images/', $name);
+         // }
     }
 
     /**
@@ -70,8 +70,7 @@ class SuperadminController extends Controller
     public function edit($type_ID)
     {
         $img = Image::find($type_ID);
-        return view('edit', compact('img', 'type_ID'));
-        // $images = Type::find($type_ID)->image;  
+        return view('edit', compact('img', 'type_ID')); 
     }
 
     /**
@@ -87,7 +86,7 @@ class SuperadminController extends Controller
         $img->type_ID = $request->get('type_ID');
         $img->image = $request->get('image');
         $img->save();
-        return view('superadmin')->with('success', 'Information has been added'); 
+        return redirect('superadmin')->with('success', 'Information has been added'); 
     }
 
     /**
