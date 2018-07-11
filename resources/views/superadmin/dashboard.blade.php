@@ -142,21 +142,21 @@
       <div class="content">
         <div class="container-fluid">
           <div class="row">
-          @foreach($types as $type)
+          @foreach($images as $img)
             <div class="col-md-4">
               <div class="card card-inverse card-info">
-                <img class="card-img-top" src="{{$type['img_Id']['image']}}">
+                <img class="card-img-top" src="{{asset('uploads/image/'.$img->image)}}">
                   <div class="card-block">
-                    <h4 class="card-title mt-3">{{$type['name']}}</h4>
+                    <h4 class="card-title mt-3">{{$img->name}}</h4>
                     <div class="meta card-text">
                       <a>Description</a>
                     </div>
                     <div class="card-text">
-                      {{$type['description']}} 
+                      {{$img->description}} 
                     </div>
                   </div>
                   <div class="card-footer">
-                    <button class="btn btn-info float-right btn-sm"><i class="material-icons">edit</i> Edit</button>
+                    <button class="btn btn-success float-right btn-sm edit-btn"><a href="{{ action('SuperadminController@edit', $img->type_ID)}}"><!-- <i class="material-icons">edit</i> --> Edit</a></button>
                   </div>
               </div>
             </div>

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Type;
+use App\Image;
+use DB;
 
 class SuperadminController extends Controller
 {
@@ -14,8 +16,12 @@ class SuperadminController extends Controller
      */
     public function index()
     {
-        $types = Type::all();
-        return view('superadmin/dashboard',compact('types'))->with(['types' => $types]);
+          $images = DB::table('images')
+        ->select('images.id', 'images.type_ID', 'images.image', 'types.id', 'types.name', 'types.description')
+        ->join('types', 'types.id', '=', 'images.type_ID')
+        ->get();
+    return view('superadmin/dashboard', compact('images'));
+    
     }
 
     /**
@@ -36,7 +42,12 @@ class SuperadminController extends Controller
      */
     public function store(Request $request)
     {
-        //
+         // if($request->hasfile('filename'))
+         // {
+         //    $file = $request->file('filename');
+         //    $name=time().$file->getClientOriginalName();
+         //    $file->move(public_path().'/images/', $name);
+         // }
     }
 
     /**
@@ -56,10 +67,10 @@ class SuperadminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($type_ID)
     {
-        $type = Type::find($id);
-        return view('edit', compact('type', 'id'));
+        $img = Image::find($type_ID);
+        return view('edit', compact('img', 'type_ID')); 
     }
 
     /**
@@ -69,9 +80,13 @@ class SuperadminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $type_ID)
     {
-        //
+        $img = Image::find($type_ID);
+        $img->type_ID = $request->get('type_ID');
+        $img->image = $request->get('image');
+        $img->save();
+        return redirect('superadmin')->with('success', 'Information has been added'); 
     }
 
     /**
