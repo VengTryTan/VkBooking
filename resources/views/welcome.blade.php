@@ -20,6 +20,8 @@
 	<link rel="stylesheet" href="{{asset('frontend/css/flexslider.css')}}">
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="{{asset('frontend/css/style.css')}}">
+	<!-- Date picker style -->
+	<link rel="stylesheet" href="{{asset('frontend/css/jquery-ui.css')}}">
 
 	<!-- Modernizr JS -->
 	<script src="{{asset('frontend/js/modernizr-2.6.2.min.js')}}"></script>
@@ -180,13 +182,22 @@
 			</ul>
 		</div>
 	</aside>
-	<button id="myBtn" disabled="false"> <a href="{{ route('checkin') }}">My Button </a></button>
+	<!-- <button id="myBtn" disabled="true"> <a href="{{ route('checkin') }}">My Button </a></button> -->
+	<button id="myBtn" disabled="true">Button</button>
 	<div id="best-deal">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
-					<h2>We are Offering fffff the Best Accommodations!</h2>
+					<h2>We are Offering the Best Accommodations!</h2>
 					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+				</div>
+				<div class="item-block animate-box col-md-6">
+					<div>Check In Date</div>
+					<input name="DateIn" type="text" id="datepicker" class="col-md-6 col-sm-12 col-lg-6"/>
+				</div>
+				<div class="item-block animate-box col-md-6">
+					<div>Check Out Date</div>
+					<input name="DateIn" type="text" id="datepicker2" class="col-md-6 col-sm-12 col-lg-6"/>
 				</div>
 				@foreach($items as $key=>$item)
 				<div class="col-md-4 item-block animate-box" data-animate-effect="fadeIn">
@@ -198,7 +209,7 @@
 						<div class="fh5co-property-innter">
 							<p>{{$item->name}}</p>
 							<div class="price-status">
-								<span class="price">${{$item->price}}<span class="per">/night
+								<span class="price">${{$item->price}}<span class="per">/night</span>
 								<select id="type" onchange="myFunction()">
 									<option value="0">0 Room</option>
 									<option value="1">1 Room</option>
@@ -316,12 +327,48 @@
 
 	<!-- MAIN JS -->
 	<script src="{{asset('frontend/js/main.js')}}"></script>
-	
+	<!-- Date Picker Function -->
+	<script src="{{asset('frontend/js/jquery-ui.js')}}"></script>
+
 	<script>
 		function myFunction() {
-			document.getElementById("myBtn").disabled = false;
+			// var type=
+			var e = document.getElementById("type");
+			var strUser = e.options[e.selectedIndex].value;
+			console.log(e.value)
+			if($('#type').val()>0)
+			{
+				$('#myBtn').attr('disabled',false)
+			}
+			else
+			{
+				$('#myBtn').attr('disabled',true)
+			}
+			// document.getElementById("myBtn").disabled = false;
 		}
 	</script>
+	<script>
+		$(function () {
+			$('#datepicker').datepicker({
+				dateFormat: "dd/MM/yy",
+				defaultDate: "+1w",
+				changeMonth: true,
+				numberOfMonths: 1,
+				onSelect: function (selectedDate) {
+					if (this.id == 'datepicker') {
+						var dateMin = $('#datepicker').datepicker("getDate");
+						var rMin = new Date(dateMin.getFullYear(), dateMin.getMonth(), dateMin.getDate() + 1);
+						var rMax = new Date(dateMin.getFullYear(), dateMin.getMonth(), dateMin.getDate() + 1);
+						$('#datepicker2').val($.datepicker.formatDate('dd/MM/yy', new Date(rMax)));
+					}
+				}
+			});
+		});
+	</script>
+	<script>
+		$( function() {
+			$( "#datepicker2" ).datepicker({dateFormat: "dd/MM/yy"});
+		});
+	</script>
 	</body>
-
 </html>
