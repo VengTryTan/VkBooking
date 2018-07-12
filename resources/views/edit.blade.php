@@ -13,6 +13,7 @@
     <h2>Edit A Form</h2><br  />
         <form method="POST" action="{{action('SuperadminController@update', $type_ID)}}" enctype="multipart/form-data">
         {{ @csrf_field() }}
+        @foreach($img as $key=>$image1)
         <input type="hidden" name="_method" value="PUT">
         <div>
         	<input type="hidden" value="{{csrf_token()}}" name="_token" />
@@ -27,7 +28,6 @@
           <div class="col-md-4"></div>
             <div class="form-group col-md-4">
               <label for="img">Image:</label><br>
-              @foreach($img as $key=>$image1)
               <img src="{{asset('uploads/image/'.$image1->image)}}" id="img" height="150" width="200" alt="img">
               <input type="file" class=" form-control user-photo-action" name="image" id="edit-pic" value="" placeholder="Edit Image">
               @endforeach

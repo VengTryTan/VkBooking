@@ -20,7 +20,7 @@ class SuperadminController extends Controller
         ->select('images.id', 'images.type_ID', 'images.image', 'types.id', 'types.name', 'types.description')
         ->join('types', 'types.id', '=', 'images.type_ID')
         ->get();
-    return view('superadmin/dashboard', compact('images'));
+    return view('superadmin/dashboard', compact('images', 'type_ID'));
     
     }
 
