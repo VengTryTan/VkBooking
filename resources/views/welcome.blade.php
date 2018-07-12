@@ -191,13 +191,18 @@
 					<h2>We are Offering the Best Accommodations!</h2>
 					<p>Far far away, behinxd the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
 				</div>
-				<div class="item-block animate-box col-md-6">
+				<div class="item-block animate-box col-md-5">
 					<div>Check In Date</div>
-					<input name="DateIn" type="text" id="datepicker" class="col-md-6 col-sm-12 col-lg-6"/>
+					<input name="
+					DateIn" type="text" id="datepicker" class="col-md-4 col-sm-12 col-lg-4"/>
 				</div>
-				<div class="item-block animate-box col-md-6">
+				<div class="item-block animate-box col-md-5">
 					<div>Check Out Date</div>
-					<input name="DateIn" type="text" id="datepicker2" class="col-md-6 col-sm-12 col-lg-6"/>
+					<input name="DateOut" type="text" id="datepicker2" class="col-md-4 col-sm-12 col-lg-4"/>
+				</div>
+				<div class="item-block animate-box col-md-2">
+				<div>Submit</div> 
+				<button id="myBtn1" disabled="true"><a href="{{ route('checkin') }}">Button</a></button>
 				</div>
 				@foreach($items as $key=>$item)
 				<div class="col-md-4 item-block animate-box" data-animate-effect="fadeIn">
@@ -348,6 +353,20 @@
 		}
 	</script>
 	<script>
+	$(document).ready(function(){
+    $("#DateIn").datepicker({
+        numberOfMonths: 2,
+        onSelect: function(selected) {
+          $("#DateOut").datepicker("option","minDate", selected)
+        }
+    });
+    $("#DateOut").datepicker({ 
+        numberOfMonths: 2,
+        onSelect: function(selected) {
+           $("#DateIn").datepicker("option","maxDate", selected)
+        }
+    });  
+});
 		$(function () {
 			$('#datepicker').datepicker({
 				dateFormat: "dd/MM/yy",
