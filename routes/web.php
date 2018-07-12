@@ -35,6 +35,9 @@ Route::resource('image', 'ImageController');
 Route::resource('superadmin', 'SuperadminController');
 Route::get('billing', 'BillingController@handle_billing');
 Route::get('rate', 'RateController@handle_rate');
+Route::get('rate/{type_ID}', function($type_ID){
+	echo "string";
+});
 
 /*
 Route::get('/search/{id}', 'RoomController@show')->name('search');
