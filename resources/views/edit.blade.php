@@ -27,8 +27,10 @@
           <div class="col-md-4"></div>
             <div class="form-group col-md-4">
               <label for="img">Image:</label><br>
-              <img src="{{asset('uploads/image/'.$img->image)}}" id="img" height="150" width="200" alt="img">
+              @foreach($img as $key=>$image1)
+              <img src="{{asset('uploads/image/'.$image1->image)}}" id="img" height="150" width="200" alt="img">
               <input type="file" class=" form-control user-photo-action" name="image" id="edit-pic" value="" placeholder="Edit Image">
+              @endforeach
             </div>
           </div>
         <div class="row">

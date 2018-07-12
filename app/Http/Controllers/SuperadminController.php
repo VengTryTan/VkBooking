@@ -70,7 +70,7 @@ class SuperadminController extends Controller
     public function edit($type_ID)
     {
         $img = Image::find($type_ID);
-        return view('edit', compact('img', 'type_ID')); 
+        return view('edit', compact('img')); 
     }
 
     /**
