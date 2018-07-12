@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="public/frontend/js/jquery-ui.js"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+	<link href="public/frontend/css/jquery-ui.css" rel="stylesheet">
 </head>
 <body>
 
@@ -24,16 +27,28 @@
 	<option value="3">3</option>
 	<option value="4">4</option>
 </select>
+<div class="column1">
+	<span>CHECK-IN</span>
+    <br />
+    <input name="DateIn" type="text" id="datepicker"/>
+</div>
+
+
+<div class="column2">
+	<span>CHECK-OUT</span>
+ 	<br/>
+    <input name="DateOut" type="text" id="datepicker2"/>
+</div>
 
 <script>
 function myFunction() {
 	//var room=1;
-	// var e = document.getElementById("room");
-	//var strUser = e.options[e.selectedIndex].value;
+	// var e = document.getElementById("type");
+	// var strUser = e.options[e.selectedIndex].value;
+	// console.log(e.value)
 
 	// console.log($('#type1').val())
 	// console.log($('#type2').val())
-	// console.log(e.value)
 
 	var type=parseInt($('#type1').val())+parseInt($('#type2').val());
 
@@ -49,8 +64,29 @@ function myFunction() {
 	}
     // document.getElementById("myBtn").disabled = true;
 }
-
 </script>
-
+<script>
+	$(function () {
+		$('#datepicker').datepicker({
+			defaultDate: "+1w",
+			changeMonth: true,
+			numberOfMonths: 1,
+			onSelect: function (selectedDate) {
+				if (this.id == 'datepicker') {
+					var dateMin = $('#datepicker').datepicker("getDate");
+					var rMin = new Date(dateMin.getFullYear(), dateMin.getMonth(), dateMin.getDate() + 1);
+					var rMax = new Date(dateMin.getFullYear(), dateMin.getMonth(), dateMin.getDate() + 1);
+					$('#datepicker2').val($.datepicker.formatDate('mm/dd/yy', new Date(rMax)));
+				}
+			}
+		});
+	});
+</script>
+<script>
+  	$( function() {
+    	$( "#datepicker2" ).datepicker({dateFormat: "mm/dd/yy"}
+    	);
+  	});
+</script>
 </body>
 </html>
