@@ -10,6 +10,10 @@
 	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
 	<!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,400italic,700' rel='stylesheet' type='text/css'> -->
 
+	<link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap-datetimepicker.css')}}">	
+	<link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap-datetimepicker.min.css')}}">
+	
+
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="{{asset('frontend/css/animate.css')}}">
 	<!-- Icomoon Icon Fonts-->
@@ -190,16 +194,49 @@
 							<h2>We are Offering the Best Accommodations!</h2>
 							<p>Far far away, behinxd the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
 						</div>
-						<div class="item-block animate-box col-md-5">
+						<!-- check in and check out part -->
+						<!-- <div class="item-block animate-box col-md-5">
 							<div>Check In Date</div>
-								<input name="DateIn" type="text" id="datepicker" class="col-md-4 col-sm-12 col-lg-4"/>
-							</div>
+								<input name="DateIn" type="text" id="datepicker-check-in" class="col-md-4 col-sm-12 col-lg-4"/>
+						</div> -->
+
 						<div class="item-block animate-box col-md-5">
+                            <label for="check-in-time" class="col-sm-3 col-form-label label-xl">
+                                Check In:
+                            </label>
+                            <div class="col-sm-9">
+                                <div class='input-group date' id='datetimepicker-check-in'>
+                                    <input id="check-in-time" type="text" class="form-control" value=""/>
+                                    <input id="checkin-time" type="hidden" name="checkin-date">
+                                        <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item-block animate-box col-md-5">
+                            <label for="check-out-time" class="col-sm-3 col-form-label label-xl">
+                                Check Out:
+                            </label>
+                            <div class="col-sm-9">
+                                <div class='input-group date' id='datetimepicker-check-out'>
+                                    <input type="text" id="check-out-time" class="form-control" value=""/>
+                                    <input id="checkout-time" type="hidden" name="checkout-date">
+                       
+                                    <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+						<!-- <div class="item-block animate-box col-md-5">
 							<div>Check Out Date</div>
-								<input name="DateOut" type="text" id="datepicker2" class="col-md-4 col-sm-12 col-lg-4"/>
+								<input name="DateOut" type="text" id="datepicker-check-out" class="col-md-4 col-sm-12 col-lg-4"/>
 								<span class="glyphicon glyphicon-envelope"></span>  
 							</div>
-						</div>
+						</div> -->
 						<div class="item-block animate-box col-md-2">
 							<div>Submit</div> 
 								<button id="myBtn1" disabled="true"><a href="{{ route('checkin') }}">Button</a></button>
@@ -419,6 +456,48 @@
 			$( function() {
 			$( "#datepicker2" ).datepicker({dateFormat: "dd/MM/yy"});
 			});
+			</script>
+			<script type="text/javascript" src="{{asset('js/moment.min.js')}}"></script>
+			<script type="text/javascript" src="{{asset('js/bootstrap-datetimepicker.min.js')}}"></script>
+
+			<script>
+				$(document).ready(function(){
+					var today = moment().add(1, 'days').format('L');
+					var d = moment().add(1, 'days').format('YYYY-MM-DD');
+					var tomorrow = moment().add(2, 'days').format('YYYY-MM-DD');
+					console.log(today);
+					console.log('*********');
+
+					$('#datetimepicker-check-in').datetimepicker({
+						minDate: today,
+						defaultDate: today,
+						format: 'L',
+						showClear: true,
+						widgetPositioning:{
+							horizontal: 'auto',
+							vertical: 'bottom'
+						}
+					});
+
+					$('#datetimepicker-check-out').datetimepicker({
+						minDate: tomorrow,
+						defaultDate: tomorrow,
+						format: 'L',
+						showClear: true,
+						widgetPositioning:{
+							horizontal: 'auto',
+							vertical: 'bottom'
+						}
+					});
+
+					$('#datetimepicker-check-in').on("dp.change", function(e){
+						var next_day = moment(e.date).add(1, 'days');
+						$('#datetimepicker-check-out').data("DateTimePicker").minDate(next_day);
+						$('#datetimepicker-check-out').data("DateTimePicker").defaultDate(next_day);
+						console.log('---------');
+						console.log(e.date);
+					});
+				});
 			</script>
 		</body>
 	</html>
