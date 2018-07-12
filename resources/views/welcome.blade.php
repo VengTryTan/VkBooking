@@ -377,7 +377,7 @@
 					if (this.id == 'datepicker') {
 						var dateMin = $('#datepicker').datepicker("getDate");
 						var rMin = new Date(dateMin.getFullYear(), dateMin.getMonth(), dateMin.getDate() + 1);
-						var rMax = new Date(dateMin.getFullYear(), dateMin.getMonth(), dateMin.getDate() + 1);
+						var rMax = new Date(dateMin.getFullYear(), dateMin.getMonth(), dateMin.getDate() + 2);
 						$('#datepicker2').val($.datepicker.formatDate('dd/MM/yy', new Date(rMax)));
 					}
 				}
