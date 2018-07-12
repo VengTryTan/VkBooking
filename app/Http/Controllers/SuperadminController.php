@@ -83,8 +83,14 @@ class SuperadminController extends Controller
     public function update(Request $request, $type_ID)
     {
         $img = Image::find($type_ID);
-        $img->type_ID = $request->get('type_ID');
         $img->image = $request->get('image');
+        if($request->hasFile('image'))
+        {
+            $image = $request->image;
+            $image_new_name = time().$image->getClientOriginalName();
+            $image->move('uploads/image', $image_new_name);
+            $img->image = 'uploads/image/'.$image_new_name;
+        }
         $img->save();
         return redirect('superadmin')->with('success', 'Information has been added'); 
     }
