@@ -33,7 +33,6 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
-
 	</head>
 		<body>
 			<div id="fh5co-page">
@@ -55,7 +54,7 @@
 				</div>
 			</header>
 
-			<aside id="fh5co-hero" clsas="js-fullheight">
+			 <aside id="fh5co-hero" clsas="js-fullheight">
 				<div class="flexslider js-fullheight">
 					<ul class="slides">
 						<li style="background-image: url(frontend/images/bungalow.jpg);">
@@ -64,7 +63,7 @@
 									<div class="fh5co-property-brief-inner">
 										<div class="fh5co-box">
 
-											<h3>Bungalow</h3>
+											 <h3>Bungalow</h3>
 											<div class="price-status">
 												<span class="price">$131.8<span class="per">/night</span> <a href="#" class="tag">Available</a></span>
 											</div>
@@ -151,7 +150,7 @@
 									</div>
 								</div>
 							</div>
-						</li>
+						</li> 
 						<li style="background-image: url(frontend/images/TypeV-7.jpg);">
 							<div class="container">
 								<div class="col-md-12 text-center js-fullheight fh5co-property-brief slider-text">
@@ -185,7 +184,7 @@
 						</li>		   	
 					</ul>
 				</div>
-			</aside>
+			</aside> 
 			<!-- <button id="myBtn" disabled="true"> <a href="{{ route('checkin') }}">My Button </a></button> -->
 			<div id="best-deal">
 				<div class="container">
@@ -209,7 +208,7 @@
                                     <input id="check-in-time" type="text" class="form-control" value=""/>
                                     <input id="checkin-time" type="hidden" name="checkin-date">
                                         <span class="input-group-addon">
-                                        <span class="glyphicon glyphicon-calendar"></span>
+										<span class="fa fa-calendar" style="font-size:29px;"></span>
                                         </span>
                                 </div>
                             </div>
@@ -225,24 +224,18 @@
                                     <input id="checkout-time" type="hidden" name="checkout-date">
                        
                                     <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-calendar"></span>
-                                    </span>
+                                    <span class="fa fa-calendar" style="font-size:29px;"></span>
+									</span>
                                 </div>
                             </div>
                         </div>
-
-						<!-- <div class="item-block animate-box col-md-5">
-							<div>Check Out Date</div>
-								<input name="DateOut" type="text" id="datepicker-check-out" class="col-md-4 col-sm-12 col-lg-4"/>
-								<span class="glyphicon glyphicon-envelope"></span>  
-							</div>
-						</div> -->
+						</div> 
 						<div class="item-block animate-box col-md-2">
 							<div>Submit</div> 
 								<button id="myBtn1" disabled="true"><a href="{{ route('checkin') }}">Button</a></button>
 							</div> 
-						</div>
-						@foreach($items as $key=>$item)
+						</div> 
+						 @foreach($items as $key=>$item)
 						<div class="col-md-4 item-block animate-box" data-animate-effect="fadeIn">
 							<div class="fh5co-property">
 								<figure>
@@ -262,7 +255,7 @@
 										</select>
 										</span>
 									</div>
-									<p>{{$item->description}}</p>
+									<p>{{$item->description}}</p> 
 
 								</div>
 								<p class="fh5co-property-specification">
@@ -462,9 +455,9 @@
 
 			<script>
 				$(document).ready(function(){
-					var today = moment().add(1, 'days').format('L');
-					var d = moment().add(1, 'days').format('YYYY-MM-DD');
-					var tomorrow = moment().add(2, 'days').format('YYYY-MM-DD');
+					var today = moment().add(0, 'days').format('L');
+					var d = moment().add(0, 'days').format('YYYY-MM-DD');
+					var tomorrow = moment().add(1, 'days').format('YYYY-MM-DD');
 					console.log(today);
 					console.log('*********');
 
@@ -477,6 +470,7 @@
 							horizontal: 'auto',
 							vertical: 'bottom'
 						}
+						
 					});
 
 					$('#datetimepicker-check-out').datetimepicker({
