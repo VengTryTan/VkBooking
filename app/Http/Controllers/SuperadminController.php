@@ -16,9 +16,10 @@ class SuperadminController extends Controller
      */
     public function index()
     {
-          $images = DB::table('images')
+        $images = DB::table('images')
         ->select('images.id', 'images.type_ID', 'images.image', 'types.id', 'types.name', 'types.description')
         ->join('types', 'types.id', '=', 'images.type_ID')
+        ->groupBy('types.id')
         ->get();
     return view('superadmin/dashboard', compact('images', 'type_ID'));
     
@@ -83,8 +84,14 @@ class SuperadminController extends Controller
     public function update(Request $request, $type_ID)
     {
         $img = Image::find($type_ID);
-        $img->type_ID = $request->get('type_ID');
         $img->image = $request->get('image');
+        if($request->hasFile('image'))
+        {
+            $image = $request->image;
+            $image_new_name = time().$image->getClientOriginalName();
+            $image->move('uploads/image', $image_new_name);
+            $img->image = 'uploads/image/'.$image_new_name;
+        }
         $img->save();
         return redirect('superadmin')->with('success', 'Information has been added'); 
     }

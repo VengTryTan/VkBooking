@@ -54,7 +54,7 @@
 				</div>
 			</header>
 
-			 <aside id="fh5co-hero" clsas="js-fullheight">
+			 <!-- <aside id="fh5co-hero" clsas="js-fullheight">
 				<div class="flexslider js-fullheight">
 					<ul class="slides">
 						<li style="background-image: url(frontend/images/bungalow.jpg);">
@@ -184,7 +184,9 @@
 						</li>		   	
 					</ul>
 				</div>
-			</aside> 
+			</aside>  -->
+            <div class="fh5co-section-with-image">		
+			<img src="{{asset('frontend/images/security.png')}}" alt="" class="img-responsive">
 			<div id="best-deal">
 				<div class="container">
 					<div class="row">
@@ -198,11 +200,15 @@
 								<input name="DateIn" type="text" id="datepicker-check-in" class="col-md-4 col-sm-12 col-lg-4"/>
 						</div> -->
 
-						<div class="form-group row no-margin">
-                            <label for="check-in-time" class="col-sm-3 col-form-label label-xl">
+						<div class="item-block animate-box col-md-12">
+                        <div class="fh5co-box animate-box">
+					<h2>Security, Comfort, &amp; Convenience</h2>
+					<p>We provide you a good service and make sure you have satified with our resort.</p>
+				    </div>
+                            <label for="check-in-time" class="col-sm-5 col-form-label label-xl">
                                 Check In:
                             </label>
-                            <div class="col-sm-9">
+                            <div class="col-sm-5">
                                 <div class='input-group date' id='datetimepicker-check-in'>
                                     <input id="check-in-time" type="text" class="form-control" value=""/>
                                     <input id="checkin-time" type="hidden" name="checkin-date">
@@ -212,16 +218,11 @@
                                 </div>
                             </div>
                         </div>
-<<<<<<< HEAD
-                        <div class="item-block animate-box col-md-5">
-=======
-
-                        <div class="form-group row no-margin">
->>>>>>> 4900df3ba29757f9df39c0d69ce31f1245bcb08f
-                            <label for="check-out-time" class="col-sm-3 col-form-label label-xl">
+                        <div class="item-block animate-box col-md-12">
+                            <label for="check-out-time" class="col-sm-5 col-form-label label-xl">
                                 Check Out:
                             </label>
-                            <div class="col-sm-9">
+                            <div class="col-sm-5">
                                 <div class='input-group date' id='datetimepicker-check-out'>
                                     <input type="text" id="check-out-time" class="form-control" value=""/>
                                     <input id="checkout-time" type="hidden" name="checkout-date">
@@ -231,14 +232,16 @@
 									</span>
                                 </div>
                             </div>
-                        </div>
-
-						<div class="item-block animate-box col-md-2">
+                            <div class="item-block animate-box col-md-2">
 							<div>Submit</div> 
 								<button id="myBtn1" disabled="true"><a href="{{ route('checkin') }}">Button</a></button>
 							</div> 
 						</div> 
-						 @foreach($items as $key=>$item)
+                        </div>
+						</div> 
+                        </div>
+						
+						 <!-- @foreach($items as $key=>$item)
 						<div class="col-md-4 item-block animate-box" data-animate-effect="fadeIn">
 							<div class="fh5co-property">
 								<figure>
@@ -266,7 +269,7 @@
 								</p>
 							</div>					
 						</div>
-						@endforeach
+						@endforeach -->
 					</div>
 				</div>
 			</div>
@@ -328,9 +331,9 @@
 						</div>
 					</div>
 				</div>	
-			</div> -->
+			</div>
 
-			<!-- <footer id="fh5co-footer" role="contentinfo">	
+			<footer id="fh5co-footer" role="contentinfo">	
 				<div class="container">
 					<div class="col-md-4 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
 						<h3>About vKirirom</h3>
@@ -351,7 +354,7 @@
 						<p>&copy; 2018 Designed by <a href="http://kit.vkirirom.com/" target="_blank"> Kirirom Institute of Technology</a></p>
 					</div>
 				</div>
-			</footer> -->
+			</footer>
 			</div>		
 			<!-- jQuery -->
 			<script src="{{asset('frontend/js/jquery.min.js')}}"></script>
@@ -370,37 +373,37 @@
 			<script src="{{asset('frontend/js/jquery-ui.js')}}"></script>
 
 			<script>
-				function myFunction() {
-				// var type=
-					var e = document.getElementById("type");
-					var strUser = e.options[e.selectedIndex].value;
-					console.log(e.value)
-					if($('#type').val()>0)
-					{
-						$('#myBtn').attr('disabled',false)
-					}
-					else
-					{
-						$('#myBtn').attr('disabled',true)
-					}
-					// document.getElementById("myBtn").disabled = false;
-				}
+			function myFunction() {
+			// var type=
+			var e = document.getElementById("type");
+			var strUser = e.options[e.selectedIndex].value;
+			console.log(e.value)
+			if($('#type').val()>0)
+			{
+			$('#myBtn').attr('disabled',false)
+			}
+			else
+			{
+			$('#myBtn').attr('disabled',true)
+			}
+			// document.getElementById("myBtn").disabled = false;
+			}
 			</script>
 			<script>
 				$(document).ready(function(){
-					$("#DateIn").datepicker({
-						numberOfMonths: 2,
-						onSelect: function(selected) {
-						$("#DateOut").datepicker("option","minDate", selected)
-						}
-					});
-					$("#DateOut").datepicker({ 
-						numberOfMonths: 2,
-						onSelect: function(selected) {
-						$("#DateIn").datepicker("option","maxDate", selected)
-						}
-					});  
+				$("#DateIn").datepicker({
+					numberOfMonths: 2,
+					onSelect: function(selected) {
+					$("#DateOut").datepicker("option","minDate", selected)
+					}
 				});
+				$("#DateOut").datepicker({ 
+					numberOfMonths: 2,
+					onSelect: function(selected) {
+					$("#DateIn").datepicker("option","maxDate", selected)
+					}
+				});  
+			});
 				$(function () {
 					$('#datepicker').datepicker({
 						dateFormat: "dd/MM/yy",
@@ -418,29 +421,44 @@
 					});
 				});
 				$(document).ready(function(){
-					$("#DateIn").datepicker({
-						numberOfMonths: 2,
-						onSelect: function(selected) {
-						$("#DateOut").datepicker("option","minDate", selected)
-						}
-					});
-					$("#DateOut").datepicker({ 
-						numberOfMonths: 2,
-						onSelect: function(selected) {
-						$("#DateIn").datepicker("option","maxDate", selected)
-						}
-					});  
+				$("#DateIn").datepicker({
+					numberOfMonths: 2,
+					onSelect: function(selected) {
+					$("#DateOut").datepicker("option","minDate", selected)
+					}
 				});
+				$("#DateOut").datepicker({ 
+					numberOfMonths: 2,
+					onSelect: function(selected) {
+					$("#DateIn").datepicker("option","maxDate", selected)
+					}
+				});  
+			});
+			// $(function () {
+			// $('#datepicker').datepicker({
+			// dateFormat: "dd/MM/yy",
+			// defaultDate: "+1w",
+			// changeMonth: true,
+			// numberOfMonths: 1,
+			// onSelect: function (selectedDate) {
+			// if (this.id == 'datepicker') {
+			// var dateMin = $('#datepicker').datepicker("getDate");
+			// var rMin = new Date(dateMin.getFullYear(), dateMin.getMonth(), dateMin.getDate() + 1);
+			// var rMax = new Date(dateMin.getFullYear(), dateMin.getMonth(), dateMin.getDate() + 1);
+			// $('#datepicker2').val($.datepicker.formatDate('dd/MM/yy', new Date(rMax)));
+			// }
+			// }
+			// });
+			// });
 			</script>
 			<script>
-				$( function() {
-					$( "#datepicker2" ).datepicker({dateFormat: "dd/MM/yy"});
-				});
+			$( function() {
+			$( "#datepicker2" ).datepicker({dateFormat: "dd/MM/yy"});
+			});
 			</script>
 			<script type="text/javascript" src="{{asset('js/moment.min.js')}}"></script>
 			<script type="text/javascript" src="{{asset('js/bootstrap-datetimepicker.min.js')}}"></script>
 
-			<!-- Check In Check out implement -->
 			<script>
 				$(document).ready(function(){
 					var today = moment().add(0, 'days').format('L');
@@ -478,20 +496,6 @@
 						$('#datetimepicker-check-out').data("DateTimePicker").defaultDate(next_day);
 						console.log('---------');
 						console.log(e.date);
-						date_checkin = moment(e.date).format("YYYY-MM-DD");
-						date_checkout = moment(e.date).add(1, 'days').format("YYYY-MM-DD");	
-						console.log('+++++++++++++');
-						console.log(date_checkin);
-						console.log(date_checkout);
-						d = moment(e.date).format("YYYY-MM-DD");
-						$('#checkin-time').val(date_checkin);	
-						$('#checkinout-time').val(date_checkout);
-					});
-
-					$('#datetimepicker-check-out').on("dp.change", function(e){
-						$('#checkinout-time').val(moment(e.date).format("YYYY-MM-DD"));
-						console.log('------------------')
-						console.log(moment(e.date).format('L'));
 					});
 				});
 			</script>

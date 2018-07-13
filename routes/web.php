@@ -16,6 +16,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/','ImageController@index1');
+Route::get('/testing','ImageController@index2');
 
 Route::post('/type','TypeController@type')->name('type');
 Route::resource('item', 'ImageController');
@@ -35,6 +36,9 @@ Route::resource('image', 'ImageController');
 Route::resource('superadmin', 'SuperadminController');
 Route::get('billing', 'BillingController@handle_billing');
 Route::get('rate', 'RateController@handle_rate');
+Route::get('rate/{type_ID}', function($type_ID){
+	echo "string";
+});
 
 /*
 Route::get('/search/{id}', 'RoomController@show')->name('search');
