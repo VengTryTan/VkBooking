@@ -16,9 +16,10 @@ class SuperadminController extends Controller
      */
     public function index()
     {
-          $images = DB::table('images')
+        $images = DB::table('images')
         ->select('images.id', 'images.type_ID', 'images.image', 'types.id', 'types.name', 'types.description')
         ->join('types', 'types.id', '=', 'images.type_ID')
+        ->groupBy('types.id')
         ->get();
     return view('superadmin/dashboard', compact('images', 'type_ID'));
     
