@@ -200,13 +200,13 @@
 								<input name="DateIn" type="text" id="datepicker-check-in" class="col-md-4 col-sm-12 col-lg-4"/>
 						</div> -->
 
-						<div class="item-block animate-box col-md-5">
+						<div class="form-group row no-margin">
                             <label for="check-in-time" class="col-sm-3 col-form-label label-xl">
                                 Check In:
                             </label>
                             <div class="col-sm-9">
                                 <div class='input-group date' id='datetimepicker-check-in'>
-                                    <input id="check-in-time" type="text" class="col-md-4 col-sm-12 col-lg-4" value=""/>
+                                    <input id="check-in-time" type="text" class="form-control" value=""/>
                                     <input id="checkin-time" type="hidden" name="checkin-date">
                                         <span class="input-group-addon">
                                         <span class="glyphicon glyphicon-calendar"></span>
@@ -215,7 +215,7 @@
                             </div>
                         </div>
 
-                        <div class="item-block animate-box col-md-5">
+                        <div class="form-group row no-margin">
                             <label for="check-out-time" class="col-sm-3 col-form-label label-xl">
                                 Check Out:
                             </label>
@@ -237,7 +237,7 @@
 								<span class="glyphicon glyphicon-envelope"></span>  
 							</div>
 						</div> -->
-						<div class="item-block animate-box col-md-2">
+						<!-- <div class="item-block animate-box col-md-2">
 							<div>Submit</div> 
 								<button id="myBtn1" disabled="true"><a href="{{ route('checkin') }}">Button</a></button>
 							</div> 
@@ -332,9 +332,9 @@
 						</div>
 					</div>
 				</div>	
-			</div>
+			</div> -->
 
-			<footer id="fh5co-footer" role="contentinfo">	
+			<!-- <footer id="fh5co-footer" role="contentinfo">	
 				<div class="container">
 					<div class="col-md-4 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
 						<h3>About vKirirom</h3>
@@ -355,7 +355,7 @@
 						<p>&copy; 2018 Designed by <a href="http://kit.vkirirom.com/" target="_blank"> Kirirom Institute of Technology</a></p>
 					</div>
 				</div>
-			</footer>
+			</footer> -->
 			</div>		
 			<!-- jQuery -->
 			<script src="{{asset('frontend/js/jquery.min.js')}}"></script>
@@ -460,6 +460,7 @@
 			<script type="text/javascript" src="{{asset('js/moment.min.js')}}"></script>
 			<script type="text/javascript" src="{{asset('js/bootstrap-datetimepicker.min.js')}}"></script>
 
+			<!-- Check In Check out implement -->
 			<script>
 				$(document).ready(function(){
 					var today = moment().add(0, 'days').format('L');
@@ -496,6 +497,20 @@
 						$('#datetimepicker-check-out').data("DateTimePicker").defaultDate(next_day);
 						console.log('---------');
 						console.log(e.date);
+						date_checkin = moment(e.date).format("YYYY-MM-DD");
+						date_checkout = moment(e.date).add(1, 'days').format("YYYY-MM-DD");	
+						console.log('+++++++++++++');
+						console.log(date_checkin);
+						console.log(date_checkout);
+						d = moment(e.date).format("YYYY-MM-DD");
+						$('#checkin-time').val(date_checkin);	
+						$('#checkinout-time').val(date_checkout);
+					});
+
+					$('#datetimepicker-check-out').on("dp.change", function(e){
+						$('#checkinout-time').val(moment(e.date).format("YYYY-MM-DD"));
+						console.log('------------------')
+						console.log(moment(e.date).format('L'));
 					});
 				});
 			</script>
