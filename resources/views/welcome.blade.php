@@ -206,7 +206,7 @@
                             </label>
                             <div class="col-sm-9">
                                 <div class='input-group date' id='datetimepicker-check-in'>
-                                    <input id="check-in-time" type="text" class="form-control" value=""/>
+                                    <input id="check-in-time" type="text" class="col-md-4 col-sm-12 col-lg-4" value=""/>
                                     <input id="checkin-time" type="hidden" name="checkin-date">
                                         <span class="input-group-addon">
                                         <span class="glyphicon glyphicon-calendar"></span>
@@ -462,9 +462,9 @@
 
 			<script>
 				$(document).ready(function(){
-					var today = moment().add(1, 'days').format('L');
-					var d = moment().add(1, 'days').format('YYYY-MM-DD');
-					var tomorrow = moment().add(2, 'days').format('YYYY-MM-DD');
+					var today = moment().add(0, 'days').format('L');
+					var d = moment().add(0, 'days').format('YYYY-MM-DD');
+					var tomorrow = moment().add(1, 'days').format('YYYY-MM-DD');
 					console.log(today);
 					console.log('*********');
 
