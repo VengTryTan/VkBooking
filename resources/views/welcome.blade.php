@@ -337,37 +337,37 @@
 			<script src="{{asset('frontend/js/jquery-ui.js')}}"></script>
 
 			<script>
-			function myFunction() {
-			// var type=
-			var e = document.getElementById("type");
-			var strUser = e.options[e.selectedIndex].value;
-			console.log(e.value)
-			if($('#type').val()>0)
-			{
-			$('#myBtn').attr('disabled',false)
-			}
-			else
-			{
-			$('#myBtn').attr('disabled',true)
-			}
-			// document.getElementById("myBtn").disabled = false;
-			}
+				function myFunction() {
+				// var type=
+					var e = document.getElementById("type");
+					var strUser = e.options[e.selectedIndex].value;
+					console.log(e.value)
+					if($('#type').val()>0)
+					{
+						$('#myBtn').attr('disabled',false)
+					}
+					else
+					{
+						$('#myBtn').attr('disabled',true)
+					}
+					// document.getElementById("myBtn").disabled = false;
+				}
 			</script>
 			<script>
 				$(document).ready(function(){
-				$("#DateIn").datepicker({
-					numberOfMonths: 2,
-					onSelect: function(selected) {
-					$("#DateOut").datepicker("option","minDate", selected)
-					}
+					$("#DateIn").datepicker({
+						numberOfMonths: 2,
+						onSelect: function(selected) {
+						$("#DateOut").datepicker("option","minDate", selected)
+						}
+					});
+					$("#DateOut").datepicker({ 
+						numberOfMonths: 2,
+						onSelect: function(selected) {
+						$("#DateIn").datepicker("option","maxDate", selected)
+						}
+					});  
 				});
-				$("#DateOut").datepicker({ 
-					numberOfMonths: 2,
-					onSelect: function(selected) {
-					$("#DateIn").datepicker("option","maxDate", selected)
-					}
-				});  
-			});
 				$(function () {
 					$('#datepicker').datepicker({
 						dateFormat: "dd/MM/yy",
@@ -385,40 +385,24 @@
 					});
 				});
 				$(document).ready(function(){
-				$("#DateIn").datepicker({
-					numberOfMonths: 2,
-					onSelect: function(selected) {
-					$("#DateOut").datepicker("option","minDate", selected)
-					}
+					$("#DateIn").datepicker({
+						numberOfMonths: 2,
+						onSelect: function(selected) {
+						$("#DateOut").datepicker("option","minDate", selected)
+						}
+					});
+					$("#DateOut").datepicker({ 
+						numberOfMonths: 2,
+						onSelect: function(selected) {
+						$("#DateIn").datepicker("option","maxDate", selected)
+						}
+					});  
 				});
-				$("#DateOut").datepicker({ 
-					numberOfMonths: 2,
-					onSelect: function(selected) {
-					$("#DateIn").datepicker("option","maxDate", selected)
-					}
-				});  
-			});
-			// $(function () {
-			// $('#datepicker').datepicker({
-			// dateFormat: "dd/MM/yy",
-			// defaultDate: "+1w",
-			// changeMonth: true,
-			// numberOfMonths: 1,
-			// onSelect: function (selectedDate) {
-			// if (this.id == 'datepicker') {
-			// var dateMin = $('#datepicker').datepicker("getDate");
-			// var rMin = new Date(dateMin.getFullYear(), dateMin.getMonth(), dateMin.getDate() + 1);
-			// var rMax = new Date(dateMin.getFullYear(), dateMin.getMonth(), dateMin.getDate() + 1);
-			// $('#datepicker2').val($.datepicker.formatDate('dd/MM/yy', new Date(rMax)));
-			// }
-			// }
-			// });
-			// });
 			</script>
 			<script>
-			$( function() {
-			$( "#datepicker2" ).datepicker({dateFormat: "dd/MM/yy"});
-			});
+				$( function() {
+					$( "#datepicker2" ).datepicker({dateFormat: "dd/MM/yy"});
+				});
 			</script>
 		</body>
 	</html>
