@@ -816,6 +816,34 @@ h1, h2, h3, h4, h5, h6, figure {
 			padding: 15px;
 		}
 	}
+	.fh5co-boxes {
+		padding: 50px;
+		background: rgba(255,255,255,.9);
+		position: absolute;
+		z-index: 1001;
+		width: 90%;
+		right: 10%;
+		top: 50%;
+		-webkit-box-shadow: 4px 11px 35px -14px rgba(0,0,0,.5);
+		-moz-box-shadow: 4px 11px 35px -14px rgba(0,0,0,.5);
+		-ms-box-shadow: 4px 11px 35px -14px rgba(0,0,0,.5);
+		-o-box-shadow: 4px 11px 35px -14px rgba(0,0,0,.5);
+		box-shadow: 4px 11px 35px -14px rgba(0,0,0,.5);
+		@media screen and (max-width: $screen-md) {
+			position: relative;
+			right: auto;
+			bottom: auto;
+			width: 100%;
+			margin-top: auto!important;
+		}
+		@media screen and (max-width: $screen-xs) {
+			position: relative;
+			right: auto;
+			bottom: auto;
+			width: 100%;
+			padding: 15px;
+		}
+	}
 	h2 {
 		font-size: 50px;
 		margin-bottom: 20px;
