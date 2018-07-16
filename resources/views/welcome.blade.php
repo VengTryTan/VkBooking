@@ -212,12 +212,10 @@
                                 </div>
                             </div>
                         </div>
-<<<<<<< HEAD
-                        <div class="item-block animate-box col-md-5">
-=======
+
+                        <!-- <div class="item-block animate-box col-md-5"> -->
 
                         <div class="form-group row no-margin">
->>>>>>> 4900df3ba29757f9df39c0d69ce31f1245bcb08f
                             <label for="check-out-time" class="col-sm-3 col-form-label label-xl">
                                 Check Out:
                             </label>
@@ -328,7 +326,7 @@
 						</div>
 					</div>
 				</div>	
-			</div> -->
+			</div>
 
 			<!-- <footer id="fh5co-footer" role="contentinfo">	
 				<div class="container">
