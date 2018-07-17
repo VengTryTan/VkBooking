@@ -208,7 +208,7 @@
 
 
         <div class="fh5co-section-with-image">
-            <img src="{{asset('frontend/images/security.png')}}" alt="" class="img-responsive">
+            <img src="{{asset('frontend/images/resort.jpg')}}" alt="" class="img-responsive">
             <div id="best-deal">
                 <div class="text-block">
                     <div class="container">
@@ -221,10 +221,10 @@
                                 </div>
                             
                             <div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box">
-                                <label for="check-in-time" class="col-sm-6 col-form-label label-xl">
+                                <label for="check-in-time" class="col-sm-3 col-form-label label-xl">
                                     Check In:
                                 </label>
-                                <div class="col-sm-6">
+                                <div class="col-sm-9">
                                     <div class='input-group date' id='datetimepicker-check-in'>
                                         <input id="check-in-time" type="text" class="form-control" value="" />
                                         <input id="checkin-time" type="hidden" name="checkin-date">
@@ -233,10 +233,10 @@
                                         </span>
                                     </div>
                                 </div>
-                                <label for="check-out-time" class="col-sm-6 col-form-label label-xl">
+                                <label for="check-out-time" class="col-sm-3 col-form-label label-xl">
                                     Check Out:
                                 </label>
-                                <div class="col-sm-6">
+                                <div class="col-sm-9">
                                     <div class='input-group date' id='datetimepicker-check-out'>
                                         <input type="text" id="check-out-time" class="form-control" value="" />
                                         <input id="checkout-time" type="hidden" name="checkout-date">
@@ -302,7 +302,7 @@
                 </div>
 
                 <div class="fh5co-section-with-image">
-                    <img src="{{asset('frontend/images/security.png')}}" alt="" class="img-responsive">
+                    <img src="{{asset('frontend/images/resort.jpg')}}" alt="" class="img-responsive">
                     <div class="fh5co-box animate-box">
                         <h2>Security, Comfort, &amp; Convenience</h2>
                         <p>We provide you a good service and make sure you have satified with our resort.</p>
