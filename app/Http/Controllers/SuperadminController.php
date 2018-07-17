@@ -68,10 +68,17 @@ class SuperadminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($type_ID)
+    public function edit(Request $request, $id)
     {
-        $img = Image::find($type_ID);
+        
+        $img = DB::table('images')
+        ->select('images.id', 'images.image', 'images.type_ID', 'types.id', 'types.name', 'types.description')
+        ->join('types', 'types.id', '=', 'images.type_ID')
+        ->where('images.type_ID', '=', $id)
+        ->first();
+
         return view('edit', compact('img')); 
+
     }
 
     /**
@@ -81,19 +88,23 @@ class SuperadminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $type_ID)
+    public function update(Request $request, $id)
     {
-        $img = Image::find($type_ID);
+        $img = DB::table('images')
+        ->select('images.id', 'images.image', 'images.type_ID', 'types.id', 'types.name', 'types.description')
+        ->join('types', 'types.id', '=', 'images.type_ID')
+        ->where('images.type_ID', '=', $id)
+        ->first();
         $img->image = $request->get('image');
-        if($request->hasFile('image'))
-        {
+        $img->description = $request->get('description');
+        if($request->hasFile('image')){
             $image = $request->image;
             $image_new_name = time().$image->getClientOriginalName();
             $image->move('uploads/image', $image_new_name);
             $img->image = 'uploads/image/'.$image_new_name;
         }
-        $img->save();
-        return redirect('superadmin')->with('success', 'Information has been added'); 
+        // $img->save();
+    return redirect('superadmin')->with('success', 'Information has been added'); 
     }
 
     /**
