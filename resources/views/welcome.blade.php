@@ -274,6 +274,33 @@
 					</div>
 					<div class="item-block animate-box col-md-5">
 						<div class="form-group row no-margin">
+                            <label for="check-in-time" class="col-sm-3 col-form-label label-xl">
+                                Check In:
+                            </label>
+                            <div class="col-sm-9">
+                                <div class='input-group date' id='datetimepicker-check-in'>
+                                    <input id="check-in-time" type="text" class="form-control" value=""/>
+                                    <input id="checkin-time" type="hidden" name="checkin-date">
+                                        <span class="input-group-addon">
+										<span class="fa fa-calendar" style="font-size:29px;"></span>
+                                        </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <div class="item-block animate-box col-md-5"> -->
+
+                        <div class="form-group row no-margin">
+                            <label for="check-out-time" class="col-sm-3 col-form-label label-xl">
+                                Check Out:
+                            </label>
+                            <div class="col-sm-9">
+                                <div class='input-group date' id='datetimepicker-check-out'>
+                                    <input type="text" id="check-out-time" class="form-control" value=""/>
+                                    <input id="checkout-time" type="hidden" name="checkout-date">
+                       
+                                    <span class="input-group-addon">
+                                    <span class="fa fa-calendar" style="font-size:29px;"></span>
 							<label for="check-out-time" class="col-sm-3 col-form-label label-xl">
 								Check Out:
 							</label>
@@ -402,7 +429,8 @@
 					</div>
 				</div>
 			</div>
-		</div> -->
+		</div>
+
 
 		<!-- <footer id="fh5co-footer" role="contentinfo">	
 				<div class="container">
