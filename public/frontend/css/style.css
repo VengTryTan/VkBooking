@@ -733,13 +733,12 @@ h1, h2, h3, h4, h5, h6, figure {
   position: relative;
 }
 .fh5co-section-with-image .fh5co-box {
-  padding: 50px;
+  padding: 80px;
   background: rgba(255, 255, 255, 0.8);
   position: absolute;
-  z-index: 1001;
   width: 80%;
   left: 10%;
-  top: 40%;
+  top: 50%;
   -webkit-box-shadow: 4px 11px 35px -14px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 4px 11px 35px -14px rgba(0, 0, 0, 0.5);
   -ms-box-shadow: 4px 11px 35px -14px rgba(0, 0, 0, 0.5);

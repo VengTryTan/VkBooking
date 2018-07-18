@@ -214,7 +214,7 @@
                     <div class="container">
                         <div class="row">
                         <div class="fh5co-box animate-box">
-                            <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
+                            <div class="col-md-6 col-md-offset-2 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
                                 <h2>We are Offering the Best Accommodations!</h2>
                                 <p>Far far away, behinxd the word mountains, far from the countries Vokalia and Consonantia,
                                     there live the blind texts. </p>      
@@ -303,10 +303,10 @@
 
                 <div class="fh5co-section-with-image">
                     <img src="{{asset('frontend/images/resort.jpg')}}" alt="" class="img-responsive">
-                    <div class="fh5co-box animate-box">
+                    <!-- <div class="fh5co-box animate-box">
                         <h2>Security, Comfort, &amp; Convenience</h2>
                         <p>We provide you a good service and make sure you have satified with our resort.</p>
-                    </div>
+                    </div> -->
                 </div>
 
                 <div id="fh5co-blog">
