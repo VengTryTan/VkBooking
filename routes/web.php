@@ -33,10 +33,13 @@ Route::resource('image', 'ImageController');
 
 
 /*superadmin route*/
-Route::resource('superadmin', 'SuperadminController');
+Route::get('superadmin', 'SuperadminController@index');
+Route::get('superadmin/type/{id}/edit', 'SuperadminController@edit')->name('types.edit');
+Route::post('superadmin/type/{id}/edit', 'SuperadminController@update')->name('types.update');
+
 Route::get('billing', 'BillingController@handle_billing');
 Route::get('rate', 'RateController@handle_rate');
-Route::get('rate/{type_ID}', function($type_ID){
+Route::get('rate/{type_id}', function($type_ID){
 	echo "string";
 });
 
