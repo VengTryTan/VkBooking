@@ -13,7 +13,7 @@
 
 	<link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap-datetimepicker.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap-datetimepicker.min.css')}}">
-
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="{{asset('frontend/css/animate.css')}}">
