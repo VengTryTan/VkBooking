@@ -145,7 +145,7 @@
     		@foreach($rates as $rate)
     		<div class="col-md-4">
         		<div class="card card-chart">
-        		<a href="{{url('rate/$rate->type_ID')}}">
+        		<a href="{{url('rate/{'id'}')}}">
             		<div class="card-header card-header-warning">
                 		<!-- <div class="ct-chart" id="websiteViewsChart"></div> -->
                 		<h4>{{$rate->name }}</h4>
