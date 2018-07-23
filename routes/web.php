@@ -15,10 +15,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/','ImageController@index1');
-Route::get('/testing','ImageController@index2');
+Route::get('/', 'ImageController@index1');
+Route::get('/testing', 'ImageController@index2');
 
-Route::post('/type','TypeController@type')->name('type');
+Route::post('/type', 'TypeController@type')->name('type');
 Route::resource('item', 'ImageController');
 // Route::get('welcome', function () {
 //     return view('welcome');
@@ -27,8 +27,8 @@ Route::resource('item', 'ImageController');
 //     return view('go');
 // });
 Route::get('test', 'CheckinController@index')->name('checkin');
-Route::resource('reservation','CheckinController@store');
-Route::resource('type','TypeController');
+Route::resource('reservation', 'CheckinController@store');
+Route::resource('type', 'TypeController');
 Route::resource('image', 'ImageController');
 
 

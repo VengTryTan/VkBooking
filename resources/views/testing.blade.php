@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 
 	<head>
@@ -26,7 +24,7 @@
         <link rel="{{ URL::to('frontend/shortcut icon') }}" href="favicon.ico">
         <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
         <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,400italic,700' rel='stylesheet' type='text/css'> -->
-        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- Animate.css -->
         <link rel="stylesheet" href="{{ URL::to('frontend/css/animate.css') }}">
         <!-- Icomoon Icon Fonts-->
@@ -36,8 +34,9 @@
         <!-- Flexslider  -->
         <link rel="stylesheet" href="{{ URL::to('frontend/css/flexslider.css') }}">
         <!-- Theme style  -->
-        <link rel="stylesheet" href="{{ URL::to('frontend/css/style.css') }}">
-
+		<link rel="stylesheet" href="{{ URL::to('frontend/css/style.css') }}">
+		<linl rel="stylesheet" href="{{ URL::to('frontend/css/bootstrap.min.css')}}">
+		<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
         <!-- Modernizr JS -->
         <script src="{{ URL::to('frontend/js/modernizr-2.6.2.min.js') }}"></script>
         <!-- FOR IE9 below -->
@@ -52,9 +51,9 @@
             <div class="container">
                 <div class="row">
                     <div class="header-inner">
-                    <img src="{{asset('frontend/images/HomePage/vKirirom.svg')}}" alt="vKirirom logo" title="logo" />
+                    	<img src="{{asset('frontend/images/HomePage/vKirirom.svg')}}" alt="vKirirom logo" title="logo" />
                         <nav role="navigation">
-                        <ul>
+                        	<ul>
 								<li class="cta">
 									<a href="contact.html">Contact us</a>
 								</li>
@@ -88,27 +87,43 @@
 						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
 					</div>
 					@foreach($items as $item)
-					<div class="col-md-4 item-block animate-box" data-animate-effect="fade">
-
-
-						<div class="fh5co-property">
-							<figure>
-								<img src="{{asset('uploads/image/'.$item->image)}}" alt="Free Website Templates FreeHTML5.co" class="img-responsive">
-								<a href="#" class="tag">For rental</a>
-							</figure>
-							<div class="fh5co-property-innter">
-								<h3><a href="#">{{$item->name}}</a></h3>
-								<div class="price-status">
-								<span class="price">${{$item->price}} </span>
+					<div class="col-md-12 item-block animate-box" data-animate-effect="fade">
+						<div class="card">
+							<div class="row">
+								<div class="col-md-4">
+									<div class="fh5co-property">
+										<img src="{{asset('uploads/image/'.$item->image)}}" alt="Free Website Templates FreeHTML5.co" class="img-responsive">
+										<!-- <a href="#" class="tag">For rental</a> -->
+									</div>
+								</div>
+								<div class="col-md-5">
+									<div class="fh5co-property-innter">
+										<h3>{{$item->name}}</h3>
+										<div class="price-status">
+											<p>{{$item->description}}</p>
+											<!-- <span class="price">${{$item->price}} </span> -->
+										</div>
+										<p class="fh5co-property-specification">
+											<span>
+												<strong class="fa fa-wifi">WiFi available</strong>
+											</span>
+											<span>
+												<strong class="fa fa-bed"> 1 Bed</strong>
+											</span>
+											<span>
+												<strong class="fa fa-shower"> Bathroom</strong>
+											</span>
+											<span>
+												<strong class="fa fa-television">TV available</strong>
+											</span>
+										</p>
+									</div>
+								</div>
+								<div class="col-md-3">	
+									<p>{{$item->price}}</p>
+								</div>
 							</div>
-								<p>{{$item->description}}</p>
-							</div>
-						<p class="fh5co-property-specification">
-							<span><strong>3500</strong> Sq Ft</span>  <span><strong>3</strong> Beds</span>  <span><strong>3.5</strong> Baths</span>  <span><strong>2</strong> Garages</span>
-						</p>
 						</div>
-
-						
 					</div>
 					@endforeach
 
@@ -123,6 +138,15 @@
 				<h5 class="card-title">Card title</h5>
 				<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 				<p class="card-text">Last updated 3 mins ago</p>
+			</div>
+		</div>
+
+		<div class="card text-center">
+			<div class="card-body">
+				<h1 class="card-title">Special title treatment</h1>
+				<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+				<a href="#" class="btn btn-primary">Go somewhere</a>
+				<p>Hello world</p>
 			</div>
 		</div>
 		
@@ -150,7 +174,9 @@
 		</footer>
 		</div>
 	
-	
+	<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
 	<!-- jQuery -->
 	<script src="{{ URL::to('frontend/js/jquery.min.js') }}"></script>
 	<!-- jQuery Easing -->
