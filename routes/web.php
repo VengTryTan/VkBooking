@@ -39,9 +39,11 @@ Route::post('superadmin/type/{id}/edit', 'SuperadminController@update')->name('t
 
 Route::get('billing', 'BillingController@handle_billing');
 Route::get('rate', 'RateController@handle_rate');
-Route::get('rate/{type_id}', function($type_ID){
-	echo "string";
-});
+Route::get('rate/{id}', function(App\Image $id){
+	return $id->type_ID;
+})->where(['id' => '[0-9]+']);
+
+Route::get('activity', 'ActivityController@index')->name('activity');
 
 /*
 Route::get('/search/{id}', 'RoomController@show')->name('search');
