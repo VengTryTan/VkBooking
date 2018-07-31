@@ -13,7 +13,7 @@
 
 	<link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap-datetimepicker.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap-datetimepicker.min.css')}}">
-
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="{{asset('frontend/css/animate.css')}}">
@@ -53,6 +53,7 @@
 								<li class="zoom">
 									<a href="https://www.facebook.com/vkirirom" target="_blank">
 										<img src="{{asset('frontend/images/facebook.svg')}}" alt="www.facebook.com" title="facebook" />
+										<!-- <i class="fa fa-facebook"></i> -->
 									</a>
 								</li>
 								<li class="zoom">
@@ -253,11 +254,6 @@
 						<p>Far far away, behinxd the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
 							</p>
 					</div>
-					<!-- check in and check out part -->
-					<!-- <div class="item-block animate-box col-md-5">
-							<div>Check In Date</div>
-								<input name="DateIn" type="text" id="datepicker-check-in" class="col-md-4 col-sm-12 col-lg-4"/>
-						</div> -->
 
 					<div class="form-group row no-margin">
 						<label for="check-in-time" class="col-sm-3 col-form-label label-xl">
@@ -273,49 +269,24 @@
 							</div>
 						</div>
 					</div>
-					<div class="item-block animate-box col-md-5">
-						<div class="form-group row no-margin">
-                            <label for="check-in-time" class="col-sm-3 col-form-label label-xl">
-                                Check In:
-                            </label>
-                            <div class="col-sm-9">
-                                <div class='input-group date' id='datetimepicker-check-in'>
-                                    <input id="check-in-time" type="text" class="form-control" value=""/>
-                                    <input id="checkin-time" type="hidden" name="checkin-date">
-                                        <span class="input-group-addon">
-										<span class="fa fa-calendar" style="font-size:29px;"></span>
-                                        </span>
-                                </div>
-                            </div>
-                        </div>
 
-                        <!-- <div class="item-block animate-box col-md-5"> -->
+                    <!-- <div class="item-block animate-box col-md-5"> -->
 
-                        <div class="form-group row no-margin">
-                            <label for="check-out-time" class="col-sm-3 col-form-label label-xl">
-                                Check Out:
-                            </label>
-                            <div class="col-sm-9">
-                                <div class='input-group date' id='datetimepicker-check-out'>
-                                    <input type="text" id="check-out-time" class="form-control" value=""/>
-                                    <input id="checkout-time" type="hidden" name="checkout-date">
-                       
-                                    <span class="input-group-addon">
-                                    <span class="fa fa-calendar" style="font-size:29px;"></span>
-							<label for="check-out-time" class="col-sm-3 col-form-label label-xl">
-								Check Out:
-							</label>
-							<div class="col-sm-9">
-								<div class='input-group date' id='datetimepicker-check-out'>
-									<input type="text" id="check-out-time" class="form-control" value="" />
-									<input id="checkout-time" type="hidden" name="checkout-date">
+                    <div class="form-group row no-margin">
+						<label for="check-out-time" class="col-sm-3 col-form-label label-xl">
+							Check Out:
+						</label>
+						<div class="col-sm-9">
+							<div class='input-group date' id='datetimepicker-check-out'>
+								<input type="text" id="check-out-time" class="form-control" value="" />
+								<input id="checkout-time" type="hidden" name="checkout-date">
 
-									<span class="input-group-addon">
-										<span class="fa fa-calendar" style="font-size:29px;"></span>
-									</span>
-								</div>
+								<span class="input-group-addon">
+									<span class="fa fa-calendar" style="font-size:29px;"></span>
+								</span>
 							</div>
 						</div>
+					</div>
 
 						<div class="item-block animate-box col-md-2">
 							<div>Submit</div>
@@ -362,6 +333,62 @@
 									<strong class="fa fa-television">TV available</strong>
 								</span>
 							</p>
+						</div>
+					</div>
+					@endforeach
+					@foreach($items as $key=>$item)
+					<div class="col-md-12 col-sm-12 col-xs-12 col-lg-12 item-block animate-box" data-animate-effect="fadeIn">
+						<div class="card">
+							<div class="row">
+								<div class="fh5co-property">
+									<div class="col-md-4">
+										<figure>
+											<img src="{{asset('uploads/image/'.$item->image)}}" alt="accomodation image" class="img-responsive">
+										</figure>
+										<div class="card">
+											<div class="row">
+												<div class="col-md-3 zoom2" style="padding: 2px;">
+													<img src="{{asset('frontend/images/boreyA.jpg')}}" alt="accomodation2" class="img-responsive">
+												</div>
+												<div class="col-md-3 zoom2" style="padding: 2px;">
+													<img src="{{asset('frontend/images/boreyR.jpg')}}" class="img-responsive">
+												</div>
+												<div class="col-md-3 zoom2" style="padding: 2px;">
+													<img src="{{asset('frontend/images/boreyR1.jpg')}}" class="img-responsive">
+												</div>
+												<div class="col-md-3 zoom2" style="padding: 2px;">
+													<img src="{{asset('frontend/images/bungalow.jpg')}}" class="img-responsive">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-5">
+										<div class="fh5co-property-innter">
+											<label>{{$item->name}}</label>
+						               		<!-- <p>{{$item->description}}</p> -->
+						               		<p class="">
+												<span>
+													<strong class="fa fa-wifi">WiFi available</strong>
+												</span>
+												<span>
+													<strong class="fa fa-bed"> 1 Bed</strong>
+												</span>
+												<span>
+													<strong class="fa fa-shower"> Bathroom</strong>
+												</span>
+												<span>
+													<strong class="fa fa-television">TV available</strong>
+												</span>
+											</p>
+					            		</div>
+					            	</div>
+					            	<div class="col-md-3">
+					            		<div class="price-status">
+					                 		<span class="price">${{$item->price}}<span class="per">/night</span></span>
+					               		</div>
+					            	</div>
+								</div>
+							</div>
 						</div>
 					</div>
 					@endforeach
