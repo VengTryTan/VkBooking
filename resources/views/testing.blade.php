@@ -95,39 +95,41 @@
 						<p>We aim to provide services and an atmosphere where everyone enjoys nature while conserving the environment as well.
 							Visit our restaurant and savour our dishes special our chef has to offer and or stay in one of our innovative rooms.</p>
 					</div>
-
-					<div class="form-group row no-margin">
-						<label for="check-in-time" class="col-sm-3 col-form-label label-xl">
-							Check In:
-						</label>
-						<div class="col-sm-9">
-							<div class='input-group date' id='datetimepicker-check-in'>
-
-								<input id="check-in-time" type="text" class="form-control" value="" />
-								<input id="checkin-time" type="hidden" name="checkin-date">
-								<span class="input-group-addon">
-									<span class="fa fa-calendar" style="font-size:29px;"></span>
-								</span>
+					
+					<form action="{{ route('checkin') }}" method="GET">
+					{{ csrf_field() }}
+						<div class="form-group row no-margin">
+							<label for="check-in-time" class="col-sm-3 col-form-label label-xl">
+								Check In:
+							</label>
+							<div class="col-sm-9">
+								<div class='input-group date' id='datetimepicker-check-in'>
+									<input id="check-in-time" type="text" class="form-control" value="" />
+									<input id="checkin-time" type="hidden" name="checkin_date" /> 
+									<span class="input-group-addon">
+										<span class="fa fa-calendar" style="font-size:29px;"></span>
+									</span>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="form-group row no-margin">
-						<label for="check-out-time" class="col-sm-3 col-form-label label-xl">
-							Check Out:
-						</label>
-						<div class="col-sm-9">
-							<div class='input-group date' id='datetimepicker-check-out'>
-								<input id="check-out-time" type="text" class="form-control" value="" />
-								<input id="checkout-time" type="hidden" name="checkout-date">
-								<span class="input-group-addon">
-									<span class="fa fa-calendar" style="font-size:29px;"></span>
-								</span>
+						<div class="form-group row no-margin">
+							<label for="check-out-time" class="col-sm-3 col-form-label label-xl">
+								Check Out:
+							</label>
+							<div class="col-sm-9">
+								<div class='input-group date' id='datetimepicker-check-out'>
+									<input id="check-out-time" type="text" class="form-control" value="" />
+									<input id="checkout-time" type="hidden" name="checkout_date" />
+									<span class="input-group-addon">
+										<span class="fa fa-calendar" style="font-size:29px;"></span>
+									</span>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div>
-						<button class="custombutton butt1">Find Room</button>
-					</div>
+						<div>
+							<button class="custombutton butt1">Find Room</button>
+						</div>
+					</form>
 					<!-- <div class="col-sm-9">
 						<button class="awe-btn awe-btn-13">Find Room</button>
 					</div> -->
@@ -222,37 +224,37 @@
 					<div class="row">
 						<div class="col-md-3">
 							<div class="thumbnail">
-									<img src="{{asset('frontend/images/16.jpg')}}" alt="Lights" style="width:100%">
-									<div class="caption">
-										<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-									</div>
+								<img src="{{asset('frontend/images/16.jpg')}}" alt="Lights" style="width:100%">
+								<div class="caption">
+									<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+								</div>
 								</a>
 							</div>
 						</div>
 						<div class="col-md-3">
 							<div class="thumbnail">
-									<img src="{{asset('frontend/images/17.jpg')}}" alt="Lights" style="width:100%">
-									<div class="caption">
-										<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-									</div>
+								<img src="{{asset('frontend/images/17.jpg')}}" alt="Lights" style="width:100%">
+								<div class="caption">
+									<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+								</div>
 								</a>
 							</div>
 						</div>
 						<div class="col-md-3">
 							<div class="thumbnail">
-									<img src="{{asset('frontend/images/18.jpg')}}" alt="Lights" style="width:100%">
-									<div class="caption">
-										<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-									</div>
+								<img src="{{asset('frontend/images/18.jpg')}}" alt="Lights" style="width:100%">
+								<div class="caption">
+									<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+								</div>
 								</a>
 							</div>
 						</div>
 						<div class="col-md-3">
 							<div class="thumbnail">
-									<img src="{{asset('frontend/images/19.jpg')}}" alt="Lights" style="width:100%">
-									<div class="caption">
-										<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-									</div>
+								<img src="{{asset('frontend/images/19.jpg')}}" alt="Lights" style="width:100%">
+								<div class="caption">
+									<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+								</div>
 								</a>
 							</div>
 						</div>
@@ -260,37 +262,37 @@
 					<div class="row">
 						<div class="col-md-3">
 							<div class="thumbnail">
-									<img src="{{asset('frontend/images/12.jpg')}}" alt="Lights" style="width:100%">
-									<div class="caption">
-										<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-									</div>
+								<img src="{{asset('frontend/images/12.jpg')}}" alt="Lights" style="width:100%">
+								<div class="caption">
+									<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+								</div>
 								</a>
 							</div>
 						</div>
 						<div class="col-md-3">
 							<div class="thumbnail">
-									<img src="{{asset('frontend/images/13.jpg')}}" alt="Lights" style="width:100%">
-									<div class="caption">
-										<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-									</div>
+								<img src="{{asset('frontend/images/13.jpg')}}" alt="Lights" style="width:100%">
+								<div class="caption">
+									<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+								</div>
 								</a>
 							</div>
 						</div>
 						<div class="col-md-3">
 							<div class="thumbnail">
-									<img src="{{asset('frontend/images/14.jpg')}}" alt="Lights" style="width:100%">
-									<div class="caption">
-										<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-									</div>
+								<img src="{{asset('frontend/images/14.jpg')}}" alt="Lights" style="width:100%">
+								<div class="caption">
+									<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+								</div>
 								</a>
 							</div>
 						</div>
 						<div class="col-md-3">
 							<div class="thumbnail">
-									<img src="{{asset('frontend/images/15.jpg')}}" alt="Lights" style="width:100%">
-									<div class="caption">
-										<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-									</div>
+								<img src="{{asset('frontend/images/15.jpg')}}" alt="Lights" style="width:100%">
+								<div class="caption">
+									<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+								</div>
 								</a>
 							</div>
 						</div>
@@ -298,7 +300,20 @@
 				</div>
 
 			</div>
-			<!-- Map -->
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
+						<h2>Our Location</h2>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+						</p>
+					</div>
+				</div>
+				<div class="row-fluid">
+					<div class="span8">
+						<iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d457923.86877925845!2d104.17120771835094!3d11.381808161287738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3108e85207384c83%3A0x1c0dc50984a079a3!2svKirirom+Pine+Resort!5e0!3m2!1sen!2skh!4v1532506013714"></iframe>
+					</div>
+				</div>
+			</div>
 
 
 			<footer id="fh5co-footer" role="contentinfo">

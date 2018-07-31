@@ -1,0 +1,178 @@
+// benefits section
+
+.benefits {
+    margin-top: 0 !important;
+    position: relative;
+    overflow: visible;
+  
+    h2 {
+      margin-bottom: $space-small;
+      font-family: $primary-font;
+      font-size: $section-title-font-size-h3-mobile !important;
+      font-weight: 700;
+      letter-spacing: $section-title-letter-spacing;
+      text-transform: none;
+      color: $title-black;
+    }
+  
+    .media {
+      img {
+        display: block;
+        flex-shrink: 1;
+        width: 20px;
+        height: 20px;
+      }
+  
+      p {
+        font-size: $font-size-lead;
+      }
+    }
+  
+    // booking form and benefits
+    .booking-form-container {
+      background: $white;
+      padding: $space-big;
+      padding-bottom: 0;
+      @include linear-gradient-diagonal(45deg, $white, $light-gray-3);
+      position: relative;
+      margin-top: -48px;
+  
+      @include tablet {
+        position: absolute;
+        bottom: 0;
+        left: auto;
+        right: auto;
+        float: left;
+        margin-top: 0;
+        margin-left: -$space-big;
+      }
+  
+      + .benefits-container {
+        margin-top: $space-big;
+      }
+  
+      &.datepicker-showing {
+        .btn-primary {
+          opacity: 0.6;
+        }
+      }
+  
+      &.disabled {
+        &::after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 100%;
+          background: $white;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          opacity: 0.4;
+        }
+      }
+  
+    }
+  
+    .benefits-container {
+      position: relative;
+  
+      .row > [class^="col"] {
+        + [class^="col"] {
+          margin-top: $space-normal;
+        }
+      }
+  
+      @include tablet {
+        margin-top: 0;
+        margin-left: $banner-date-form-width;
+        padding-left: $space-big + $space-big;
+      }
+  
+      @include desktop {
+        .row > [class^="col"] {
+          + [class^="col"] {
+            margin-top: 0;
+          }
+        }
+      }
+  
+    }
+  
+    &.benefits-full {
+  
+      .benefits-container {
+        padding-top: $space-big;
+        background-color: $white;
+  
+        @include tablet {
+          margin-left: 0;
+          margin-top: -48px;
+          padding: $space-normal $space-normal-3;
+          box-shadow: 690px 0px $white;
+        }
+  
+      }
+  
+    }
+  
+    .booking-link {
+      margin-top: $space-normal;
+    }
+  
+    @include desktop {
+  
+      h2 {
+        font-size: $section-title-font-size-h3-2 !important;
+      }
+  
+      .media {
+        margin: $space-small 0;
+  
+        img {
+          display: block;
+          width: 30px;
+          height: 30px;
+        }
+  
+        p {
+          font-size: $font-size-lead;
+  
+          + p {
+            margin-top: $space-small;
+          }
+        }
+  
+        &.booking-link {
+          margin-top: $space-normal;
+  
+          img {
+            width: 20px;
+            height: 20px;
+          }
+  
+          p {
+            line-height: 1;
+          }
+        }
+  
+      }
+  
+    }
+  
+    // ie and 360 fix
+    @include ie {
+      .media {
+        display: block;
+  
+        img,
+        .media-body {
+          display: inline-block;
+          vertical-align: middle;
+        }
+      }
+    }
+  
+  }
+  

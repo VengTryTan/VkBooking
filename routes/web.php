@@ -30,6 +30,7 @@ Route::get('test', 'CheckinController@index')->name('checkin');
 Route::resource('reservation','CheckinController@store');
 Route::resource('type','TypeController');
 Route::resource('image', 'ImageController');
+Route::post('testing', 'GuestOneController@search')->name('testing');
 
 
 /*superadmin route*/
@@ -39,11 +40,14 @@ Route::post('superadmin/type/{id}/edit', 'SuperadminController@update')->name('t
 
 Route::get('billing', 'BillingController@handle_billing');
 Route::get('rate', 'RateController@handle_rate');
+
 Route::get('rate/{id}', function(App\Image $id){
 	return $id->type_ID;
 })->where(['id' => '[0-9]+']);
 
 Route::get('activity', 'ActivityController@index')->name('activity');
+
+
 
 /*
 Route::get('/search/{id}', 'RoomController@show')->name('search');
