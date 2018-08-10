@@ -27,7 +27,8 @@
 	<link rel="stylesheet" href="{{asset('frontend/css/style.css')}}">
 	<!-- Date picker style -->
 	<link rel="stylesheet" href="{{asset('frontend/css/jquery-ui.css')}}">
-
+	<link rel="stylesheet" href="{{asset('css/multirange.css')}}">
+	<!-- <link rel="stylesheet" href="{{asset('css/app.css')}}"> -->
 	<!-- Modernizr JS -->
 	<script src="{{asset('frontend/js/modernizr-2.6.2.min.js')}}"></script>
 	<!-- FOR IE9 below -->
@@ -251,146 +252,148 @@
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
 						<h2>We are Offering the Best Accommodations!</h2>
-						<p>Far far away, behinxd the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
-							</p>
+						<p>Far far away, behinxd the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
 					</div>
-
-					<div class="form-group row no-margin">
-						<label for="check-in-time" class="col-sm-3 col-form-label label-xl">
-							Check In:
-						</label>
-						<div class="col-sm-9">
-							<div class='input-group date' id='datetimepicker-check-in'>
-								<input id="check-in-time" type="text" class="form-control" value="" />
-								<input id="checkin-time" type="hidden" name="checkin-date">
-								<span class="input-group-addon">
-									<span class="fa fa-calendar" style="font-size:29px;"></span>
-								</span>
+					<div class="col-md-3 col-sm-3 col-xs-3 col-lg-3 item-block animate-box" data-animate-effect="fadeIn">
+						<div id="sidebar">
+							<div class="nice well-small">
+								<ul class="nav nav-list">
+									<h4 class="filters-header-text"><img src="{{asset('img/filter.svg')}}" width="20px" height="20px" alt="filter">Filter by:</h4>
+									
+									<!-- <li><a href="products.html"><span class="icon-chevron-right"></span>See All Jewelry & Watches</a></li>
+									<li style="border:0"> &nbsp;</li> -->
+									<!-- <div class="slidecontainer">
+										<p>Default range slider:</p>
+										<input type="range" min="1" max="100" value="50">
+										<input type="range" multiple value="20,80"/>
+										<p>Custom range slider:</p>
+										<input type="range" multiple value="20,80" />
+										<input type="range" multiple min="0" max="250" value="10,250" class="slider" id="myRange" name="filter">
+									</div> -->
+									<!-- <input type="radio" name="budgets" value="budget">budget<br>
+									<input type="radio" name="luxary" value="luxary">Luxury -->
+									<form action="">
+										<div class="filter-box">
+											<div class="filter-class">
+												<span>Accommodations Class</span><br>
+											</div>
+											<input type="radio" name="acc-class" value="budget" id="budget"><span id="budget"> budgets</span><br>
+											<input type="radio" name="acc-class" value="luxury" id="luxury"><span id="budget"> Luxury</span><br>
+											<input type="radio" name="acc-class" value="other" id="other"><span id="budget"> Other</span><hr>
+										</div>
+									</form>
+									<!-- <form action="">
+										<div class="filter-class">
+											<span>People</span><br>
+										</div>
+										<div class="row">
+											<div class="col-md-4">
+												<span>Beds</span>
+											</div>
+											<div class="col-md-8">
+												<select id="softflow">
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+													<option>4</option>
+												</select><br>
+											</div>
+											<div class="col-md-4">
+												<span>Adults</span>
+											</div>
+											<div class="col-md-8">
+												<select id="softflow">
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+													<option>4</option>
+												</select><br>
+											</div>
+											<div class="col-md-4">
+												<span>Children</span>
+											</div>
+											<div class="col-md-8">
+												<select id="softflow">
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+													<option>4</option>
+												</select><br>
+											</div>
+										</div>
+									</form> -->
+									<form action="">
+										<div class="filter-box">
+											<div class="filter-class">
+												<span>Type of beds</span><br>
+											</div>
+											<input type="radio" name="type-bed" value="budget"><span id="budget"> Single bed</span><br>
+											<input type="radio" name="type-bed" value="luxury"><span id="budget"> Double beds</span><br>
+											<input type="radio" name="type-bed" value="other"><span id="budget"> 4 beds</span><br>
+											<input type="radio" name="type-bed" value="other"><span id="budget"> Camping type</span><hr>
+										</div>
+									</form>
+									<li> <a class="totalInCar\t" href="cart.html"><strong>Total Amount  <span class="badge badge-warning pull-right" style="line-height:18px;">$448.42</span></strong></a></li>
+								</ul>
 							</div>
-						</div>
-					</div>
-
-                    <!-- <div class="item-block animate-box col-md-5"> -->
-
-                    <div class="form-group row no-margin">
-						<label for="check-out-time" class="col-sm-3 col-form-label label-xl">
-							Check Out:
-						</label>
-						<div class="col-sm-9">
-							<div class='input-group date' id='datetimepicker-check-out'>
-								<input type="text" id="check-out-time" class="form-control" value="" />
-								<input id="checkout-time" type="hidden" name="checkout-date">
-
-								<span class="input-group-addon">
-									<span class="fa fa-calendar" style="font-size:29px;"></span>
-								</span>
-							</div>
-						</div>
-					</div>
-
-						<div class="item-block animate-box col-md-2">
-							<div>Submit</div>
-							<button id="myBtn1" disabled="true">
-								<a href="{{ route('checkin') }}">Button</a>
-							</button>
 						</div>
 					</div>
 					@foreach($items as $key=>$item)
-					<div class="col-md-4 item-block animate-box" data-animate-effect="fadeIn">
-						<div class="fh5co-property">
-							<figure>
-								<img src="{{asset('uploads/image/'.$item->image)}}" alt="accomodation image" class="img-responsive">
-								<a href="#" class="tag">For rental</a>
-							</figure>
-							<div class="fh5co-property-innter">
-								<p>{{$item->name}}</p>
-								<div class="price-status">
-									<span class="price">${{$item->price}}
-										<span class="per">/night</span>
-										<select id="type" onchange="myFunction()">
-											<option value="0">0 Room</option>
-											<option value="1">1 Room</option>
-											<option value="2">2 Room</option>
-											<option value="3">3 Room</option>
-											<option value="4">4 Room</option>
-										</select>
-									</span>
-								</div>
-								<p>{{$item->description}}</p>
-
-							</div>
-							<p class="fh5co-property-specification">
-								<span>
-									<strong class="fa fa-wifi">WiFi available</strong>
-								</span>
-								<span>
-									<strong class="fa fa-bed"> 1 Bed</strong>
-								</span>
-								<span>
-									<strong class="fa fa-shower"> Bathroom</strong>
-								</span>
-								<span>
-									<strong class="fa fa-television">TV available</strong>
-								</span>
-							</p>
-						</div>
-					</div>
-					@endforeach
-					@foreach($items as $key=>$item)
-					<div class="col-md-12 col-sm-12 col-xs-12 col-lg-12 item-block animate-box" data-animate-effect="fadeIn">
-						<div class="card">
-							<div class="row">
-								<div class="fh5co-property">
-									<div class="col-md-4">
-										<figure>
-											<img src="{{asset('uploads/image/'.$item->image)}}" alt="accomodation image" class="img-responsive">
-										</figure>
-										<div class="card">
-											<div class="row">
-												<div class="col-md-3 zoom2" style="padding: 2px;">
-													<img src="{{asset('frontend/images/boreyA.jpg')}}" alt="accomodation2" class="img-responsive">
+						<div style="float: right;" class="col-md-9 col-sm-9 col-xs-9 col-lg-9 item-block animate-box" data-animate-effect="fadeIn">
+							<div class="card">
+								<div class="row">
+									<div class="fh5co-property">
+										<div class="col-md-4">
+											<aside id="fh5co-hero">
+												<div class="flexslider">
+													<ul class="slides">
+														<li>
+															<img src="{{asset('uploads/image/'.$item->image)}}" class="img-responsive" alt="image">
+														</li>
+														<li>
+															<img src="{{asset('uploads/image/'.$item->image)}}" class="img-responsive" alt="image">
+														</li>
+														<li>
+															<img src="{{asset('uploads/image/'.$item->image)}}" class="img-responsive" alt="image">
+														</li>
+														<li>
+															<img src="{{asset('uploads/image/'.$item->image)}}" class="img-responsive" alt="image">
+														</li>
+														<li>
+															<img src="{{asset('uploads/image/'.$item->image)}}" class="img-responsive" alt="image">
+														</li>
+													</ul>
 												</div>
-												<div class="col-md-3 zoom2" style="padding: 2px;">
-													<img src="{{asset('frontend/images/boreyR.jpg')}}" class="img-responsive">
-												</div>
-												<div class="col-md-3 zoom2" style="padding: 2px;">
-													<img src="{{asset('frontend/images/boreyR1.jpg')}}" class="img-responsive">
-												</div>
-												<div class="col-md-3 zoom2" style="padding: 2px;">
-													<img src="{{asset('frontend/images/bungalow.jpg')}}" class="img-responsive">
-												</div>
+											</aside>
+										</div>
+										<div class="col-md-5">
+											<div class="fh5co-property-innter">
+												<label>{{$item->name}}</label>							               		
+												<p class="">
+													<span>
+														<strong class="fa fa-wifi">WiFi available</strong>
+													</span>
+													<span>
+														<strong class="fa fa-bed"> 1 Bed</strong>
+													</span>
+													<span>
+														<strong class="fa fa-shower"> Bathroom</strong>
+													</span>
+													<span>
+														<strong class="fa fa-television">TV available</strong>
+													</span>
+												</p>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="price-status">
+												<span class="price">${{$item->price}}<span class="per">/night</span></span>
 											</div>
 										</div>
 									</div>
-									<div class="col-md-5">
-										<div class="fh5co-property-innter">
-											<label>{{$item->name}}</label>
-						               		<!-- <p>{{$item->description}}</p> -->
-						               		<p class="">
-												<span>
-													<strong class="fa fa-wifi">WiFi available</strong>
-												</span>
-												<span>
-													<strong class="fa fa-bed"> 1 Bed</strong>
-												</span>
-												<span>
-													<strong class="fa fa-shower"> Bathroom</strong>
-												</span>
-												<span>
-													<strong class="fa fa-television">TV available</strong>
-												</span>
-											</p>
-					            		</div>
-					            	</div>
-					            	<div class="col-md-3">
-					            		<div class="price-status">
-					                 		<span class="price">${{$item->price}}<span class="per">/night</span></span>
-					               		</div>
-					            	</div>
 								</div>
 							</div>
 						</div>
-					</div>
 					@endforeach
 				</div>
 			</div>
@@ -624,6 +627,26 @@
 			});
 		});
 	</script>
+	<script>
+		$(':radio').mousedown(function(e){
+			var $self = $(this);
+			if( $self.is(':checked') ){
+				var uncheck = function(){
+				setTimeout(function(){$self.removeAttr('checked');},0);
+				};
+				var unbind = function(){
+				$self.unbind('mouseup',up);
+				};
+				var up = function(){
+				uncheck();
+				unbind();
+				};
+				$self.bind('mouseup',up);
+				$self.one('mouseout', unbind);
+			}
+		});
+	</script>
+	<script type="text/javascript" src="{{asset('js/multirange.js')}}"></script>
 </body>
 
 </html>
