@@ -53,7 +53,7 @@ class ActivityController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**

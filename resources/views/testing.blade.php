@@ -27,31 +27,32 @@
 	<link rel="stylesheet" href="{{asset('frontend/css/style.css')}}">
 	<!-- Date picker style -->
 	<link rel="stylesheet" href="{{asset('frontend/css/jquery-ui.css')}}">
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <link rel="{{ URL::to('frontend/shortcut icon') }}" href="favicon.ico">
-        <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-        <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,400italic,700' rel='stylesheet' type='text/css'> -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <!-- Animate.css -->
-        <link rel="stylesheet" href="{{ URL::to('frontend/css/animate.css') }}">
-        <!-- Icomoon Icon Fonts-->
-        <link rel="stylesheet" href="{{ URL::to('frontend/css/icomoon.css') }}">
-        <!-- Bootstrap  -->
-        <link rel="stylesheet" href="{{ URL::to('frontend/css/bootstrap.css') }}">
-        <!-- Flexslider  -->
-        <link rel="stylesheet" href="{{ URL::to('frontend/css/flexslider.css') }}">
-        <!-- Theme style  -->
-		<link rel="stylesheet" href="{{ URL::to('frontend/css/style.css') }}">
-		<linl rel="stylesheet" href="{{ URL::to('frontend/css/bootstrap.min.css')}}">
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="{{ URL::to('frontend/shortcut icon') }}" href="favicon.ico">
+	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+	<!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,400italic,700' rel='stylesheet' type='text/css'> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="{{ URL::to('frontend/css/animate.css') }}">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="{{ URL::to('frontend/css/icomoon.css') }}">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="{{ URL::to('frontend/css/bootstrap.css') }}">
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="{{ URL::to('frontend/css/flexslider.css') }}">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="{{ URL::to('frontend/css/style.css') }}">
+	<linl rel="stylesheet" href="{{ URL::to('frontend/css/bootstrap.min.css')}}">
 		<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
-        <!-- Modernizr JS -->
-        <script src="{{ URL::to('frontend/js/modernizr-2.6.2.min.js') }}"></script>
-        <!-- FOR IE9 below -->
-        <!--[if lt IE 9]>
+		<!-- Modernizr JS -->
+		<script src="{{ URL::to('frontend/js/modernizr-2.6.2.min.js') }}"></script>
+		<!-- FOR IE9 below -->
+		<!--[if lt IE 9]>
         <script src="js/respond.min.js"></script>
         <![endif]-->
-    
+
 </head>
+
 <body>
 	<div id="fh5co-page">
 		<header id="fh5co-header" role="banner">
@@ -107,57 +108,17 @@
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
 						<h2>We are Offering the Best Real Estate Deals</h2>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+						</p>
 					</div>
-					@foreach($items as $item)
-					<div class="col-md-12 item-block animate-box" data-animate-effect="fade">
-						<div class="card">
-							<div class="row">
-								<div class="col-md-4">
-									<div class="fh5co-property">
-										<img src="{{asset('uploads/image/'.$item->image)}}" alt="Free Website Templates FreeHTML5.co" class="img-responsive">
-										<!-- <a href="#" class="tag">For rental</a> -->
-									</div>
-								</div>
-								<div class="col-md-5">
-									<div class="fh5co-property-innter">
-										<h3>{{$item->name}}</h3>
-										<div class="price-status">
-											<p>{{$item->description}}</p>
-											<!-- <span class="price">${{$item->price}} </span> -->
-										</div>
-										<p class="fh5co-property-specification">
-											<span>
-												<strong class="fa fa-wifi">WiFi available</strong>
-											</span>
-											<span>
-												<strong class="fa fa-bed"> 1 Bed</strong>
-											</span>
-											<span>
-												<strong class="fa fa-shower"> Bathroom</strong>
-											</span>
-											<span>
-												<strong class="fa fa-television">TV available</strong>
-											</span>
-										</p>
-									</div>
-								</div>
-								<div class="col-md-3">	
-									<p>{{$item->price}}</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					@endforeach
-
+					<div>
 						<h2>'vKirirom' is a new concept for enriching people's lives for the future</h2>
 						<p>We aim to provide services and an atmosphere where everyone enjoys nature while conserving the environment as well.
 							Visit our restaurant and savour our dishes special our chef has to offer and or stay in one of our innovative rooms.</p>
 					</div>
-<<<<<<< HEAD
-					
-					<form action="{{ route('checkin') }}" method="GET">
-					{{ csrf_field() }}
+
+					<form action="{{ route('checkin') }}" method="POST">
+						{{ csrf_field() }}
 						<div class="form-group row no-margin">
 							<label for="check-in-time" class="col-sm-3 col-form-label label-xl">
 								Check In:
@@ -165,463 +126,404 @@
 							<div class="col-sm-9">
 								<div class='input-group date' id='datetimepicker-check-in'>
 									<input id="check-in-time" type="text" class="form-control" value="" />
-									<input id="checkin-time" type="hidden" name="checkin_date" /> 
+									<input id="checkin_time" type="hidden" name="checkin_date" />
 									<span class="input-group-addon">
 										<span class="fa fa-calendar" style="font-size:29px;"></span>
 									</span>
 								</div>
-=======
-
-					<div class="form-group row no-margin">
-						<label for="check-in-time" class="col-sm-3 col-form-label label-xl">
-							Check In:
-						</label>
-						<div class="col-sm-9">
-							<div class='input-group date' id='datetimepicker-check-in'>
-								<input id="check-in-time" type="text" class="form-control" value="" />
-								<input id="checkin-time" type="hidden" name="checkin-date">
-								<span class="input-group-addon">
-									<span class="fa fa-calendar" style="font-size:29px;"></span>
-								</span>
->>>>>>> 309211bd7349cff05cee90119e6e4d6356730f6a
-							</div>
-						</div>
-						<div class="form-group row no-margin">
-							<label for="check-out-time" class="col-sm-3 col-form-label label-xl">
-								Check Out:
-							</label>
-							<div class="col-sm-9">
-								<div class='input-group date' id='datetimepicker-check-out'>
-									<input id="check-out-time" type="text" class="form-control" value="" />
-									<input id="checkout-time" type="hidden" name="checkout_date" />
-									<span class="input-group-addon">
-										<span class="fa fa-calendar" style="font-size:29px;"></span>
-									</span>
+								<div class="form-group row no-margin">
+									<label for="check-out-time" class="col-sm-3 col-form-label label-xl">
+										Check Out:
+									</label>
+									<div class="col-sm-9">
+										<div class='input-group date' id='datetimepicker-check-out'>
+											<input id="check-out-time" type="text" class="form-control" value="" />
+											<input id="checkout-time" type="hidden" name="checkout_date" />
+											<span class="input-group-addon">
+												<span class="fa fa-calendar" style="font-size:29px;"></span>
+											</span>
+										</div>
+									</div>
 								</div>
-							</div>
-						</div>
-						<div>
-							<button class="custombutton butt1">Find Room</button>
-						</div>
+								<div>
+									<button class="custombutton butt1">Find Room</button>
+								</div>
 					</form>
 					<!-- <div class="col-sm-9">
 						<button class="awe-btn awe-btn-13">Find Room</button>
 					</div> -->
 
+					</div>
+					</div>
+				</div>
+
+			<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+			<!-- jQuery -->
+			<script src="{{ URL::to('frontend/js/jquery.min.js') }}"></script>
+			<!-- jQuery Easing -->
+			<script src="{{ URL::to('frontend/js/jquery.easing.1.3.js') }}"></script>
+			<!-- Bootstrap -->
+			<script src="{{ URL::to('frontend/js/bootstrap.min.js') }}"></script>
+			<!-- Waypoints -->
+			<script src="{{ URL::to('frontend/js/jquery.waypoints.min.js') }}"></script>
+			<!-- Flexslider -->
+			<script src="{{ URL::to('frontend/js/jquery.flexslider-min.js') }}"></script>
+		</div>
+	</div>
+
+	<div class="fh5co-section-with-image">
+		<img src="{{asset('frontend/images/security.png')}}" alt="" class="img-responsive">
+		<div class="fh5co-box animate-box">
+			<h2>Security, Comfort, &amp; Convenience</h2>
+			<p>We provide you a good service and make sure you have satified with our resort.</p>
+		</div>
+	</div>
+
+	<div id="fh5co-blog">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
+					<h2>Our information</h2>
+					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 animate-box" data-animate-effect="fadeIn">
+					<a class="fh5co-entry" href="#">
+						<figure>
+							<img src="{{asset('frontend/images/bungalow.jpg')}}" alt="Free Website Template, Free HTML5 Bootstrap Template" class="img-responsive">
+						</figure>
+						<div class="fh5co-copy">
+							<h3>Bungalow</h3>
+							<span class="fh5co-date">June 8, 2016</span>
+							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-3 animate-box" data-animate-effect="fadeIn">
+					<a class="fh5co-entry" href="#">
+						<figure>
+							<img src="{{asset('frontend/images/boreyA.jpg')}}" alt="Free Website Template, Free HTML5 Bootstrap Template" class="img-responsive">
+						</figure>
+						<div class="fh5co-copy">
+							<h3>Borey A</h3>
+							<span class="fh5co-date">June 8, 2016</span>
+							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+							</p>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-3 animate-box" data-animate-effect="fadeIn">
+					<a class="fh5co-entry" href="#">
+						<figure>
+							<img src="{{asset('frontend/images/luxurytent1.jpg')}}" alt="Free Website Template, Free HTML5 Bootstrap Template" class="img-responsive">
+						</figure>
+						<div class="fh5co-copy">
+							<h3>Luxury Tent</h3>
+							<span class="fh5co-date">June 8, 2016</span>
+							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+							</p>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-3 animate-box" data-animate-effect="fadeIn">
+					<a class="fh5co-entry" href="#">
+						<figure>
+							<img src="{{asset('frontend/images/camping5.JPG')}}" alt="Free Website Template, Free HTML5 Bootstrap Template" class="img-responsive">
+						</figure>
+						<div class="fh5co-copy">
+							<h3>Camping</h3>
+							<span class="fh5co-date">June 8, 2016</span>
+							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+							</p>
+						</div>
+					</a>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
+						<h2>Our Meal</h2>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<div class="thumbnail">
+							<img src="{{asset('frontend/images/16.jpg')}}" alt="Lights" style="width:100%">
+							<div class="caption">
+								<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+							</div>
+							</a>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="thumbnail">
+							<img src="{{asset('frontend/images/17.jpg')}}" alt="Lights" style="width:100%">
+							<div class="caption">
+								<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+							</div>
+							</a>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="thumbnail">
+							<img src="{{asset('frontend/images/18.jpg')}}" alt="Lights" style="width:100%">
+							<div class="caption">
+								<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+							</div>
+							</a>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="thumbnail">
+							<img src="{{asset('frontend/images/19.jpg')}}" alt="Lights" style="width:100%">
+							<div class="caption">
+								<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+							</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3">
+						<div class="thumbnail">
+							<img src="{{asset('frontend/images/12.jpg')}}" alt="Lights" style="width:100%">
+							<div class="caption">
+								<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+							</div>
+							</a>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="thumbnail">
+							<img src="{{asset('frontend/images/13.jpg')}}" alt="Lights" style="width:100%">
+							<div class="caption">
+								<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+							</div>
+							</a>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="thumbnail">
+							<img src="{{asset('frontend/images/14.jpg')}}" alt="Lights" style="width:100%">
+							<div class="caption">
+								<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+							</div>
+							</a>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="thumbnail">
+							<img src="{{asset('frontend/images/15.jpg')}}" alt="Lights" style="width:100%">
+							<div class="caption">
+								<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+							</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
+					<h2>Our Location</h2>
+					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+					</p>
+				</div>
+			</div>
+			<div class="row-fluid">
+				<div class="span8">
+					<iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d457923.86877925845!2d104.17120771835094!3d11.381808161287738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3108e85207384c83%3A0x1c0dc50984a079a3!2svKirirom+Pine+Resort!5e0!3m2!1sen!2skh!4v1532506013714"></iframe>
 				</div>
 			</div>
 		</div>
 
-		<div class="card bg-dark text-white">
-			<img class="card-img" src="https://unsplash.com/photos/JoRoy500nCc" alt="Card image">
-			<div class="card-img-overlay">
-				<h5 class="card-title">Card title</h5>
-				<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-				<p class="card-text">Last updated 3 mins ago</p>
-			</div>
-		</div>
 
-		<div class="card text-center">
-			<div class="card-body">
-				<h1 class="card-title">Special title treatment</h1>
-				<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-				<a href="#" class="btn btn-primary">Go somewhere</a>
-				<p>Hello world</p>
-			</div>
-		</div>
-		
 		<footer id="fh5co-footer" role="contentinfo">
 			<div class="container">
 				<div class="col-md-4 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
 					<h3>About vKirirom</h3>
-					<p>vKirirom Pine Resort is located amongst the pine trees of Kirirom Mountain. Here at vKiriom, we try to preserve the natural beauty of the environment. Our building locations are properly studied so that we avoid cutting down many trees.</p>
+					<p>vKirirom Pine Resort is located amongst the pine trees of Kirirom Mountain. Here at vKiriom, we try to preserve the
+						natural beauty of the environment. Our building locations are properly studied so that we avoid cutting down many trees.
+					</p>
 				</div>
 				<div class="col-md-4 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
 					<h3>Kirirom Institute of Technology</h3>
-					<div><label>KIT</label>adapts a new style of learning with an effective new educational techniques as a boarding school.</div>
+					<div>
+						<label>KIT</label>adapts a new style of learning with an effective new educational techniques as a boarding school.</div>
 					<a href="http://www.kit.edu.kh/contact.php" target="_black">Enroll here !!</a>
-					<div>New university for the future in Kirirom Mountain under the vKririom Project. An educational approach that stands amongst the forest.</div>
+					<div>New university for the future in Kirirom Mountain under the vKririom Project. An educational approach that stands amongst
+						the forest.</div>
 					<a href="http://www.kit.edu.kh/index.php" target="_black"> More about KIT</a>
 				</div>
 				<div class="col-md-4 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
 					<h3>THE MEANING OF OUR LOGO</h3>
-					<p>In the logo of vKirirom - you will find '<span style="color: orange;">v</span>' in orange and <span style="color: green;">'Kirirom'</span> in green. The orange colour represents the people who live in Kirirom. This is the colour of joy and creativity. It also reminds us  of the robes monks wear in Cambodia. The green represents the nature and its beauty.</p>
-				</div>					
-				<div class="col-md-12 fh5co-copyright text-center">
-					<p>&copy; 2018 Designed by <a href="http://kit.vkirirom.com/" target="_blank"> Kirirom Institute of Technology</a></p>
+					<p>In the logo of vKirirom - you will find '
+						<span style="color: orange;">v</span>' in orange and
+						<span style="color: green;">'Kirirom'</span> in green. The orange colour represents the people who live in Kirirom. This is the colour of joy and
+						creativity. It also reminds us of the robes monks wear in Cambodia. The green represents the nature and its beauty.</p>
 				</div>
+			</div>
+			<div class="col-md-12 fh5co-copyright text-center">
+				<p>&copy; 2018 Designed by
+					<a href="http://kit.vkirirom.com/" target="_blank"> Kirirom Institute of Technology</a>
+				</p>
 			</div>
 		</footer>
-		</div>
-	
-	<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+
+	</div>
 	<!-- jQuery -->
-	<script src="{{ URL::to('frontend/js/jquery.min.js') }}"></script>
+	<script src="{{asset('frontend/js/jquery.min.js')}}"></script>
 	<!-- jQuery Easing -->
-	<script src="{{ URL::to('frontend/js/jquery.easing.1.3.js') }}"></script>
+	<script src="{{asset('frontend/js/jquery.easing.1.3.js')}}"></script>
 	<!-- Bootstrap -->
-	<script src="{{ URL::to('frontend/js/bootstrap.min.js') }}"></script>
+	<script src="{{asset('frontend/js/bootstrap.min.js')}}"></script>
 	<!-- Waypoints -->
-	<script src="{{ URL::to('frontend/js/jquery.waypoints.min.js') }}"></script>
+	<script src="{{asset('frontend/js/jquery.waypoints.min.js')}}"></script>
 	<!-- Flexslider -->
-	<script src="{{ URL::to('frontend/js/jquery.flexslider-min.js') }}"></script>
-			</div>
-		</div>
+	<script src="{{asset('frontend/js/jquery.flexslider-min.js')}}"></script>
 
-		<div class="fh5co-section-with-image">
-			<img src="{{asset('frontend/images/security.png')}}" alt="" class="img-responsive">
-			<div class="fh5co-box animate-box">
-				<h2>Security, Comfort, &amp; Convenience</h2>
-				<p>We provide you a good service and make sure you have satified with our resort.</p>
-			</div>
-		</div>
+	<!-- MAIN JS -->
+	<script src="{{asset('frontend/js/main.js')}}"></script>
+	<!-- Date Picker Function -->
+	<script src="{{asset('frontend/js/jquery-ui.js')}}"></script>
 
-		<div id="fh5co-blog">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
-						<h2>Our information</h2>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="container">
-				<div class="row">
-					<div class="col-md-3 animate-box" data-animate-effect="fadeIn">
-						<a class="fh5co-entry" href="#">
-							<figure>
-								<img src="{{asset('frontend/images/bungalow.jpg')}}" alt="Free Website Template, Free HTML5 Bootstrap Template" class="img-responsive">
-							</figure>
-							<div class="fh5co-copy">
-								<h3>Bungalow</h3>
-								<span class="fh5co-date">June 8, 2016</span>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-							</div>
-						</a>
-					</div>
-					<div class="col-md-3 animate-box" data-animate-effect="fadeIn">
-						<a class="fh5co-entry" href="#">
-							<figure>
-								<img src="{{asset('frontend/images/boreyA.jpg')}}" alt="Free Website Template, Free HTML5 Bootstrap Template" class="img-responsive">
-							</figure>
-							<div class="fh5co-copy">
-								<h3>Borey A</h3>
-								<span class="fh5co-date">June 8, 2016</span>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
-								</p>
-							</div>
-						</a>
-					</div>
-					<div class="col-md-3 animate-box" data-animate-effect="fadeIn">
-						<a class="fh5co-entry" href="#">
-							<figure>
-								<img src="{{asset('frontend/images/luxurytent1.jpg')}}" alt="Free Website Template, Free HTML5 Bootstrap Template" class="img-responsive">
-							</figure>
-							<div class="fh5co-copy">
-								<h3>Luxury Tent</h3>
-								<span class="fh5co-date">June 8, 2016</span>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
-								</p>
-							</div>
-						</a>
-					</div>
-					<div class="col-md-3 animate-box" data-animate-effect="fadeIn">
-						<a class="fh5co-entry" href="#">
-							<figure>
-								<img src="{{asset('frontend/images/camping5.JPG')}}" alt="Free Website Template, Free HTML5 Bootstrap Template" class="img-responsive">
-							</figure>
-							<div class="fh5co-copy">
-								<h3>Camping</h3>
-								<span class="fh5co-date">June 8, 2016</span>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
-								</p>
-							</div>
-						</a>
-					</div>
-				</div>
-
-				<div class="container">
-					<div class="row">
-						<div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
-							<h2>Our Meal</h2>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="container">
-					<div class="row">
-						<div class="col-md-3">
-							<div class="thumbnail">
-								<img src="{{asset('frontend/images/16.jpg')}}" alt="Lights" style="width:100%">
-								<div class="caption">
-									<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-								</div>
-								</a>
-							</div>
-						</div>
-						<div class="col-md-3">
-							<div class="thumbnail">
-								<img src="{{asset('frontend/images/17.jpg')}}" alt="Lights" style="width:100%">
-								<div class="caption">
-									<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-								</div>
-								</a>
-							</div>
-						</div>
-						<div class="col-md-3">
-							<div class="thumbnail">
-								<img src="{{asset('frontend/images/18.jpg')}}" alt="Lights" style="width:100%">
-								<div class="caption">
-									<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-								</div>
-								</a>
-							</div>
-						</div>
-						<div class="col-md-3">
-							<div class="thumbnail">
-								<img src="{{asset('frontend/images/19.jpg')}}" alt="Lights" style="width:100%">
-								<div class="caption">
-									<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-								</div>
-								</a>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-3">
-							<div class="thumbnail">
-								<img src="{{asset('frontend/images/12.jpg')}}" alt="Lights" style="width:100%">
-								<div class="caption">
-									<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-								</div>
-								</a>
-							</div>
-						</div>
-						<div class="col-md-3">
-							<div class="thumbnail">
-								<img src="{{asset('frontend/images/13.jpg')}}" alt="Lights" style="width:100%">
-								<div class="caption">
-									<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-								</div>
-								</a>
-							</div>
-						</div>
-						<div class="col-md-3">
-							<div class="thumbnail">
-								<img src="{{asset('frontend/images/14.jpg')}}" alt="Lights" style="width:100%">
-								<div class="caption">
-									<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-								</div>
-								</a>
-							</div>
-						</div>
-						<div class="col-md-3">
-							<div class="thumbnail">
-								<img src="{{asset('frontend/images/15.jpg')}}" alt="Lights" style="width:100%">
-								<div class="caption">
-									<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-								</div>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-			</div>
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
-						<h2>Our Location</h2>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
-						</p>
-					</div>
-				</div>
-				<div class="row-fluid">
-					<div class="span8">
-						<iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d457923.86877925845!2d104.17120771835094!3d11.381808161287738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3108e85207384c83%3A0x1c0dc50984a079a3!2svKirirom+Pine+Resort!5e0!3m2!1sen!2skh!4v1532506013714"></iframe>
-					</div>
-				</div>
-			</div>
-
-
-			<footer id="fh5co-footer" role="contentinfo">
-				<div class="container">
-					<div class="col-md-4 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
-						<h3>About vKirirom</h3>
-						<p>vKirirom Pine Resort is located amongst the pine trees of Kirirom Mountain. Here at vKiriom, we try to preserve the
-							natural beauty of the environment. Our building locations are properly studied so that we avoid cutting down many
-							trees.
-						</p>
-					</div>
-					<div class="col-md-4 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
-						<h3>Kirirom Institute of Technology</h3>
-						<div>
-							<label>KIT</label>adapts a new style of learning with an effective new educational techniques as a boarding school.</div>
-						<a href="http://www.kit.edu.kh/contact.php" target="_black">Enroll here !!</a>
-						<div>New university for the future in Kirirom Mountain under the vKririom Project. An educational approach that stands amongst
-							the forest.</div>
-						<a href="http://www.kit.edu.kh/index.php" target="_black"> More about KIT</a>
-					</div>
-					<div class="col-md-4 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
-						<h3>THE MEANING OF OUR LOGO</h3>
-						<p>In the logo of vKirirom - you will find '
-							<span style="color: orange;">v</span>' in orange and
-							<span style="color: green;">'Kirirom'</span> in green. The orange colour represents the people who live in Kirirom. This is the colour of joy
-							and creativity. It also reminds us of the robes monks wear in Cambodia. The green represents the nature and its beauty.</p>
-					</div>
-				</div>
-				<div class="col-md-12 fh5co-copyright text-center">
-					<p>&copy; 2018 Designed by
-						<a href="http://kit.vkirirom.com/" target="_blank"> Kirirom Institute of Technology</a>
-					</p>
-				</div>
-			</footer>
-
-		</div>
-		<!-- jQuery -->
-		<script src="{{asset('frontend/js/jquery.min.js')}}"></script>
-		<!-- jQuery Easing -->
-		<script src="{{asset('frontend/js/jquery.easing.1.3.js')}}"></script>
-		<!-- Bootstrap -->
-		<script src="{{asset('frontend/js/bootstrap.min.js')}}"></script>
-		<!-- Waypoints -->
-		<script src="{{asset('frontend/js/jquery.waypoints.min.js')}}"></script>
-		<!-- Flexslider -->
-		<script src="{{asset('frontend/js/jquery.flexslider-min.js')}}"></script>
-
-		<!-- MAIN JS -->
-		<script src="{{asset('frontend/js/main.js')}}"></script>
-		<!-- Date Picker Function -->
-		<script src="{{asset('frontend/js/jquery-ui.js')}}"></script>
-
-		<script>
-			function myFunction() {
-				// var type=
-				var e = document.getElementById("type");
-				var strUser = e.options[e.selectedIndex].value;
-				console.log(e.value)
-				if ($('#type').val() > 0) {
-					$('#myBtn').attr('disabled', false)
-				} else {
-					$('#myBtn').attr('disabled', true)
-				}
-				// document.getElementById("myBtn").disabled = false;
+	<script>
+		function myFunction() {
+			// var type=
+			var e = document.getElementById("type");
+			var strUser = e.options[e.selectedIndex].value;
+			console.log(e.value)
+			if ($('#type').val() > 0) {
+				$('#myBtn').attr('disabled', false)
+			} else {
+				$('#myBtn').attr('disabled', true)
 			}
-		</script>
-		<script>
-			$(document).ready(function () {
-				$("#DateIn").datepicker({
-					numberOfMonths: 2,
-					onSelect: function (selected) {
-						$("#DateOut").datepicker("option", "minDate", selected)
-					}
-				});
-				$("#DateOut").datepicker({
-					numberOfMonths: 2,
-					onSelect: function (selected) {
-						$("#DateIn").datepicker("option", "maxDate", selected)
-					}
-				});
+			// document.getElementById("myBtn").disabled = false;
+		}
+	</script>
+	<script>
+		$(document).ready(function () {
+			$("#DateIn").datepicker({
+				numberOfMonths: 2,
+				onSelect: function (selected) {
+					$("#DateOut").datepicker("option", "minDate", selected)
+				}
 			});
-			$(function () {
-				$('#datepicker').datepicker({
-					dateFormat: "dd/MM/yy",
-					defaultDate: "+1w",
-					changeMonth: true,
-					numberOfMonths: 1,
-					onSelect: function (selectedDate) {
-						if (this.id == 'datepicker') {
-							var dateMin = $('#datepicker').datepicker("getDate");
-							var rMin = new Date(dateMin.getFullYear(), dateMin.getMonth(), dateMin.getDate() + 1);
-							var rMax = new Date(dateMin.getFullYear(), dateMin.getMonth(), dateMin.getDate() + 2);
-							$('#datepicker2').val($.datepicker.formatDate('dd/MM/yy', new Date(rMax)));
-						}
-					}
-				});
+			$("#DateOut").datepicker({
+				numberOfMonths: 2,
+				onSelect: function (selected) {
+					$("#DateIn").datepicker("option", "maxDate", selected)
+				}
 			});
-			$(document).ready(function () {
-				$("#DateIn").datepicker({
-					numberOfMonths: 2,
-					onSelect: function (selected) {
-						$("#DateOut").datepicker("option", "minDate", selected)
+		});
+		$(function () {
+			$('#datepicker').datepicker({
+				dateFormat: "YYYY-MM-dd",
+				defaultDate: "+1w",
+				changeMonth: true,
+				numberOfMonths: 1,
+				onSelect: function (selectedDate) {
+					if (this.id == 'datepicker') {
+						var dateMin = $('#datepicker').datepicker("getDate");
+						var rMin = new Date(dateMin.getFullYear(), dateMin.getMonth(), dateMin.getDate() + 1);
+						var rMax = new Date(dateMin.getFullYear(), dateMin.getMonth(), dateMin.getDate() + 2);
+						$('#datepicker2').val($.datepicker.formatDate('YY-MM-dd', new Date(rMax)));
 					}
-				});
-				$("#DateOut").datepicker({
-					numberOfMonths: 2,
-					onSelect: function (selected) {
-						$("#DateIn").datepicker("option", "maxDate", selected)
-					}
-				});
+				}
 			});
-		</script>
-		<script>
-			$(function () {
-				$("#datepicker2").datepicker({
-					dateFormat: "dd/MM/yy"
-				});
+		});
+		$(document).ready(function () {
+			$("#DateIn").datepicker({
+				numberOfMonths: 2,
+				onSelect: function (selected) {
+					$("#DateOut").datepicker("option", "minDate", selected)
+				}
 			});
-		</script>
-		<script type="text/javascript" src="{{asset('js/moment.min.js')}}"></script>
-		<script type="text/javascript" src="{{asset('js/bootstrap-datetimepicker.min.js')}}"></script>
-
-		<!-- Check In Check out implement -->
-		<script>
-			$(document).ready(function () {
-				var today = moment().add(0, 'days').format('L');
-				var d = moment().add(0, 'days').format('YYYY-MM-DD');
-				var tomorrow = moment().add(1, 'days').format('YYYY-MM-DD');
-				console.log(today);
-				console.log('*********');
-
-				$('#datetimepicker-check-in').datetimepicker({
-					minDate: today,
-					defaultDate: today,
-					format: 'L',
-					showClear: true,
-					widgetPositioning: {
-						horizontal: 'auto',
-						vertical: 'bottom'
-					}
-
-				});
-
-				$('#datetimepicker-check-out').datetimepicker({
-					minDate: tomorrow,
-					defaultDate: tomorrow,
-					format: 'L',
-					showClear: true,
-					widgetPositioning: {
-						horizontal: 'auto',
-						vertical: 'bottom'
-					}
-				});
-				$('#datetimepicker-check-in').on("dp.change", function (e) {
-					var next_day = moment(e.date).add(1, 'days');
-					$('#datetimepicker-check-out').data("DateTimePicker").minDate(next_day);
-					$('#datetimepicker-check-out').data("DateTimePicker").defaultDate(next_day);
-					console.log('---------');
-					console.log(e.date);
-					date_checkin = moment(e.date).format("YYYY-MM-DD");
-					date_checkout = moment(e.date).add(1, 'days').format("YYYY-MM-DD");
-					console.log('+++++++++++++');
-					console.log(date_checkin);
-					console.log(date_checkout);
-					d = moment(e.date).format("YYYY-MM-DD");
-					$('#checkin-time').val(date_checkin);
-					$('#checkinout-time').val(date_checkout);
-				});
-
-				$('#datetimepicker-check-out').on("dp.change", function (e) {
-					$('#checkinout-time').val(moment(e.date).format("YYYY-MM-DD"));
-					console.log('------------------')
-					console.log(moment(e.date).format('L'));
-				});
+			$("#DateOut").datepicker({
+				numberOfMonths: 2,
+				onSelect: function (selected) {
+					$("#DateIn").datepicker("option", "maxDate", selected)
+				}
 			});
-		</script>
+		});
+	</script>
+	<script>
+		$(function () {
+			$("#datepicker2").datepicker({
+				dateFormat: "YY-MM-dd"
+			});
+		});
+	</script>
+	<script type="text/javascript" src="{{asset('js/moment.min.js')}}"></script>
+	<script type="text/javascript" src="{{asset('js/bootstrap-datetimepicker.min.js')}}"></script>
+
+	<!-- Check In Check out implement -->
+	<script>
+		$(document).ready(function () {
+			var today = moment().add(0, 'days').format('L');
+			var d = moment().add(0, 'days').format('YYYY-MM-DD');
+			var tomorrow = moment().add(1, 'days').format('YYYY-MM-DD');
+			console.log(today);
+			console.log('*********');
+
+			$('#datetimepicker-check-in').datetimepicker({
+				minDate: today,
+				defaultDate: today,
+				format: "YYYY-MM-DD",
+				showClear: true,
+				widgetPositioning: {
+					horizontal: 'auto',
+					vertical: 'bottom'
+				}
+
+			});
+
+			$('#datetimepicker-check-out').datetimepicker({
+				minDate: tomorrow,
+				defaultDate: tomorrow,
+				format: 'L',
+				showClear: true,
+				widgetPositioning: {
+					horizontal: 'auto',
+					vertical: 'bottom'
+				}
+			});
+			$('#datetimepicker-check-in').on("dp.change", function (e) {
+				var next_day = moment(e.date).add(1, 'days');
+				$('#datetimepicker-check-out').data("DateTimePicker").minDate(next_day);
+				$('#datetimepicker-check-out').data("DateTimePicker").defaultDate(next_day);
+				console.log('---------');
+				console.log(e.date);
+				date_checkin = moment(e.date).format("YYYY-MM-DD");
+				date_checkout = moment(e.date).add(1, 'days').format("YYYY-MM-DD");
+				console.log('+++++++++++++');
+				console.log(date_checkin);
+				console.log(date_checkout);
+				d = moment(e.date).format("YYYY-MM-DD");
+				$('#checkin-time').val(date_checkin);
+				$('#checkinout-time').val(date_checkout);
+			});
+
+			$('#datetimepicker-check-out').on("dp.change", function (e) {
+				$('#checkinout-time').val(moment(e.date).format("YYYY-MM-DD"));
+				console.log('------------------')
+				console.log(moment(e.date).format('L'));
+			});
+		});
+	</script>
 </body>
 
 </html>

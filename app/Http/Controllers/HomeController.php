@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Type;
+use App\Rate;
 
 class HomeController extends Controller
 {
@@ -25,6 +26,7 @@ class HomeController extends Controller
     public function index()
     {
         $allrooms = Type::all();
-        return view('home', compact('allrooms'));
+        $nerd = Rate::all();
+        return view('home', compact(['allrooms', '$nerd']));
     }
 }

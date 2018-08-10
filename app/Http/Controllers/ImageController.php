@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Image;
 use App\Type;
 use Carbon\Carbon;
+use App\Rate;
 
 
 class ImageController extends Controller
@@ -122,12 +123,13 @@ class ImageController extends Controller
 
     public function index2()
     {
+        $nerd = Rate::all();
         $items = DB::table('types')
         ->select('types.id', 'types.name','rates.price', 'images.image', 'types.description', DB::raw('count(images.image) as total'))
         ->join('images', 'types.id', '=', 'images.type_ID')
         ->join('rates', 'images.type_ID', '=', 'rates.type_ID')
         ->groupBy('rates.type_ID')
         ->get();
-    return view('testing', compact('items'));
+    return view('testing', compact(['items', 'nerd']));
     }
 }

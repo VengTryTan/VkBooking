@@ -83,20 +83,21 @@
                     </div>
                 </div>
 
-                <input type="submit" value="Continue to checkout" class="btn" id="confirm-purchase">
+                <input type="submit" value="Continue to checkout" class="btn" id="confirm-purchase">    
             </form>
         </div>
     </div>
+    @foreach ($user as $item)
     <div class="col-25">
         <div class="container">
-            <h4>Selected Room
+            <h4> 
                 <span class="price" style="color:black">
                     <i class="fa fa-shopping-cart"></i>
                     <b>4</b>
                 </span>
             </h4>
-            <p>Bungalow
-                <span class="price">$175</span>
+            
+                <span class="price"></span>
             </p>
             <hr>
             <p>Total
@@ -111,14 +112,17 @@
                 </span>
             </h4>
             <p>Checkin :
-                <span class="date" style="color:black"></span>
+                <span class="date" style="color:black"> {{$item->date}}</span>
             </p>
             <p>Checkout :
                 <span class="date" style="color:black"></span>
             </p>
         </div>
     </div>
+    @endforeach
+    
 </div>
+
 <script>
     $('#cardNumber').keyup(function () {
         var foo = $(this).val().split("-").join(""); // remove hyphens

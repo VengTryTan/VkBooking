@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Checkin;
+use DB;
+use App\Rate;
 
 class CheckinController extends Controller
 {
@@ -58,8 +60,21 @@ class CheckinController extends Controller
      */
     public function show($id)
     {
-        //
+        $nerd = Rate::where('id', $id)->firstOrFail();;
+        return View::make('checkin')
+            ->with('nerd', $nerd);
     }
+
+    public function search(Request $request){
+        $searchDate= $request->checkin_date;
+        $user = Rate::where('date','=',$searchDate)->get();
+        //$user = DB::select( DB::raw("SELECT * FROM rates WHERE date = $searchDate"));
+        echo($searchDate);
+        echo($user);
+
+        return view('checkin',compact(['user','searchDate']));
+      }
+
 
     /**
      * Show the form for editing the specified resource.
