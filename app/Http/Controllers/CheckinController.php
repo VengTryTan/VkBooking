@@ -78,7 +78,7 @@ class CheckinController extends Controller
        // echo($searchDate);
         //echo($user);
 
-        return view('welcome',compact(['user','searchDate', 'items']));
+        return view('welcome',compact(['user','searchDate']));
       }
 
 
