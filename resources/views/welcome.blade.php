@@ -124,13 +124,9 @@
 								<div class="row">
 									<div class="fh5co-property">
 										<div class="col-md-4">
-											<aside id="fh5co-hero">
-												<div class="flexslider">
-													
-
-													<p>{{$item->date}}</p>
-												</div>
-											</aside>
+											<div class="flexslider">
+												<p>{{$item->date}}</p>
+											</div>
 										</div>
 										<div class="col-md-5">
 											<div class="fh5co-property-innter">
