@@ -89,7 +89,7 @@
 							<div id="sidebar">
 								<div class="nice well-small">
 									<ul class="nav nav-list">
-										<h4 class="filters-header-text"><img src="{{asset('img/filter.svg')}}" width="20px" height="20px" alt="filter">Filter by:</h4>
+										<h4 class="filters-header-text"><img src="{{asset('img/filter.svg')}}" width="20px" height="20px" alt="filter">Filter by :</h4>
 										<form action="">
 											<div class="filter-box">
 												<div class="filter-class">
@@ -122,7 +122,7 @@
 						<div style="float: right;" class="col-md-9 col-sm-9 col-xs-9 col-lg-9 item-block animate-box" data-animate-effect="fadeIn">
 							<div class="card">
 								<div class="row">
-									<div class="fh5co-property">
+									<div >
 										<div class="col-md-4">
 											<div class="flexslider">
 												<p>{{$item->date}}</p>
@@ -130,21 +130,19 @@
 										</div>
 										<div class="col-md-5">
 											<div class="fh5co-property-innter">
-												<label>{{$item->name}}</label>							               		
-												<p class="">
-													<span>
-														<strong class="fa fa-wifi">WiFi available</strong>
-													</span>
-													<span>
-														<strong class="fa fa-bed"> 1 Bed</strong>
-													</span>
-													<span>
-														<strong class="fa fa-shower"> Bathroom</strong>
-													</span>
-													<span>
-														<strong class="fa fa-television">TV available</strong>
-													</span>
-												</p>
+												<label>{{$item->name}}</label>
+												<span>
+													<strong class="fa fa-wifi">WiFi available</strong>
+												</span>
+												<span>
+													<strong class="fa fa-bed"> 1 Bed</strong>
+												</span>
+												<span>
+													<strong class="fa fa-shower"> Bathroom</strong>
+												</span>
+												<span>
+													<strong class="fa fa-television">TV available</strong>
+												</span>
 											</div>
 										</div>
 										<div class="col-md-3">
