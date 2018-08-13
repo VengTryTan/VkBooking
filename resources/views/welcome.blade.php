@@ -21,6 +21,7 @@
 	<link rel="stylesheet" href="{{asset('frontend/css/icomoon.css')}}">
 	<!-- Bootstrap  -->
 	<link rel="stylesheet" href="{{asset('frontend/css/bootstrap.css')}}">
+	<link rel="stylesheet" href="{{asset('frontend/css/bootstrap.min.css')}}">
 	<!-- Flexslider  -->
 	<link rel="stylesheet" href="{{asset('frontend/css/flexslider.css')}}">
 	<!-- Theme style  -->
@@ -29,6 +30,7 @@
 	<link rel="stylesheet" href="{{asset('frontend/css/jquery-ui.css')}}">
 	<link rel="stylesheet" href="{{asset('css/multirange.css')}}">
 	<!-- <link rel="stylesheet" href="{{asset('css/app.css')}}"> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
 	<!-- Modernizr JS -->
 	<script src="{{asset('frontend/js/modernizr-2.6.2.min.js')}}"></script>
 	<!-- FOR IE9 below -->
@@ -83,38 +85,40 @@
 						<h2>We are Offering the Best Accommodations!</h2>
 						<p>Far far away, behinxd the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
 					</div>
-					<div class="col-md-3 col-sm-3 col-xs-3 col-lg-3 item-block animate-box" data-animate-effect="fadeIn">
-						<div id="sidebar">
-							<div class="nice well-small">
-								<ul class="nav nav-list">
-									<h4 class="filters-header-text"><img src="{{asset('img/filter.svg')}}" width="20px" height="20px" alt="filter">Filter by:</h4>
-									<form action="">
-										<div class="filter-box">
-											<div class="filter-class">
-												<span>Accommodations Class</span><br>
+						<div class="col-md-3 col-sm-3 col-xs-3 col-lg-3 item-block animate-box" data-animate-effect="fadeIn">
+							<div id="sidebar">
+								<div class="nice well-small">
+									<ul class="nav nav-list">
+										<h4 class="filters-header-text"><img src="{{asset('img/filter.svg')}}" width="20px" height="20px" alt="filter">Filter by:</h4>
+										<form action="">
+											<div class="filter-box">
+												<div class="filter-class">
+													<span>Accommodations Class</span><br>
+												</div>
+												<input type="radio" name="acc-class" value="budget" id="budget"><span id="budget"> budgets</span><br>
+												<input type="radio" name="acc-class" value="luxury" id="luxury"><span id="budget"> Luxury</span><br>
+												<input type="radio" name="acc-class" value="other" id="other"><span id="budget"> Other</span><hr>
 											</div>
-											<input type="radio" name="acc-class" value="budget" id="budget"><span id="budget"> budgets</span><br>
-											<input type="radio" name="acc-class" value="luxury" id="luxury"><span id="budget"> Luxury</span><br>
-											<input type="radio" name="acc-class" value="other" id="other"><span id="budget"> Other</span><hr>
-										</div>
-									</form>
-									<form action="">
-										<div class="filter-box">
-											<div class="filter-class">
-												<span>Type of beds</span><br>
+										</form>
+										<form action="">
+											<div class="filter-box">
+												<div class="filter-class">
+													<span>Type of beds</span><br>
+												</div>
+												<input type="radio" name="type-bed" value="budget"><span id="budget"> Single bed</span><br>
+												<input type="radio" name="type-bed" value="luxury"><span id="budget"> Double beds</span><br>
+												<input type="radio" name="type-bed" value="other"><span id="budget"> 4 beds</span><br>
+												<input type="radio" name="type-bed" value="other"><span id="budget"> Camping type</span><hr>
 											</div>
-											<input type="radio" name="type-bed" value="budget"><span id="budget"> Single bed</span><br>
-											<input type="radio" name="type-bed" value="luxury"><span id="budget"> Double beds</span><br>
-											<input type="radio" name="type-bed" value="other"><span id="budget"> 4 beds</span><br>
-											<input type="radio" name="type-bed" value="other"><span id="budget"> Camping type</span><hr>
-										</div>
-									</form>
-									<li> <a class="totalInCar\t" href="cart.html"><strong>Total Amount  <span class="badge badge-warning pull-right" style="line-height:18px;">$448.42</span></strong></a></li>
-								</ul>
+										</form>
+										<li> <a class="totalInCar\t" href="cart.html"><strong>Total Amount  <span class="badge badge-warning pull-right" style="line-height:18px;">$448.42</span></strong></a></li>
+									</ul>
+								</div>
 							</div>
 						</div>
 					</div>
-					@foreach($user as $key=>$item)
+		
+					@foreach($items as $key=>$item)
 						<div style="float: right;" class="col-md-9 col-sm-9 col-xs-9 col-lg-9 item-block animate-box" data-animate-effect="fadeIn">
 							<div class="card">
 								<div class="row">
@@ -148,6 +152,17 @@
 											</div>
 										</div>
 										<div class="col-md-3">
+											<span>Available room:</span><br>
+											<div>
+												<select class="selectpicker" style="width: 100%; heigth: auto; text-align:">
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+													<option>4</option>
+													<option>5</option>
+													<option>6</option>
+												</select>
+											</div>
 											<div class="price-status">
 												<span class="price">${{$item->price}}<span class="per">/night</span></span>
 											</div>
@@ -408,7 +423,14 @@
 			}
 		});
 	</script>
+	<script>
+		$('.selectpicker').selectpicker({
+			style: 'btn-info',
+			size: 4
+		});
+	</script>
 	<script type="text/javascript" src="{{asset('js/multirange.js')}}"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
 </body>
 
 </html>
