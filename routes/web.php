@@ -15,8 +15,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/', 'ImageController@index1');
-Route::get('/testing', 'ImageController@index2');
+Route::get('/', 'ImageController@index2');
+Route::get('/testing', 'ImageController@index1');
 
 Route::post('/type', 'TypeController@type')->name('type');
 Route::resource('item', 'ImageController');

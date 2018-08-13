@@ -67,12 +67,18 @@ class CheckinController extends Controller
 
     public function search(Request $request){
         $searchDate= $request->checkin_date;
-        $user = Rate::where('date','=',$searchDate)->get();
-        //$user = DB::select( DB::raw("SELECT * FROM rates WHERE date = $searchDate"));
-        echo($searchDate);
-        echo($user);
+       // $user = Rate::where('date','=',$searchDate)->get();
+        $user = DB::table('types')
+        ->select('types.id', 'types.name','rates.price','rates.date', 'images.image',  DB::raw('count(images.image) as total'))
+        ->join('images', 'types.id', '=', 'images.type_ID')
+        ->join('rates', 'images.type_ID', '=', 'rates.type_ID')
+        ->groupBy('rates.type_ID')
+        ->where('rates.date', $searchDate)
+        ->get();
+       // echo($searchDate);
+        //echo($user);
 
-        return view('checkin',compact(['user','searchDate']));
+        return view('welcome',compact(['user','searchDate', 'items']));
       }
 
 

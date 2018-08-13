@@ -112,12 +112,13 @@ class ImageController extends Controller
     public function index1()
     {
         $items = DB::table('types')
-        ->select('types.id', 'types.name','rates.price', 'images.image', 'types.description', DB::raw('count(images.image) as total'))
+        ->select('types.id', 'types.name','rates.price', 'rates.date','images.image',  DB::raw('count(types.id) as total'))
         ->join('images', 'types.id', '=', 'images.type_ID')
         ->join('rates', 'images.type_ID', '=', 'rates.type_ID')
         ->groupBy('rates.type_ID')
         ->get();
-    return view('welcome', compact('items'));
+        echo($items);
+    return view('checkin', compact('items'));
     }
 
 

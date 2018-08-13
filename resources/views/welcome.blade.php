@@ -74,178 +74,7 @@
 			</div>
 		</header>
 
-		<aside id="fh5co-hero" clsas="js-fullheight">
-			<div class="flexslider js-fullheight">
-				<ul class="slides">
-					<li style="background-image: url(frontend/images/bungalow.jpg);">
-						<div class="container">
-							<div class="col-md-12 text-center js-fullheight fh5co-property-brief slider-text">
-								<div class="fh5co-property-brief-inner">
-									<div class="fh5co-box">
-
-										<h3>Bungalow</h3>
-										<div class="price-status">
-											<span class="price">$131.8
-												<span class="per">/night</span>
-												<a href="#" class="tag">Available</a>
-											</span>
-										</div>
-										<p>Stay in one of our specially designed bungalows and experience the invigorating fresh air of Kirirom. Relax in
-											our king size or twin-bed bungalows. King size or twin bed(s) / Ceiling fan / Local TV / En-suit bathroom (with
-											hot water supply) / Electric kettle / Hair dryer / Private veranda / Free Wi-fi Internet / Safe box.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li style="background-image: url(frontend/images/boreyR1.jpg);">
-						<div class="container">
-							<div class="col-md-12 text-center js-fullheight fh5co-property-brief slider-text">
-								<div class="fh5co-property-brief-inner">
-									<div class="fh5co-box">
-										<h3>Villa Jasmine</h3>
-										<div class="price-status">
-											<span class="price">$131
-												<span class="per">/night</span>
-												<a href="#" class="tag">Available</a>
-											</span>
-										</div>
-										<p>Comprising of a combined bedroom, living, dining, kitchen area and an attached toilet, these versatile homes promises
-											lots of many pleasant experiences in the cool Kiririom mountain top. With your own private garden of about 180
-											sq. meters, mixed the fresh outdoor environment with the beauty of your private studio home. Jasmine hills – elevate
-											your lifestyle today.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li style="background-image: url(frontend/images/boreyA.jpg);">
-						<div class="container">
-							<div class="col-md-12 text-center js-fullheight fh5co-property-brief slider-text">
-								<div class="fh5co-property-brief-inner">
-									<div class="fh5co-box">
-										<h3>Villa Suite</h3>
-										<div class="price-status">
-											<span class="price">$272
-												<span class="per">/night</span>
-												<a href="#" class="tag">For Sale</a>
-											</span>
-										</div>
-										<p>This two-bedroom villa with a mezzanine level is suitable for bigger families or group. This modern designed building
-											has a bath and shower room with a state of the art kitchen, a wide living room and an open roof deck for BBQ party
-											or just simply relaxing under the sun or the stars.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li style="background-image: url(frontend/images/khmercottage.jpg);">
-						<div class="container">
-							<div class="col-md-12 text-center js-fullheight fh5co-property-brief slider-text">
-								<div class="fh5co-property-brief-inner">
-									<div class="fh5co-box">
-
-										<h3>Khmer Cottage</h3>
-										<div class="price-status">
-											<span class="price">$50
-												<span class="per">/night</span>
-												<a href="#" class="tag">Available</a>
-											</span>
-										</div>
-										<p>Experience a real Khmer traditional hut with the fresh and cool breeze. Stay in a Khmer farmer's open-style house
-											nicely decorated with natural materials. Each cottage has twin beds and is best suited to students and couples
-											who would like to enjoy the natural fresh air of the pine forests in Kirirom Mountain. Each cottage size is 3m
-											x 4m (12m2).</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li style="background-image: url(frontend/images/luxurytent1.jpg);">
-						<div class="container">
-							<div class="col-md-12 text-center js-fullheight fh5co-property-brief slider-text">
-								<div class="fh5co-property-brief-inner">
-									<div class="fh5co-box">
-
-										<h3>Luxury Tent</h3>
-										<div class="price-status">
-											<span class="price">$82
-												<span class="per">/night</span>
-												<a href="#" class="tag">Available</a>
-											</span>
-										</div>
-										<p>Stay in style and comfort in a high quality tent with the comfort of a hotel room. The tents come with a king size
-											bed and en-suite bathroom. Rooms size is 5m x 4 m (20m2).Luxury Tent is a modern tent house which has a king size
-											bed and nice bath room. Its size is 5m x 4m or 20m2.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li style="background-image: url(frontend/images/piperoom6.jpg);">
-						<div class="container">
-							<div class="col-md-12 text-center js-fullheight fh5co-property-brief slider-text">
-								<div class="fh5co-property-brief-inner">
-									<div class="fh5co-box">
-
-										<h3>Pipe Room</h3>
-										<div class="price-status">
-											<span class="price">$59
-												<span class="per">/night</span>
-												<a href="#" class="tag">Available</a>
-											</span>
-										</div>
-										<p>A unique design to Cambodia and other Asian countries, the Pipe Rooms are affordable but cozy. Our pipe rooms are
-											ideal for students and couples who want to experience a creatively designed room in our beautiful, natural resort.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li style="background-image: url(frontend/images/TypeV-7.jpg);">
-						<div class="container">
-							<div class="col-md-12 text-center js-fullheight fh5co-property-brief slider-text">
-								<div class="fh5co-property-brief-inner">
-									<div class="fh5co-box">
-
-										<h3>Orchide Hill Service Apartment</h3>
-										<div class="price-status">
-											<span class="price">$600
-												<span class="per">/month</span>
-												<a href="#" class="tag">Available</a>
-											</span>
-										</div>
-										<p>It is a condominium type building surrounded by pine tree forest which is available for customers who stay more
-											than 1week. Furnitures are provided and equipped facilities are for use. Utilities, water, gas, wifi fees are
-											included in the price.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li style="background-image: url(frontend/images/camping5.jpg);">
-						<div class="container">
-							<div class="col-md-12 text-center js-fullheight fh5co-property-brief slider-text">
-								<div class="fh5co-property-brief-inner">
-									<div class="fh5co-box">
-										<h3>Auto Camping</h3>
-										<div class="price-status">
-											<span class="price">$20
-												<span class="per">/night</span>
-												<a href="#" class="tag">Available</a>
-											</span>
-										</div>
-										<p>Come with your car and camp amongst nature. With your safety in mind, our campsite has a perimeter fence and 24
-											hours security staff on duty. Simply drive your car to Kirirom. Park and camp in one of our car camping grounds.
-											You can rent or purchase camping equipment and tools in our resort.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</li>
-				</ul>
-			</div>
-		</aside>
+		
 		
 		<div id="best-deal">
 			<div class="container">
@@ -259,19 +88,6 @@
 							<div class="nice well-small">
 								<ul class="nav nav-list">
 									<h4 class="filters-header-text"><img src="{{asset('img/filter.svg')}}" width="20px" height="20px" alt="filter">Filter by:</h4>
-									
-									<!-- <li><a href="products.html"><span class="icon-chevron-right"></span>See All Jewelry & Watches</a></li>
-									<li style="border:0"> &nbsp;</li> -->
-									<!-- <div class="slidecontainer">
-										<p>Default range slider:</p>
-										<input type="range" min="1" max="100" value="50">
-										<input type="range" multiple value="20,80"/>
-										<p>Custom range slider:</p>
-										<input type="range" multiple value="20,80" />
-										<input type="range" multiple min="0" max="250" value="10,250" class="slider" id="myRange" name="filter">
-									</div> -->
-									<!-- <input type="radio" name="budgets" value="budget">budget<br>
-									<input type="radio" name="luxary" value="luxary">Luxury -->
 									<form action="">
 										<div class="filter-box">
 											<div class="filter-class">
@@ -282,46 +98,6 @@
 											<input type="radio" name="acc-class" value="other" id="other"><span id="budget"> Other</span><hr>
 										</div>
 									</form>
-									<!-- <form action="">
-										<div class="filter-class">
-											<span>People</span><br>
-										</div>
-										<div class="row">
-											<div class="col-md-4">
-												<span>Beds</span>
-											</div>
-											<div class="col-md-8">
-												<select id="softflow">
-													<option>1</option>
-													<option>2</option>
-													<option>3</option>
-													<option>4</option>
-												</select><br>
-											</div>
-											<div class="col-md-4">
-												<span>Adults</span>
-											</div>
-											<div class="col-md-8">
-												<select id="softflow">
-													<option>1</option>
-													<option>2</option>
-													<option>3</option>
-													<option>4</option>
-												</select><br>
-											</div>
-											<div class="col-md-4">
-												<span>Children</span>
-											</div>
-											<div class="col-md-8">
-												<select id="softflow">
-													<option>1</option>
-													<option>2</option>
-													<option>3</option>
-													<option>4</option>
-												</select><br>
-											</div>
-										</div>
-									</form> -->
 									<form action="">
 										<div class="filter-box">
 											<div class="filter-class">
@@ -338,7 +114,7 @@
 							</div>
 						</div>
 					</div>
-					@foreach($items as $key=>$item)
+					@foreach($user as $key=>$item)
 						<div style="float: right;" class="col-md-9 col-sm-9 col-xs-9 col-lg-9 item-block animate-box" data-animate-effect="fadeIn">
 							<div class="card">
 								<div class="row">
@@ -346,23 +122,9 @@
 										<div class="col-md-4">
 											<aside id="fh5co-hero">
 												<div class="flexslider">
-													<ul class="slides">
-														<li>
-															<img src="{{asset('uploads/image/'.$item->image)}}" class="img-responsive" alt="image">
-														</li>
-														<li>
-															<img src="{{asset('uploads/image/'.$item->image)}}" class="img-responsive" alt="image">
-														</li>
-														<li>
-															<img src="{{asset('uploads/image/'.$item->image)}}" class="img-responsive" alt="image">
-														</li>
-														<li>
-															<img src="{{asset('uploads/image/'.$item->image)}}" class="img-responsive" alt="image">
-														</li>
-														<li>
-															<img src="{{asset('uploads/image/'.$item->image)}}" class="img-responsive" alt="image">
-														</li>
-													</ul>
+													
+
+													<p>{{$item->date}}</p>
 												</div>
 											</aside>
 										</div>
