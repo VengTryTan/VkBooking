@@ -94,10 +94,10 @@
 				<ul class="slides">
 					<li class="img-responsive" style="background-image: url(frontend/images/1.jpg);" />
 					<li class="img-responsive" style="background-image: url(frontend/images/1.jpg);" />
-					<li class="img-responsive" style="background-image: url(frontend/images/2.jpg);" />>
-					<li class="img-responsive" style="background-image: url(frontend/images/3.jpg);" />>
-					<li class="img-responsive" style="background-image: url(frontend/images/4.jpg);" />>
-					<li class="img-responsive" style="background-image: url(frontend/images/5.jpg);" />>
+					<li class="img-responsive" style="background-image: url(frontend/images/2.jpg);" />
+					<li class="img-responsive" style="background-image: url(frontend/images/3.jpg);" />
+					<li class="img-responsive" style="background-image: url(frontend/images/4.jpg);" />
+					<li class="img-responsive" style="background-image: url(frontend/images/5.jpg);" />
 					<li class="img-responsive" style="background-image: url(frontend/images/6.jpg);" />
 					<li class="img-responsive" style="background-image: url(frontend/images/resort.jpg);" />
 				</ul>

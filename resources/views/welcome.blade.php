@@ -6,37 +6,23 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>vKirirom Pine Resort</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-	<link rel="shortcut icon" href="favicon.ico">
+	
 	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-	<!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,400italic,700' rel='stylesheet' type='text/css'> -->
-
-	<link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap-datetimepicker.css')}}">
-	<link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap-datetimepicker.min.css')}}">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-	<!-- Animate.css -->
+	
 	<link rel="stylesheet" href="{{asset('frontend/css/animate.css')}}">
-	<!-- Icomoon Icon Fonts-->
 	<link rel="stylesheet" href="{{asset('frontend/css/icomoon.css')}}">
-	<!-- Bootstrap  -->
 	<link rel="stylesheet" href="{{asset('frontend/css/bootstrap.css')}}">
 	<link rel="stylesheet" href="{{asset('frontend/css/bootstrap.min.css')}}">
-	<!-- Flexslider  -->
-	<link rel="stylesheet" href="{{asset('frontend/css/flexslider.css')}}">
-	<!-- Theme style  -->
+	<!-- <link rel="stylesheet" href="{{asset('frontend/css/flexslider.css')}}"> -->
 	<link rel="stylesheet" href="{{asset('frontend/css/style.css')}}">
-	<!-- Date picker style -->
 	<link rel="stylesheet" href="{{asset('frontend/css/jquery-ui.css')}}">
-	<link rel="stylesheet" href="{{asset('css/multirange.css')}}">
-	<!-- <link rel="stylesheet" href="{{asset('css/app.css')}}"> -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
-	<!-- Modernizr JS -->
+	<!-- <link rel="stylesheet" href="{{asset('css/multirange.css')}}"> -->
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css"> -->
+	<link rel="stylesheet" href="{{asset('frontend/css/bootstrap-select.min.css')}}">
 	<script src="{{asset('frontend/js/modernizr-2.6.2.min.js')}}"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
+
+	<link href="URL::to('frontend/plugins/plugins/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
+
 </head>
 
 <body>
@@ -75,9 +61,6 @@
 				</div>
 			</div>
 		</header>
-
-		
-		
 		<div id="best-deal">
 			<div class="container">
 				<div class="row">
@@ -105,58 +88,83 @@
 												<div class="filter-class">
 													<span>Type of beds</span><br>
 												</div>
-												<input type="radio" name="type-bed" value="budget"><span id="budget"> Single bed</span><br>
-												<input type="radio" name="type-bed" value="luxury"><span id="budget"> Double beds</span><br>
-												<input type="radio" name="type-bed" value="other"><span id="budget"> 4 beds</span><br>
-												<input type="radio" name="type-bed" value="other"><span id="budget"> Camping type</span><hr>
+												<input type="radio" name="type-bed" value="single"><span id="budget"> Single bed</span><br>
+												<input type="radio" name="type-bed" value="double"><span id="budget"> Double beds</span><br>
+												<input type="radio" name="type-bed" value="beds"><span id="budget"> 4 beds</span><br>
+												<input type="radio" name="type-bed" value="camp"><span id="budget"> Camping type</span><hr>
 											</div>
 										</form>
-										<li> <a class="totalInCar\t" href="cart.html"><strong>Total Amount  <span class="badge badge-warning pull-right" style="line-height:18px;">$448.42</span></strong></a></li>
+										<li> <a class="totalInCar\t" href="cart.html"><strong>Total Amount <span class="badge badge-warning pull-right" style="line-height:18px;">$448.42</span></strong></a></li>
 									</ul>
 								</div>
 							</div>
 						</div>
 					</div>
-		
 					@foreach($user as $key=>$item)
 						<div style="float: right;" class="col-md-9 col-sm-9 col-xs-9 col-lg-9 item-block animate-box" data-animate-effect="fadeIn">
 							<div class="card">
 								<div class="row">
-									<div >
+									<div class="fh5co-property">
 										<div class="col-md-4">
 											<div class="flexslider">
-												<p>{{$item->date}}</p>
+												<span>{{$item->date}}</span>
+											</div>
+											<div id="carouselExampleIndicators-{{ $item->price }}" class="carousel slide" data-ride="carousel">
+												<ol class="carousel-indicators">
+													<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+													<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+													<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+												</ol>
+												<div class="carousel-inner">
+													<div class="carousel-item active">
+														<img class="d-block w-100" src="{{asset('/frontend/images/slide_1.jpg')}}" alt="First slide">
+													</div>
+													<div class="carousel-item">
+														<img class="d-block w-100" src="{{asset('/frontend/images/slide_2.jpg')}}" alt="Second slide">
+													</div>
+													<div class="carousel-item">
+														<img class="d-block w-100" src="{{asset('/frontend/images/slide_3.jpg')}}" alt="Third slide">
+													</div>
+												</div>
+												<a class="carousel-control-prev" href="#carouselExampleIndicators-{{ $item->price }}" role="button" data-slide="prev">
+													<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+													<span class="sr-only">Previous</span>
+												</a>
+												<a class="carousel-control-next" href="#carouselExampleIndicators-{{ $item->price }}" role="button" data-slide="next">
+													<span class="carousel-control-next-icon" aria-hidden="true"></span>
+													<span class="sr-only">Next</span>
+												</a>
 											</div>
 										</div>
 										<div class="col-md-5">
 											<div class="fh5co-property-innter">
-												<label>{{$item->name}}</label>
-												<span>
-													<strong class="fa fa-wifi">WiFi available</strong>
-												</span>
-												<span>
-													<strong class="fa fa-bed"> 1 Bed</strong>
-												</span>
-												<span>
-													<strong class="fa fa-shower"> Bathroom</strong>
-												</span>
-												<span>
-													<strong class="fa fa-television">TV available</strong>
-												</span>
+												<h3><label>{{$item->name}}</label></h3>
+												<p>
+													<span>
+														<strong class="fa fa-wifi">WiFi available</strong>
+													</span>
+													<span>
+														<strong class="fa fa-bed"> 1 Bed</strong>
+													</span>
+													<span>
+														<strong class="fa fa-shower"> Bathroom</strong>
+													</span>
+													<span>
+														<strong class="fa fa-television"> TV available</strong>
+													</span>
+												</p>
 											</div>
-										</div>
+										</div> 
 										<div class="col-md-3">
-											<span>Available room:</span><br>
-											<div>
-												<select class="selectpicker" style="width: 100%; heigth: auto; text-align:">
-													<option>1</option>
-													<option>2</option>
-													<option>3</option>
-													<option>4</option>
-													<option>5</option>
-													<option>6</option>
-												</select>
-											</div>
+										<select class="show-tick" style="border: none">
+											<option value="">Number of Room</option>
+											<option value="10">10</option>
+											<option value="20">20</option>
+											<option value="30">30</option>
+											<option value="40">40</option>
+											<option value="50">50</option>
+										</select>
+
 											<div class="price-status">
 												<span class="price">${{$item->price}}<span class="per">/night</span></span>
 											</div>
@@ -257,20 +265,14 @@
 			</div>
 		</footer>
 	</div>
-	<!-- jQuery -->
+	
 	<script src="{{asset('frontend/js/jquery.min.js')}}"></script>
-	<!-- jQuery Easing -->
 	<script src="{{asset('frontend/js/jquery.easing.1.3.js')}}"></script>
-	<!-- Bootstrap -->
 	<script src="{{asset('frontend/js/bootstrap.min.js')}}"></script>
-	<!-- Waypoints -->
+	<script src="{{asset('frontend/js/bootstrap-select.min.js')}}"></script>
 	<script src="{{asset('frontend/js/jquery.waypoints.min.js')}}"></script>
-	<!-- Flexslider -->
 	<script src="{{asset('frontend/js/jquery.flexslider-min.js')}}"></script>
-
-	<!-- MAIN JS -->
 	<script src="{{asset('frontend/js/main.js')}}"></script>
-	<!-- Date Picker Function -->
 	<script src="{{asset('frontend/js/jquery-ui.js')}}"></script>
 
 	<script>
@@ -342,7 +344,7 @@
 	</script>
 	<script type="text/javascript" src="{{asset('js/moment.min.js')}}"></script>
 	<script type="text/javascript" src="{{asset('js/bootstrap-datetimepicker.min.js')}}"></script>
-
+	
 	<!-- Check In Check out implement -->
 	<script>
 		$(document).ready(function () {
@@ -417,14 +419,6 @@
 			}
 		});
 	</script>
-	<script>
-		$('.selectpicker').selectpicker({
-			style: 'btn-info',
-			size: 4
-		});
-	</script>
-	<script type="text/javascript" src="{{asset('js/multirange.js')}}"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
-</body>
 
+</body>
 </html>
