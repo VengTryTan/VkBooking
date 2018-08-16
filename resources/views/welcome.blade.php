@@ -14,6 +14,9 @@
 	<link rel="stylesheet" href="{{asset('frontend/css/bootstrap.css')}}">
 	<link rel="stylesheet" href="{{asset('frontend/css/bootstrap.min.css')}}">
 	<!-- <link rel="stylesheet" href="{{asset('frontend/css/flexslider.css')}}"> -->
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="{{asset('frontend/css/flexslider.css')}}">
+	<!-- Theme style  -->
 	<link rel="stylesheet" href="{{asset('frontend/css/style.css')}}">
 	<link rel="stylesheet" href="{{asset('frontend/css/jquery-ui.css')}}">
 	<!-- <link rel="stylesheet" href="{{asset('css/multirange.css')}}"> -->
@@ -55,6 +58,7 @@
 										<img src="{{asset('frontend/images/instagram.svg')}}" alt="www.instagram.com" title="instagram" />
 									</a>
 								</li>
+								
 							</ul>
 						</nav>
 					</div>
@@ -156,15 +160,14 @@
 											</div>
 										</div> 
 										<div class="col-md-3">
-										<select class="show-tick" style="border: none">
-											<option value="">Number of Room</option>
-											<option value="10">10</option>
-											<option value="20">20</option>
-											<option value="30">30</option>
-											<option value="40">40</option>
-											<option value="50">50</option>
-										</select>
-
+											<select class="show-tick" style="border: none">
+												<option value="">Number of Room</option>
+												<option value="10">10</option>
+												<option value="20">20</option>
+												<option value="30">30</option>
+												<option value="40">40</option>
+												<option value="50">50</option>
+											</select>
 											<div class="price-status">
 												<span class="price">${{$item->price}}<span class="per">/night</span></span>
 											</div>
@@ -419,6 +422,5 @@
 			}
 		});
 	</script>
-
 </body>
 </html>
