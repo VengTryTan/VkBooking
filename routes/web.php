@@ -27,6 +27,7 @@ Route::resource('item', 'ImageController');
 //     return view('go');
 // });
 Route::post('test', 'CheckinController@search')->name('checkin');
+Route::get('budget', 'CheckinController@searchone')->name('budget');
 Route::resource('reservation', 'CheckinController@store');
 Route::resource('type', 'TypeController');
 Route::resource('image', 'ImageController');

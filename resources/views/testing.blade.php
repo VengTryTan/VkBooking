@@ -106,12 +106,7 @@
 		<div id="best-deal">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
-						<h2>We are Offering the Best Real Estate Deals</h2>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
-						</p>
-					</div>
-					<div>
+					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
 						<h2>'vKirirom' is a new concept for enriching people's lives for the future</h2>
 						<p>We aim to provide services and an atmosphere where everyone enjoys nature while conserving the environment as well.
 							Visit our restaurant and savour our dishes special our chef has to offer and or stay in one of our innovative rooms.</p>
@@ -131,6 +126,8 @@
 										<span class="fa fa-calendar" style="font-size:29px;"></span>
 									</span>
 								</div>
+							</div>
+							</div>
 								<div class="form-group row no-margin">
 									<label for="check-out-time" class="col-sm-3 col-form-label label-xl">
 										Check Out:
@@ -494,7 +491,7 @@
 			$('#datetimepicker-check-out').datetimepicker({
 				minDate: tomorrow,
 				defaultDate: tomorrow,
-				format: 'L',
+				format: 'YYYY-MM-DD',
 				showClear: true,
 				widgetPositioning: {
 					horizontal: 'auto',
