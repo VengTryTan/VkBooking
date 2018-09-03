@@ -76,8 +76,8 @@ class CheckinController extends Controller
         ->where('rates.date', $searchDate)
         ->get();
        // echo($searchDate);
-        //echo($user);
-
+        // echo($user);
+        
         return view('welcome',compact(['user','searchDate']));
       }
       public function searchone(Request $request){
