@@ -4,6 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>vKirirom Pine Resort</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	
@@ -24,7 +25,7 @@
 	<link rel="stylesheet" href="{{asset('frontend/css/bootstrap-select.min.css')}}">
 	<script src="{{asset('frontend/js/modernizr-2.6.2.min.js')}}"></script>
 
-	<link href="{{asset('frontend/plugin/plugins/bootstrap-select/css/bootstrap-select.css')}}" rel="stylesheet" />
+	<!-- <link href="{{asset('frontend/plugin/plugins/bootstrap-select/css/bootstrap-select.css')}}" rel="stylesheet" /> -->
 
 </head>
 
@@ -68,14 +69,10 @@
 					<button id="myBtn" disabled="true" type="button" style="float: right;" class="btn btn-warning waves-effect">Book now</button>
 				</div>
 			</div> -->
-			<div class="container">
+			<div class="container-fluid">
 				<div class="row">
-					<div class="col-md-12 col-md-offset-2 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
-						<h2>We are Offering the Best Accommodations!</h2>
-						<p>Far far away, behinxd the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-					</div>
-					<div class="col-md-3 col-sm-12 col-xs-12 col-lg-3 item-block animate-box" data-animate-effect="fadeIn">
-						<div id="sidebar">
+					<div class="col-md-3 col-sm-12 col-xs-12 col-lg-3 item-block animate-box fh5co-entry" style="float: right;" data-animate-effect="fadeIn">
+						<div class="sidebar-filter">
 							<div class="nice well-small">
 								<ul class="nav nav-list">
 									<h4 class="filters-header-text"><img src="{{asset('img/filter.svg')}}" width="20px" height="20px" alt="filter">Filter by :</h4>
@@ -106,7 +103,7 @@
 						</div>
 					</div>
 					@foreach($user as $key=>$item)
-					<div class="col-md-9 item-block animate-box" data-animate-effect="fadeIn">
+					<div class="col-md-8 item-block float-left animate-box" data-animate-effect="fadeIn">
 						<div class="card">
 							<div class="row">
 								<div class="fh5co-property">
@@ -158,15 +155,6 @@
 										</div>
 									</div> 
 									<div class="col-md-3 col-sm-12">
-										
-										<!-- <select id="type" class="show-tick" style="border: none" onChange="myFunction()">
-											<option value="0">Number of Room</option>
-											<option value="10">10</option>
-											<option value="20">20</option>
-											<option value="30">30</option>
-											<option value="40">40</option>
-											<option value="50">50</option>
-										</select> -->
 										<select id="{{$item->id}}" class="show-tick" style="border: none" name="{{$item->name}}" onChange="myFunction()">
 											<option value="0">Rooms</option>
 											<option value="1">1</option>
@@ -184,73 +172,15 @@
 						</div>
 					</div>
 					@endforeach
-				</div>
-			</div>
-		</div>
-		
-		<div class="fh5co-section-with-image">
-			<img src="{{asset('frontend/images/security.png')}}" alt="" class="img-responsive">
-			<div class="fh5co-box animate-box">
-				<h2>Security, Comfort, &amp; Convenience</h2>
-				<p>We provide you a good service and make sure you have satified with our resort.</p>
-			</div>
-		</div>
-
-		<div id="fh5co-blog">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
-						<h2>Our information</h2>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-					</div>
-				</div>
-			</div>
-			<div class="container">
-				<div class="row">
-					<div class="col-md-4 animate-box" data-animate-effect="fadeIn">
-						<a class="fh5co-entry" href="#">
-							<figure>
-								<img src="{{asset('frontend/images/slide_4.jpg')}}" alt="Free Website Template, Free HTML5 Bootstrap Template" class="img-responsive">
-							</figure>
-							<div class="fh5co-copy">
-								<h3>We Create Awesome Free Templates</h3>
-								<span class="fh5co-date">June 8, 2016</span>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
-									</p>
-							</div>
-						</a>
-					</div>
-					<div class="col-md-4 animate-box" data-animate-effect="fadeIn">
-						<a class="fh5co-entry" href="#">
-							<figure>
-								<img src="{{asset('frontend/images/slide_5.jpg')}}" alt="Free Website Template, Free HTML5 Bootstrap Template" class="img-responsive">
-							</figure>
-							<div class="fh5co-copy">
-								<h3>Handcrafted Using CSS3 &amp; HTML5</h3>
-								<span class="fh5co-date">June 8, 2016</span>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
-									</p>
-							</div>
-						</a>
-					</div>
-					<div class="col-md-4 animate-box" data-animate-effect="fadeIn">
-						<a class="fh5co-entry" href="#">
-							<figure>
-								<img src="{{asset('frontend/images/slide_6.jpg')}}" alt="Free Website Template, Free HTML5 Bootstrap Template" class="img-responsive">
-							</figure>
-							<div class="fh5co-copy">
-								<h3>We Try To Update The Site Everyday</h3>
-								<span class="fh5co-date">June 8, 2016</span>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
-									</p>
-							</div>
-						</a>
+					<div class="col-md-1 animate-box" data-animate-effect="fadeIn">
+						<div class="button-demo">
+							<!-- <input type="hidden" id="test"> -->
+							<button id="myBtn" hidden="true" type="button" class="btn btn-warning waves-effect">Book now</button>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-
-
 		<footer id="fh5co-footer" role="contentinfo">	
 			<div class="container">
 				<div class="col-md-4 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
@@ -349,9 +279,9 @@
 			console.log($('#test').val())
 			console.log(room.length)
 			if(room.length>0){
-				$('#myBtn').attr('disabled', false)
+				$('#myBtn').attr('hidden', false)
 			}else{
-				$('#myBtn').attr('disabled', true)
+				$('#myBtn').attr('hidden', true)
 			}
 
 		})	
@@ -472,14 +402,17 @@
 			var $self = $(this);
 			if( $self.is(':checked') ){
 				var uncheck = function(){
-				setTimeout(function(){$self.removeAttr('checked');},0);
+					setTimeout(function(){
+						$self.removeAttr('checked');
+						},
+					0);
 				};
 				var unbind = function(){
 				$self.unbind('mouseup',up);
 				};
 				var up = function(){
-				uncheck();
-				unbind();
+					uncheck();
+					unbind();
 				};
 				$self.bind('mouseup',up);
 				$self.one('mouseout', unbind);
