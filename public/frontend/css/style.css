@@ -2194,3 +2194,8 @@ figure {
   margin-bottom: 0;
   padding: 14px 14px 0;
 }
+
+.sidebar-filter {
+  border: 1px solid #eee;
+  box-shadow: 1px solid #ccc;
+}

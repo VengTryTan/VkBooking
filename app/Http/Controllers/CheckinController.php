@@ -74,7 +74,9 @@ class CheckinController extends Controller
         ->groupBy('rates.type_ID')
         ->where('rates.date', $searchDate)
         ->get();
-
+        echo($searchDate);
+         echo($user);
+        
         return view('welcome',compact(['user','searchDate']));
       }
       public function searchone(Request $request){
