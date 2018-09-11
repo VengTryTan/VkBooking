@@ -71,7 +71,7 @@
 			</div> -->
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-md-3 col-sm-12 col-xs-12 col-lg-3 item-block animate-box fh5co-entry" style="float: right;" data-animate-effect="fadeIn">
+					<div class="col-md-3 col-sm-12 col-xs-12 col-lg-3 item-block animate-box fh5co-entry" style="float: left;" data-animate-effect="fadeIn">
 						<div class="sidebar-filter">
 							<div class="nice well-small">
 								<ul class="nav nav-list">
@@ -97,84 +97,85 @@
 											<input type="radio" name="type-bed" value="camp"><span id="budget"> Camping type</span><hr>
 										</div>
 									</form>
-									<li> <a class="totalInCart" href="cart.html"><strong>Total Amount <span class="badge badge-warning pull-right" style="line-height:18px;">$448.42</span></strong></a></li>
+									<li> <a class="totalInCart"><strong>Total Amount <span class="badge badge-warning pull-right" style="line-height:18px;">$448.42</span></strong></a></li>
 								</ul>
 							</div>
 						</div>
 					</div>
-					@foreach($user as $key=>$item)
-					<div class="col-md-8 item-block float-left animate-box" data-animate-effect="fadeIn">
-						<div class="card">
-							<div class="row">
-								<div class="fh5co-property">
-									<div class="col-md-4 col-sm-12">
-										<div id="roomSlider-{{ $item->id }}" class="carousel slide" data-ride="carousel">
-											<ol class="carousel-indicators">
-												<li data-target="#roomSlider" data-slide-to="0" class="active"></li>
-												<li data-target="#roomSlider" data-slide-to="1"></li>
-												<li data-target="#roomSlider" data-slide-to="2"></li>
-											</ol>
-											<div class="carousel-inner">
-												<div class="carousel-item active">
-													<img class="d-block w-100" src="{{asset('/frontend/images/slide_1.jpg')}}" alt="First slide">
+					<div class="col-md-8">
+						@foreach($user as $key=>$item)
+						<div class="col-md-12 item-block animate-box" style="float: right;" data-animate-effect="fadeIn">
+							<div class="card">
+								<div class="row">
+									<div class="fh5co-property">
+										<div class="col-md-4 col-sm-12">
+											<div id="roomSlider-{{ $item->id }}" class="carousel slide" data-ride="carousel">
+												<ol class="carousel-indicators">
+													<li data-target="#roomSlider" data-slide-to="0" class="active"></li>
+													<li data-target="#roomSlider" data-slide-to="1"></li>
+													<li data-target="#roomSlider" data-slide-to="2"></li>
+												</ol>
+												<div class="carousel-inner">
+													<div class="carousel-item active">
+														<img class="d-block w-100" src="{{asset('/frontend/images/slide_1.jpg')}}" alt="First slide">
+													</div>
+													<div class="carousel-item">
+														<img class="d-block w-100" src="{{asset('/frontend/images/slide_2.jpg')}}" alt="Second slide">
+													</div>
+													<div class="carousel-item">
+														<img class="d-block w-100" src="{{asset('/frontend/images/slide_3.jpg')}}" alt="Third slide">
+													</div>
 												</div>
-												<div class="carousel-item">
-													<img class="d-block w-100" src="{{asset('/frontend/images/slide_2.jpg')}}" alt="Second slide">
-												</div>
-												<div class="carousel-item">
-													<img class="d-block w-100" src="{{asset('/frontend/images/slide_3.jpg')}}" alt="Third slide">
-												</div>
+												<a class="carousel-control-prev" href="#roomSlider-{{ $item->id }}" role="button" data-slide="prev">
+													<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+													<span class="sr-only">Previous</span>
+												</a>
+												<a class="carousel-control-next" href="#roomSlider-{{ $item->id }}" role="button" data-slide="next">
+													<span class="carousel-control-next-icon" aria-hidden="true"></span>
+													<span class="sr-only">Next</span>
+												</a>
 											</div>
-											<a class="carousel-control-prev" href="#roomSlider-{{ $item->id }}" role="button" data-slide="prev">
-												<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-												<span class="sr-only">Previous</span>
-											</a>
-											<a class="carousel-control-next" href="#roomSlider-{{ $item->id }}" role="button" data-slide="next">
-												<span class="carousel-control-next-icon" aria-hidden="true"></span>
-												<span class="sr-only">Next</span>
-											</a>
 										</div>
-									</div>
-									<div class="col-md-5 col-sm-12">
-										<div class="fh5co-property-innter">
-											<h3><label>{{$item->name}}</label></h3>
-											<p>
-												<span>
-													<strong class="fa fa-wifi">WiFi available</strong>
-												</span>
-												<span>
-													<strong class="fa fa-bed"> 1 Bed</strong>
-												</span>
-												<span>
-													<strong class="fa fa-shower"> Bathroom</strong>
-												</span>
-												<span>
-													<strong class="fa fa-television"> TV available</strong>
-												</span>
-											</p>
-										</div>
-									</div> 
-									<div class="col-md-3 col-sm-12">
-										<select id="{{$item->id}}" class="show-tick" style="border: none" name="{{$item->name}}" onChange="myFunction()">
-											<option value="0">Rooms</option>
-											<option value="1">1</option>
-											<option value="2">2</option>
-											<option value="3">3</option>
-											<option value="4">4</option>
-											<option value="5">5</option>
-										</select>
-										<div class="price-status">
-											<span class="price">${{$item->price}}<span class="per">/night</span></span>
+										<div class="col-md-5 col-sm-12">
+											<div class="fh5co-property-innter">
+												<h3><label>{{$item->name}}</label></h3>
+												<p>
+													<span>
+														<strong class="fa fa-wifi">WiFi available</strong>
+													</span>
+													<span>
+														<strong class="fa fa-bed"> 1 Bed</strong>
+													</span>
+													<span>
+														<strong class="fa fa-shower"> Bathroom</strong>
+													</span>
+													<span>
+														<strong class="fa fa-television"> TV available</strong>
+													</span>
+												</p>
+											</div>
+										</div> 
+										<div class="col-md-3 col-sm-12">
+											<select id="{{$item->id}}" class="show-tick" style="border: none" name="{{$item->name}}" onChange="myFunction()">
+												<option value="0">Rooms</option>
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+												<option value="4">4</option>
+												<option value="5">5</option>
+											</select>
+											<div class="price-status">
+												<span class="price">${{$item->price}}<span class="per">/night</span></span>
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
+						@endforeach
 					</div>
-					@endforeach
 					<div class="col-md-1 animate-box" data-animate-effect="fadeIn">
 						<div class="button-demo">
-							<!-- <input type="hidden" id="test"> -->
 							<button id="myBtn" hidden="true" type="button" class="btn btn-warning waves-effect">Book now</button>
 						</div>
 					</div>
