@@ -89,7 +89,7 @@ class CheckinController extends Controller
         ->where('rates.date', $date)
         ->get();
 
-        return view('test',compact(['user','searchDate']));
+        return view('welcome',compact(['user','searchDate']));
       }
 
 

@@ -85,9 +85,9 @@
 											<div class="filter-class">
 												<span>Accommodations Class</span><br>
 											</div>
-											<input type="button" name="acc-class" value="budget" id="budget"><span id="budget"> budgets</span><br>
-											<input type="radio" name="acc-class" value="luxury" id="luxury"><span id="luxury"> Luxury</span><br>
-											<input type="radio" name="acc-class" value="other" id="other"><span id="others"> Other</span>
+											<input type="radio" name="accclass" value="budget" id="budget"><span id="budget"> budgets</span><br>
+											<input type="radio" name="accclass" value="luxury" id="luxury"><span id="luxury"> Luxury</span><br>
+											<input type="radio" name="accclass" value="other" id="other"><span id="others"> Other</span>
 											<hr>
 										</div>
 									</form>
@@ -475,7 +475,6 @@
 			});
 		});
 	</script>
-
 </body>
 
 </html>
