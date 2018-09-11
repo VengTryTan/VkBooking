@@ -6,9 +6,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>vKirirom Pine Resort</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	
+
 	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-	
+
 	<link rel="stylesheet" href="{{asset('frontend/css/animate.css')}}">
 	<link rel="stylesheet" href="{{asset('frontend/css/icomoon.css')}}">
 	<link rel="stylesheet" href="{{asset('frontend/css/bootstrap.css')}}">
@@ -58,7 +58,7 @@
 										<img src="{{asset('frontend/images/instagram.svg')}}" alt="www.instagram.com" title="instagram" />
 									</a>
 								</li>
-								
+
 							</ul>
 						</nav>
 					</div>
@@ -68,23 +68,27 @@
 		<div id="best-deal">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-12 col-xs-12 col-sm-12 col-md-12 col-md-offset-2 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
+					<div class="col-lg-12 col-xs-12 col-sm-12 col-md-12 text-center fh5co-heading animate-box"
+					    data-animate-effect="fadeIn">
 						<h2>We are Offering the Best Accommodations!</h2>
-						<p>Far far away, behinxd the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+						<p>Far far away, behinxd the word mountains, far from the countries Vokalia and Consonantia, there live the blind
+							texts.</p>
 					</div>
 					<div class="col-md-3 col-sm-3 col-xs-3 col-lg-3 item-block animate-box" data-animate-effect="fadeIn">
 						<div id="sidebar">
 							<div class="nice well-small">
 								<ul class="nav nav-list">
-									<h4 class="filters-header-text"><img src="{{asset('img/filter.svg')}}" width="20px" height="20px" alt="filter">Filter by :</h4>
+									<h4 class="filters-header-text"><img src="{{asset('img/filter.svg')}}" width="20px" height="20px" alt="filter">Filter
+										by :</h4>
 									<form action="">
 										<div class="filter-box">
 											<div class="filter-class">
 												<span>Accommodations Class</span><br>
 											</div>
-											<input type="radio" name="acc-class" value="budget" id="budget"><span id="budget"> budgets</span><br>
-											<input type="radio" name="acc-class" value="luxury" id="luxury"><span id="budget"> Luxury</span><br>
-											<input type="radio" name="acc-class" value="other" id="other"><span id="budget"> Other</span><hr>
+											<input type="button" name="acc-class" value="budget" id="budget"><span id="budget"> budgets</span><br>
+											<input type="radio" name="acc-class" value="luxury" id="luxury"><span id="luxury"> Luxury</span><br>
+											<input type="radio" name="acc-class" value="other" id="other"><span id="others"> Other</span>
+											<hr>
 										</div>
 									</form>
 									<form action="">
@@ -92,13 +96,15 @@
 											<div class="filter-class">
 												<span>Type of beds</span><br>
 											</div>
-											<input type="radio" name="type-bed" value="single"><span id="budget"> Single bed</span><br>
-											<input type="radio" name="type-bed" value="double"><span id="budget"> Double beds</span><br>
-											<input type="radio" name="type-bed" value="beds"><span id="budget"> 4 beds</span><br>
-											<input type="radio" name="type-bed" value="camp"><span id="budget"> Camping type</span><hr>
+											<input type="radio" name="type" value="single"><span id="budget"> Single bed</span><br>
+											<input type="radio" name="type" value="beds"><span id="budget"> 4 beds</span><br>
+											<input type="radio" name="type" value="double"><span id="budget"> Double beds</span><br>
+											<input type="radio" name="type" value="camp"><span id="budget"> Camping type</span>
+											<hr>
 										</div>
 									</form>
-									<li> <a class="totalInCart" href="cart.html"><strong>Total Amount <span class="badge badge-warning pull-right" style="line-height:18px;">$448.42</span></strong></a></li>
+									<li> <a class="totalInCart" href="cart.html"><strong>Total Amount <span class="badge badge-warning pull-right"
+												    style="line-height:18px;">$448.42</span></strong></a></li>
 								</ul>
 							</div>
 						</div>
@@ -109,79 +115,80 @@
 						</div>
 					</div>
 					@foreach($user as $key=>$item)
-						<div style="float: right;" class="col-md-9 col-sm-9 col-xs-9 col-lg-9 item-block animate-box" data-animate-effect="fadeIn">
-							<div class="card">
-								<div class="row">
-									<div class="fh5co-property">
-										<div class="col-md-4">
-											<div id="carouselExampleIndicators-{{ $item->price }}" class="carousel slide" data-ride="carousel">
-												<ol class="carousel-indicators">
-													<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-													<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-													<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-												</ol>
-												<div class="carousel-inner">
-													<div class="carousel-item active">
-														<img class="d-block w-100" src="{{asset('/frontend/images/slide_1.jpg')}}" alt="First slide">
-													</div>
-													<div class="carousel-item">
-														<img class="d-block w-100" src="{{asset('/frontend/images/slide_2.jpg')}}" alt="Second slide">
-													</div>
-													<div class="carousel-item">
-														<img class="d-block w-100" src="{{asset('/frontend/images/slide_3.jpg')}}" alt="Third slide">
-													</div>
+					<div style="float: right;" class="col-md-12 col-sm-12 col-xs-12 col-lg-12 item-block animate-box" data-animate-effect="fadeIn">
+						<div class="card">
+							<div class="row">
+								<div class="fh5co-property">
+									<div class="col-md-4">
+										<div id="carouselExampleIndicators-{{ $item->price }}" class="carousel slide" data-ride="carousel">
+											<ol class="carousel-indicators">
+												<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+												<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+												<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+											</ol>
+											<div class="carousel-inner">
+												<div class="carousel-item active">
+													<img class="d-block w-100" src="{{asset('/frontend/images/slide_1.jpg')}}" alt="First slide">
 												</div>
-												<a class="carousel-control-prev" href="#carouselExampleIndicators-{{ $item->price }}" role="button" data-slide="prev">
-													<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-													<span class="sr-only">Previous</span>
-												</a>
-												<a class="carousel-control-next" href="#carouselExampleIndicators-{{ $item->price }}" role="button" data-slide="next">
-													<span class="carousel-control-next-icon" aria-hidden="true"></span>
-													<span class="sr-only">Next</span>
-												</a>
+												<div class="carousel-item">
+													<img class="d-block w-100" src="{{asset('/frontend/images/slide_2.jpg')}}" alt="Second slide">
+												</div>
+												<div class="carousel-item">
+													<img class="d-block w-100" src="{{asset('/frontend/images/slide_3.jpg')}}" alt="Third slide">
+												</div>
 											</div>
+											<a class="carousel-control-prev" href="#carouselExampleIndicators-{{ $item->price }}" role="button"
+											    data-slide="prev">
+												<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+												<span class="sr-only">Previous</span>
+											</a>
+											<a class="carousel-control-next" href="#carouselExampleIndicators-{{ $item->price }}" role="button"
+											    data-slide="next">
+												<span class="carousel-control-next-icon" aria-hidden="true"></span>
+												<span class="sr-only">Next</span>
+											</a>
 										</div>
-										<div class="col-md-5">
-											<div class="fh5co-property-innter">
-												<h3><label>{{$item->name}}</label></h3>
-												<p>
-													<span>
-														<strong class="fa fa-wifi">WiFi available</strong>
-													</span>
-													<span>
-														<strong class="fa fa-bed"> 1 Bed</strong>
-													</span>
-													<span>
-														<strong class="fa fa-shower"> Bathroom</strong>
-													</span>
-													<span>
-														<strong class="fa fa-television"> TV available</strong>
-													</span>
-												</p>
-											</div>
-										</div> 
-										<div class="col-md-3">
-											
-											<select id="type" class="show-tick" style="border: none" onChange="myFunction()">
-												<option value="">Number of Room</option>
-												<option value="10">10</option>
-												<option value="20">20</option>
-												<option value="30">30</option>
-												<option value="40">40</option>
-												<option value="50">50</option>
-											</select>
-											<div class="price-status">
-												<span class="price">${{$item->price}}<span class="per">/night</span></span>
-											</div>
+									</div>
+									<div class="col-md-5">
+										<div class="fh5co-property-innter">
+											<h3><label>{{$item->name}}</label></h3>
+											<p>
+												<span>
+													<strong class="fa fa-wifi">WiFi available</strong>
+												</span>
+												<span>
+													<strong class="fa fa-bed"> 1 Bed</strong>
+												</span>
+												<span>
+													<strong class="fa fa-shower"> Bathroom</strong>
+												</span>
+												<span>
+													<strong class="fa fa-television"> TV available</strong>
+												</span>
+											</p>
+										</div>
+									</div>
+									<div class="col-md-3">
+
+										<select id="type" class="show-tick" style="border: none" onChange="myFunction()">
+											<option value="">Number of Room</option>
+											<option value="10">10</option>
+											<option value="20">20</option>
+											<option value="30">30</option>
+											<option value="40">40</option>
+											<option value="50">50</option>
+										</select>
+										<div class="price-status">
+											<span class="price">${{$item->price}}<span class="per">/night</span></span>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
+					</div>
 					@endforeach
 				</div>
 			</div>
-		</div>
 		<div class="fh5co-section-with-image">
 			<img src="{{asset('frontend/images/security.png')}}" alt="" class="img-responsive">
 			<div class="fh5co-box animate-box">
@@ -195,8 +202,9 @@
 				<div class="row">
 					<div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
 						<h2>Our information</h2>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
-							</p>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind
+							texts.
+						</p>
 					</div>
 				</div>
 			</div>
@@ -205,39 +213,45 @@
 					<div class="col-md-4 animate-box" data-animate-effect="fadeIn">
 						<a class="fh5co-entry" href="#">
 							<figure>
-								<img src="{{asset('frontend/images/slide_4.jpg')}}" alt="Free Website Template, Free HTML5 Bootstrap Template" class="img-responsive">
+								<img src="{{asset('frontend/images/slide_4.jpg')}}" alt="Free Website Template, Free HTML5 Bootstrap Template"
+								    class="img-responsive">
 							</figure>
 							<div class="fh5co-copy">
 								<h3>We Create Awesome Free Templates</h3>
 								<span class="fh5co-date">June 8, 2016</span>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
-									</p>
+								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
+									blind texts.
+								</p>
 							</div>
 						</a>
 					</div>
 					<div class="col-md-4 animate-box" data-animate-effect="fadeIn">
 						<a class="fh5co-entry" href="#">
 							<figure>
-								<img src="{{asset('frontend/images/slide_5.jpg')}}" alt="Free Website Template, Free HTML5 Bootstrap Template" class="img-responsive">
+								<img src="{{asset('frontend/images/slide_5.jpg')}}" alt="Free Website Template, Free HTML5 Bootstrap Template"
+								    class="img-responsive">
 							</figure>
 							<div class="fh5co-copy">
 								<h3>Handcrafted Using CSS3 &amp; HTML5</h3>
 								<span class="fh5co-date">June 8, 2016</span>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
-									</p>
+								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
+									blind texts.
+								</p>
 							</div>
 						</a>
 					</div>
 					<div class="col-md-4 animate-box" data-animate-effect="fadeIn">
 						<a class="fh5co-entry" href="#">
 							<figure>
-								<img src="{{asset('frontend/images/slide_6.jpg')}}" alt="Free Website Template, Free HTML5 Bootstrap Template" class="img-responsive">
+								<img src="{{asset('frontend/images/slide_6.jpg')}}" alt="Free Website Template, Free HTML5 Bootstrap Template"
+								    class="img-responsive">
 							</figure>
 							<div class="fh5co-copy">
 								<h3>We Try To Update The Site Everyday</h3>
 								<span class="fh5co-date">June 8, 2016</span>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
-									</p>
+								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
+									blind texts.
+								</p>
 							</div>
 						</a>
 					</div>
@@ -246,30 +260,37 @@
 		</div>
 
 
-		<footer id="fh5co-footer" role="contentinfo">	
+		<footer id="fh5co-footer" role="contentinfo">
 			<div class="container">
 				<div class="col-md-4 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
 					<h3>About vKirirom</h3>
-					<p>vKirirom Pine Resort is located amongst the pine trees of Kirirom Mountain. Here at vKiriom, we try to preserve the natural beauty of the environment. Our building locations are properly studied so that we avoid cutting down many trees.</p>
+					<p>vKirirom Pine Resort is located amongst the pine trees of Kirirom Mountain. Here at vKiriom, we try to preserve
+						the natural beauty of the environment. Our building locations are properly studied so that we avoid cutting down
+						many trees.</p>
 				</div>
 				<div class="col-md-4 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
 					<h3>Kirirom Institute of Technology</h3>
-					<div><label>KIT</label>adapts a new style of learning with an effective new educational techniques as a boarding school.</div>
+					<div><label>KIT</label>adapts a new style of learning with an effective new educational techniques as a boarding
+						school.</div>
 					<a href="http://www.kit.edu.kh/contact.php" target="_black">Enroll here !!</a>
-					<div>New university for the future in Kirirom Mountain under the vKririom Project. An educational approach that stands amongst the forest.</div>
+					<div>New university for the future in Kirirom Mountain under the vKririom Project. An educational approach that
+						stands amongst the forest.</div>
 					<a href="http://www.kit.edu.kh/index.php" target="_black"> More about KIT</a>
 				</div>
 				<div class="col-md-4 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
 					<h3>THE MEANING OF OUR LOGO</h3>
-					<p>In the logo of vKirirom - you will find '<span style="color: orange;">v</span>' in orange and <span style="color: green;">'Kirirom'</span> in green. The orange colour represents the people who live in Kirirom. This is the colour of joy and creativity. It also reminds us  of the robes monks wear in Cambodia. The green represents the nature and its beauty.</p>
-				</div>					
+					<p>In the logo of vKirirom - you will find '<span style="color: orange;">v</span>' in orange and <span style="color: green;">'Kirirom'</span>
+						in green. The orange colour represents the people who live in Kirirom. This is the colour of joy and creativity.
+						It also reminds us of the robes monks wear in Cambodia. The green represents the nature and its beauty.</p>
+				</div>
 				<div class="col-md-12 fh5co-copyright text-center">
 					<p>&copy; 2018 Designed by <a href="http://kit.vkirirom.com/" target="_blank"> Kirirom Institute of Technology</a></p>
 				</div>
 			</div>
 		</footer>
 	</div>
-	
+	<input type="button" id="testbtn" value="Click me">
+
 	<script src="{{asset('frontend/js/jquery.min.js')}}"></script>
 	<script src="{{asset('frontend/js/jquery.easing.1.3.js')}}"></script>
 	<script src="{{asset('frontend/js/bootstrap.js')}}"></script>
@@ -283,7 +304,7 @@
 	<script>
 		function myFunction() {
 			// var type=;
-			
+
 			var e = document.getElementById("type");
 			var strUser = e.options[e.selectedIndex].value;
 			console.log(e.value)
@@ -293,7 +314,7 @@
 				$('#myBtn').attr('disabled', true)
 			}
 			// document.getElementById("myBtn").disabled = false;
-		}		
+		}
 	</script>
 	<script>
 		$(document).ready(function () {
@@ -350,7 +371,7 @@
 	</script>
 	<script type="text/javascript" src="{{asset('js/moment.min.js')}}"></script>
 	<script type="text/javascript" src="{{asset('js/bootstrap-datetimepicker.min.js')}}"></script>
-	
+
 	<!-- Check In Check out implement -->
 	<script>
 		$(document).ready(function () {
@@ -407,23 +428,54 @@
 		});
 	</script>
 	<script>
-		$(':radio').mousedown(function(e){
+		$(':radio').mousedown(function (e) {
 			var $self = $(this);
-			if( $self.is(':checked') ){
-				var uncheck = function(){
-				setTimeout(function(){$self.removeAttr('checked');},0);
+			if ($self.is(':checked')) {
+				var uncheck = function () {
+					setTimeout(function () {
+						$self.removeAttr('checked');
+					}, 0);
 				};
-				var unbind = function(){
-				$self.unbind('mouseup',up);
+				var unbind = function () {
+					$self.unbind('mouseup', up);
 				};
-				var up = function(){
-				uncheck();
-				unbind();
+				var up = function () {
+					uncheck();
+					unbind();
 				};
-				$self.bind('mouseup',up);
+				$self.bind('mouseup', up);
 				$self.one('mouseout', unbind);
 			}
 		});
 	</script>
+
+
+	<script>
+		var buttonclicked;
+		$("#testbtn").click(function () {
+			if (buttonclicked != true) {
+				buttonclicked = true;
+				alert("Button is clicked for first time");
+			} else {
+				alert("Button was clicked before");
+			}
+		});
+	</script>
+
+	<script>
+		$(document).ready(function () {
+			$('#budget').on('ifClicked', function (event) {
+				$.ajax({
+					type: 'POST',
+					url: "{{ URL::route('budget') }}",
+					success: function (data) {
+						alert("Success");
+					},
+				});
+			});
+		});
+	</script>
+
 </body>
+
 </html>

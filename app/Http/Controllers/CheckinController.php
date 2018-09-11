@@ -67,7 +67,6 @@ class CheckinController extends Controller
 
     public function search(Request $request){
         $searchDate= $request->checkin_date;
-       // $user = Rate::where('date','=',$searchDate)->get();
         $user = DB::table('types')
         ->select('types.id', 'types.name','rates.price','rates.date', 'images.image',  DB::raw('count(images.image) as total'))
         ->join('images', 'types.id', '=', 'images.type_ID')
@@ -75,26 +74,22 @@ class CheckinController extends Controller
         ->groupBy('rates.type_ID')
         ->where('rates.date', $searchDate)
         ->get();
-       // echo($searchDate);
-        //echo($user);
 
         return view('welcome',compact(['user','searchDate']));
       }
       public function searchone(Request $request){
        // $searchDate= $request->checkin_date;
-        $date = $request->searchDate;
+        $searchDate = $request->searchDate;
         $user = DB::table('types')
         ->select('types.id', 'types.name','rates.price','rates.date', 'images.image',  DB::raw('count(images.image) as total'))
         ->join('images', 'types.id', '=', 'images.type_ID')
         ->join('rates', 'images.type_ID', '=', 'rates.type_ID')
         ->groupBy('rates.type_ID')
-        ->orderBy('types.name', 'asc')
+        ->orderBy('rates.price', 'asc')
         ->where('rates.date', $date)
         ->get();
-        echo($date);
-        echo($user);
 
-        return view('welcome',compact(['user','date']));
+        return view('test',compact(['user','searchDate']));
       }
 
 
