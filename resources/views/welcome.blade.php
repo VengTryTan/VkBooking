@@ -14,18 +14,17 @@
 	<link rel="stylesheet" href="{{asset('frontend/css/icomoon.css')}}">
 	<link rel="stylesheet" href="{{asset('frontend/css/bootstrap.css')}}">
 	<link rel="stylesheet" href="{{asset('frontend/css/bootstrap.min.css')}}">
-	<!-- <link rel="stylesheet" href="{{asset('frontend/css/flexslider.css')}}"> -->
+
 	<!-- Flexslider  -->
 	<link rel="stylesheet" href="{{asset('frontend/css/flexslider.css')}}">
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="{{asset('frontend/css/style.css')}}">
 	<link rel="stylesheet" href="{{asset('frontend/css/jquery-ui.css')}}">
-	<!-- <link rel="stylesheet" href="{{asset('css/multirange.css')}}"> -->
-	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css"> -->
+	
 	<link rel="stylesheet" href="{{asset('frontend/css/bootstrap-select.min.css')}}">
 	<script src="{{asset('frontend/js/modernizr-2.6.2.min.js')}}"></script>
 
-	<!-- <link href="{{asset('frontend/plugin/plugins/bootstrap-select/css/bootstrap-select.css')}}" rel="stylesheet" /> -->
+
 
 </head>
 
@@ -35,19 +34,19 @@
 			<div class="container">
 				<div class="row">
 					<div class="header-inner">
-						<a href="/Vkbooking/public">
+						<a href="/">
 							<img src="{{asset('frontend/images/HomePage/vKirirom.svg')}}" alt="vKirirom logo" title="logo" />
 						</a>
 						<nav role="navigation">
 							<ul>
 								<li class="zoom">
 									<a href="https://www.facebook.com/vkirirom" target="_blank">
-										<img src="{{asset('frontend/images/facebook.svg')}}" alt="www.facebook.com" title="facebook" />
+									 <img src="{{asset('frontend/images/facebook.svg')}}" alt="www.facebook.com" title="facebook" /> 
 									</a>
 								</li>
 								<li class="zoom">
 									<a href="https://www.youtube.com/channel/UCCIu3JTn0s4UX5Kze5Hse0g" target="_blank">
-										<img src="{{asset('frontend/images/youtube.svg')}}" alt="www.youtube.com" title="youtube" />
+										 <img src="{{asset('frontend/images/youtube.svg')}}" alt="www.youtube.com" title="youtube" /> 
 									</a>
 								</li>
 								<li class="zoom">
@@ -55,11 +54,7 @@
 										<img src="{{asset('frontend/images/instagram.svg')}}" alt="www.instagram.com" title="instagram" />
 									</a>
 								</li>
-<<<<<<< HEAD
-
-=======
 								<li class="cta"><a href="contact.html">Contact us</a></li>
->>>>>>> b07e7271549315681ad9cf92c43a269b6055c391
 							</ul>
 						</nav>
 					</div>
@@ -75,19 +70,8 @@
 			</div> -->
 			<div class="container-fluid">
 				<div class="row">
-<<<<<<< HEAD
-					<div class="col-lg-12 col-xs-12 col-sm-12 col-md-12 text-center fh5co-heading animate-box"
-					    data-animate-effect="fadeIn">
-						<h2>We are Offering the Best Accommodations!</h2>
-						<p>Far far away, behinxd the word mountains, far from the countries Vokalia and Consonantia, there live the blind
-							texts.</p>
-					</div>
-					<div class="col-md-3 col-sm-3 col-xs-3 col-lg-3 item-block animate-box" data-animate-effect="fadeIn">
-						<div id="sidebar">
-=======
 					<div class="col-md-3 col-sm-12 col-xs-12 col-lg-3 item-block animate-box fh5co-entry" style="float: left;" data-animate-effect="fadeIn">
 						<div class="sidebar-filter">
->>>>>>> b07e7271549315681ad9cf92c43a269b6055c391
 							<div class="nice well-small">
 								<ul class="nav nav-list">
 									<h4 class="filters-header-text"><img src="{{asset('img/filter.svg')}}" width="20px" height="20px" alt="filter">Filter
@@ -115,45 +99,11 @@
 											<hr>
 										</div>
 									</form>
-<<<<<<< HEAD
-									<li> <a class="totalInCart" href="cart.html"><strong>Total Amount <span class="badge badge-warning pull-right"
-												    style="line-height:18px;">$448.42</span></strong></a></li>
-=======
 									<li> <a class="totalInCart"><strong>Total Amount <span class="badge badge-warning pull-right" style="line-height:18px;">$448.42</span></strong></a></li>
->>>>>>> b07e7271549315681ad9cf92c43a269b6055c391
 								</ul>
 							</div>
 						</div>
 					</div>
-<<<<<<< HEAD
-					<div class="col-md-9">
-						<div class="button-demo">
-							<button id="myBtn" disabled="true" type="button" style="float: right;" class="btn btn-warning waves-effect">Book</button>
-						</div>
-					</div>
-					@foreach($user as $key=>$item)
-					<div style="float: right;" class="col-md-12 col-sm-12 col-xs-12 col-lg-12 item-block animate-box" data-animate-effect="fadeIn">
-						<div class="card">
-							<div class="row">
-								<div class="fh5co-property">
-									<div class="col-md-4">
-										<div id="carouselExampleIndicators-{{ $item->price }}" class="carousel slide" data-ride="carousel">
-											<ol class="carousel-indicators">
-												<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-												<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-												<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-											</ol>
-											<div class="carousel-inner">
-												<div class="carousel-item active">
-													<img class="d-block w-100" src="{{asset('/frontend/images/slide_1.jpg')}}" alt="First slide">
-												</div>
-												<div class="carousel-item">
-													<img class="d-block w-100" src="{{asset('/frontend/images/slide_2.jpg')}}" alt="Second slide">
-												</div>
-												<div class="carousel-item">
-													<img class="d-block w-100" src="{{asset('/frontend/images/slide_3.jpg')}}" alt="Third slide">
-												</div>
-=======
 					<div class="col-md-8">
 						@foreach($user as $key=>$item)
 						<div class="col-md-12 item-block animate-box" style="float: right;" data-animate-effect="fadeIn">
@@ -186,53 +136,9 @@
 													<span class="carousel-control-next-icon" aria-hidden="true"></span>
 													<span class="sr-only">Next</span>
 												</a>
->>>>>>> b07e7271549315681ad9cf92c43a269b6055c391
 											</div>
-											<a class="carousel-control-prev" href="#carouselExampleIndicators-{{ $item->price }}" role="button"
-											    data-slide="prev">
-												<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-												<span class="sr-only">Previous</span>
-											</a>
-											<a class="carousel-control-next" href="#carouselExampleIndicators-{{ $item->price }}" role="button"
-											    data-slide="next">
-												<span class="carousel-control-next-icon" aria-hidden="true"></span>
-												<span class="sr-only">Next</span>
-											</a>
+											
 										</div>
-<<<<<<< HEAD
-									</div>
-									<div class="col-md-5">
-										<div class="fh5co-property-innter">
-											<h3><label>{{$item->name}}</label></h3>
-											<p>
-												<span>
-													<strong class="fa fa-wifi">WiFi available</strong>
-												</span>
-												<span>
-													<strong class="fa fa-bed"> 1 Bed</strong>
-												</span>
-												<span>
-													<strong class="fa fa-shower"> Bathroom</strong>
-												</span>
-												<span>
-													<strong class="fa fa-television"> TV available</strong>
-												</span>
-											</p>
-										</div>
-									</div>
-									<div class="col-md-3">
-
-										<select id="type" class="show-tick" style="border: none" onChange="myFunction()">
-											<option value="">Number of Room</option>
-											<option value="10">10</option>
-											<option value="20">20</option>
-											<option value="30">30</option>
-											<option value="40">40</option>
-											<option value="50">50</option>
-										</select>
-										<div class="price-status">
-											<span class="price">${{$item->price}}<span class="per">/night</span></span>
-=======
 										<div class="col-md-5 col-sm-12">
 											<div class="fh5co-property-innter">
 												<h3><label>{{$item->name}}</label></h3>
@@ -264,101 +170,24 @@
 											<div class="price-status">
 												<span class="price">${{$item->price}}<span class="per">/night</span></span>
 											</div>
->>>>>>> b07e7271549315681ad9cf92c43a269b6055c391
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-<<<<<<< HEAD
-					</div>
-					@endforeach
-				</div>
-			</div>
-		<div class="fh5co-section-with-image">
-			<img src="{{asset('frontend/images/security.png')}}" alt="" class="img-responsive">
-			<div class="fh5co-box animate-box">
-				<h2>Security, Comfort, &amp; Convenience</h2>
-				<p>We provide you a good service and make sure you have satified with our resort.</p>
-			</div>
-		</div>
-
-		<div id="fh5co-blog">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
-						<h2>Our information</h2>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind
-							texts.
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="container">
-				<div class="row">
-					<div class="col-md-4 animate-box" data-animate-effect="fadeIn">
-						<a class="fh5co-entry" href="#">
-							<figure>
-								<img src="{{asset('frontend/images/slide_4.jpg')}}" alt="Free Website Template, Free HTML5 Bootstrap Template"
-								    class="img-responsive">
-							</figure>
-							<div class="fh5co-copy">
-								<h3>We Create Awesome Free Templates</h3>
-								<span class="fh5co-date">June 8, 2016</span>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
-									blind texts.
-								</p>
-							</div>
-						</a>
-					</div>
-					<div class="col-md-4 animate-box" data-animate-effect="fadeIn">
-						<a class="fh5co-entry" href="#">
-							<figure>
-								<img src="{{asset('frontend/images/slide_5.jpg')}}" alt="Free Website Template, Free HTML5 Bootstrap Template"
-								    class="img-responsive">
-							</figure>
-							<div class="fh5co-copy">
-								<h3>Handcrafted Using CSS3 &amp; HTML5</h3>
-								<span class="fh5co-date">June 8, 2016</span>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
-									blind texts.
-								</p>
-							</div>
-						</a>
-					</div>
-					<div class="col-md-4 animate-box" data-animate-effect="fadeIn">
-						<a class="fh5co-entry" href="#">
-							<figure>
-								<img src="{{asset('frontend/images/slide_6.jpg')}}" alt="Free Website Template, Free HTML5 Bootstrap Template"
-								    class="img-responsive">
-							</figure>
-							<div class="fh5co-copy">
-								<h3>We Try To Update The Site Everyday</h3>
-								<span class="fh5co-date">June 8, 2016</span>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
-									blind texts.
-								</p>
-							</div>
-						</a>
-=======
 						@endforeach
 					</div>
 					<div class="col-md-1 animate-box" data-animate-effect="fadeIn">
 						<div class="button-demo">
+						<a href="/payment">
 							<button id="myBtn" hidden="true" type="button" class="btn btn-warning waves-effect">Book now</button>
+						</a>
 						</div>
->>>>>>> b07e7271549315681ad9cf92c43a269b6055c391
 					</div>
 				</div>
 			</div>
 		</div>
-<<<<<<< HEAD
-
-
-		<footer id="fh5co-footer" role="contentinfo">
-=======
 		<footer id="fh5co-footer" role="contentinfo">	
->>>>>>> b07e7271549315681ad9cf92c43a269b6055c391
 			<div class="container">
 				<div class="col-md-4 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
 					<h3>About vKirirom</h3>
@@ -412,9 +241,6 @@
 				$('#myBtn').attr('disabled', true)
 			}
 			// document.getElementById("myBtn").disabled = false;
-<<<<<<< HEAD
-		}
-=======
 		}	
 
 		var room = [];
@@ -472,7 +298,6 @@
 			}
 
 		})	
->>>>>>> b07e7271549315681ad9cf92c43a269b6055c391
 	</script>
 	<script>
 		$(document).ready(function () {

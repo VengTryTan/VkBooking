@@ -6,10 +6,10 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>vKirirom Pine Resort</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	
 	<link rel="shortcut icon" href="favicon.ico">
 	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-	<!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,400italic,700' rel='stylesheet' type='text/css'> -->
+	
 
 	<link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap-datetimepicker.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap-datetimepicker.min.css')}}">
@@ -27,10 +27,10 @@
 	<link rel="stylesheet" href="{{asset('frontend/css/style.css')}}">
 	<!-- Date picker style -->
 	<link rel="stylesheet" href="{{asset('frontend/css/jquery-ui.css')}}">
-	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
 	<link rel="{{ URL::to('frontend/shortcut icon') }}" href="favicon.ico">
 	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-	<!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,400italic,700' rel='stylesheet' type='text/css'> -->
+	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="{{ URL::to('frontend/css/animate.css') }}">
@@ -43,13 +43,9 @@
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="{{ URL::to('frontend/css/style.css') }}">
 	<linl rel="stylesheet" href="{{ URL::to('frontend/css/bootstrap.min.css')}}">
-		<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
-		<!-- Modernizr JS -->
+	
 		<script src="{{ URL::to('frontend/js/modernizr-2.6.2.min.js') }}"></script>
-		<!-- FOR IE9 below -->
-		<!--[if lt IE 9]>
-        <script src="js/respond.min.js"></script>
-        <![endif]-->
+	
 
 </head>
 
