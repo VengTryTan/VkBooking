@@ -62,12 +62,6 @@
 			</div>
 		</header>
 		<div id="best-deal">
-			<!-- <div>
-				<div class="button-demo">
-					<input type="hidden" id="test">
-					<button id="myBtn" disabled="true" type="button" style="float: right;" class="btn btn-warning waves-effect">Book now</button>
-				</div>
-			</div> -->
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-3 col-sm-12 col-xs-12 col-lg-3 item-block animate-box fh5co-entry" style="float: left;" data-animate-effect="fadeIn">
