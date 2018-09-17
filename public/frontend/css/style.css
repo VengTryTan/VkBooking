@@ -2197,6 +2197,7 @@ figure {
 .sidebar-filter {
   border: 1px solid #eee;
   box-shadow: 1px solid #ccc;
+  padding: 1px;
 }
 
 .button-demo {
