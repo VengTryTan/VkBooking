@@ -24,8 +24,6 @@
 	<link rel="stylesheet" href="{{asset('frontend/css/bootstrap-select.min.css')}}">
 	<script src="{{asset('frontend/js/modernizr-2.6.2.min.js')}}"></script>
 
-
-
 </head>
 
 <body>
@@ -162,7 +160,7 @@
 												<option value="5">5</option>
 											</select>
 											<div class="price-status">
-												<span class="price">${{$item->price}}<span class="per">/night</span></span>
+												<span class="price">${{$item->event_name}}<span class="per">/night</span></span>
 											</div>
 										</div>
 									</div>

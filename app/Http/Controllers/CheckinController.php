@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
-use App\Pricing;
+use App\Event;
 use App\Hotel;
 use App\Image;
 
@@ -88,14 +88,17 @@ class CheckinController extends Controller
 
 
      // Search for available hotels
-     public function search(Request $request){
+     public function search(Request $request)
+     {
+
         $searchDate= $request->checkin_date;
+
         $user = DB::table('hotels')
-        ->select('hotels.id', 'hotels.name','pricings.price','pricings.date', 'images.picture',  DB::raw('count(images.picture) as total'))
+        ->select('hotels.id', 'hotels.name','events.event_name','events.start_date', 'images.picture',  DB::raw('count(images.picture) as total'))
         ->join('images', 'hotels.id', '=', 'images.hotels_id')
-        ->join('pricings', 'images.hotels_id', '=', 'pricings.hotels_id')
-        ->groupBy('pricings.hotels_id')
-        ->where('pricings.date', $searchDate)
+        ->join('events', 'images.hotels_id', '=', 'events.hotels_id')
+        ->groupBy('events.hotels_id')
+        ->where('events.start_date', $searchDate)
         ->get();
         
         return view('welcome',compact(['user','searchDate']));
@@ -103,29 +106,14 @@ class CheckinController extends Controller
 
 
 
-    public function searchone(Request $request){
-
-        $searchDate = $request->searchDate;
-        $user = DB::table('hotels')
-        ->select('hotels.id', 'hotels.name','pricings.price','pricings.date', 'images.picture',  DB::raw('count(images.picture) as total'))
-        ->join('images', 'hotels.id', '=', 'images.hotels_id')
-        ->join('pricings', 'images.hotels_id', '=', 'pricings.hotels_id')
-        ->groupBy('pricings.hotels_id')
-        ->orderBy('pricings.price', 'asc')
-        ->where('pricings.date', $date)
-        ->get();
-
-    return view('welcome',compact(['user','searchDate']));
-    }
-
     public function index2()
     {
-        $nerd = Pricing::all();
+        $nerd = Event::all();
         $items = DB::table('hotels')
-        ->select('hotels.id', 'hotels.name','pricings.price', 'images.picture', 'hotels.description', DB::raw('count(images.picture) as total'))
+        ->select('hotels.id', 'hotels.name','events.event_name', 'images.picture', 'hotels.description', DB::raw('count(images.picture) as total'))
         ->join('images', 'hotels.id', '=', 'images.hotels_id')
-        ->join('pricings', 'images.hotels_id', '=', 'pricings.hotels_id')
-        ->groupBy('pricings.hotels_id')
+        ->join('events', 'images.hotels_id', '=', 'events.hotels_id')
+        ->groupBy('events.hotels_id')
         ->get();
     return view('testing', compact(['items', 'nerd']));
     }
