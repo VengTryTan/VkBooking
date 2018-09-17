@@ -14,13 +14,8 @@
 Auth::routes();
 
 // Route Get
-<<<<<<< HEAD
-Route::get('/', 'CheckinController@index2');
-Route::get('/payment', 'CheckinController@payment');
-=======
 Route::get('/', 'CheckinController@index2')->name('home');
-Route::get('/payment', 'ReservationController@index');
->>>>>>> 1fc68beb9bfc497b77fae77cdf9b5a3ee4e1566c
+Route::get('/payment', 'CheckinController@payment');
 
 // Route Post
 Route::post('test', 'CheckinController@search')->name('checkin'); 
