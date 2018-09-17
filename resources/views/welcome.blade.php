@@ -7,9 +7,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>vKirirom Pine Resort</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	
+
 	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-	
+
 	<link rel="stylesheet" href="{{asset('frontend/css/animate.css')}}">
 	<link rel="stylesheet" href="{{asset('frontend/css/icomoon.css')}}">
 	<link rel="stylesheet" href="{{asset('frontend/css/bootstrap.css')}}">
@@ -28,7 +28,7 @@
 
 <body>
 	<div id="fh5co-page">
-	@include('_partial.header')
+		@include('_partial.header')
 		<div id="best-deal">
 			<div class="container-fluid">
 				<div class="row">
@@ -37,7 +37,8 @@
 						<div class="sidebar-filter">
 							<div class="nice well-small">
 								<ul class="nav nav-list">
-									<h4 class="filters-header-text"><img src="{{asset('img/filter.svg')}}" width="20px" height="20px" alt="filter">Filter by :</h4>
+									<h4 class="filters-header-text"><img src="{{asset('img/filter.svg')}}" width="20px" height="20px" alt="filter">Filter
+										by :</h4>
 									<form action="">
 										<div class="col-md-12 col-lg-12 filter-box">
 											<div class="filter-class">
@@ -45,7 +46,8 @@
 											</div>
 											<input type="radio" name="acc-class" value="budget" id="budget"><span id="budget"> budgets</span><br>
 											<input type="radio" name="acc-class" value="luxury" id="luxury"><span id="budget"> Luxury</span><br>
-											<input type="radio" name="acc-class" value="other" id="other"><span id="budget"> Other</span><hr>
+											<input type="radio" name="acc-class" value="other" id="other"><span id="budget"> Other</span>
+											<hr>
 										</div>
 									</form>
 									<form action="">
@@ -56,7 +58,8 @@
 											<input type="radio" name="type-bed" value="single"><span id="budget"> Single bed</span><br>
 											<input type="radio" name="type-bed" value="double"><span id="budget"> Double beds</span><br>
 											<input type="radio" name="type-bed" value="beds"><span id="budget"> 4 beds</span><br>
-											<input type="radio" name="type-bed" value="camp"><span id="budget"> Camping type</span><hr>
+											<input type="radio" name="type-bed" value="camp"><span id="budget"> Camping type</span>
+											<hr>
 										</div>
 									</form>
 								</ul>
@@ -138,12 +141,14 @@
 				</div>
 			</div>
 		</div>
-		<div class="button-demo">
-			<button id="myBtn" hidden="true" type="button" class="btn btn-warning waves-effect">Book</button>
-		</div>
+		<a href="/payment">
+			<div class="button-demo">
+				<button id="myBtn" hidden="true" type="button" class="btn btn-warning waves-effect">Book</button>
+			</div>
+		</a>
 		@include('_partial.footer')
 	</div>
-	
+
 	<script src="{{asset('frontend/js/jquery.min.js')}}"></script>
 	<script src="{{asset('frontend/js/jquery.easing.1.3.js')}}"></script>
 	<!-- <script src="{{asset('frontend/js/bootstrap.js')}}"></script> -->
@@ -157,7 +162,7 @@
 	<script>
 		function myFunction() {
 			// var type=;
-			
+
 			var e = document.getElementById("type");
 			var strUser = e.options[e.selectedIndex].value;
 			console.log(e.value)
@@ -280,7 +285,7 @@
 	</script>
 	<script type="text/javascript" src="{{asset('js/moment.min.js')}}"></script>
 	<script type="text/javascript" src="{{asset('js/bootstrap-datetimepicker.min.js')}}"></script>
-	
+
 	<!-- Check In Check out implement -->
 	<script>
 		$(document).ready(function () {
@@ -337,26 +342,27 @@
 		});
 	</script>
 	<script>
-		$(':radio').mousedown(function(e){
+		$(':radio').mousedown(function (e) {
 			var $self = $(this);
-			if( $self.is(':checked') ){
-				var uncheck = function(){
-					setTimeout(function(){
-						$self.removeAttr('checked');
+			if ($self.is(':checked')) {
+				var uncheck = function () {
+					setTimeout(function () {
+							$self.removeAttr('checked');
 						},
-					0);
+						0);
 				};
-				var unbind = function(){
-				$self.unbind('mouseup',up);
+				var unbind = function () {
+					$self.unbind('mouseup', up);
 				};
-				var up = function(){
+				var up = function () {
 					uncheck();
 					unbind();
 				};
-				$self.bind('mouseup',up);
+				$self.bind('mouseup', up);
 				$self.one('mouseout', unbind);
 			}
 		});
 	</script>
 </body>
+
 </html>
