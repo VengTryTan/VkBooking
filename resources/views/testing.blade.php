@@ -4,86 +4,33 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>vKirirom Pine Resort</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	
-	<link rel="shortcut icon" href="favicon.ico">
-	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-	
-
 	<link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap-datetimepicker.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap-datetimepicker.min.css')}}">
-
-
-	<!-- Animate.css -->
 	<link rel="stylesheet" href="{{asset('frontend/css/animate.css')}}">
-	<!-- Icomoon Icon Fonts-->
 	<link rel="stylesheet" href="{{asset('frontend/css/icomoon.css')}}">
-	<!-- Bootstrap  -->
 	<link rel="stylesheet" href="{{asset('frontend/css/bootstrap.css')}}">
-	<!-- Flexslider  -->
 	<link rel="stylesheet" href="{{asset('frontend/css/flexslider.css')}}">
-	<!-- Theme style  -->
 	<link rel="stylesheet" href="{{asset('frontend/css/style.css')}}">
-	<!-- Date picker style -->
 	<link rel="stylesheet" href="{{asset('frontend/css/jquery-ui.css')}}">
 
 	<link rel="{{ URL::to('frontend/shortcut icon') }}" href="favicon.ico">
 	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
 	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="{{ URL::to('frontend/css/animate.css') }}">
-	<!-- Icomoon Icon Fonts-->
+	<!-- <link rel="stylesheet" href="{{ URL::to('frontend/css/animate.css') }}">
 	<link rel="stylesheet" href="{{ URL::to('frontend/css/icomoon.css') }}">
-	<!-- Bootstrap  -->
 	<link rel="stylesheet" href="{{ URL::to('frontend/css/bootstrap.css') }}">
-	<!-- Flexslider  -->
 	<link rel="stylesheet" href="{{ URL::to('frontend/css/flexslider.css') }}">
-	<!-- Theme style  -->
 	<link rel="stylesheet" href="{{ URL::to('frontend/css/style.css') }}">
-	<linl rel="stylesheet" href="{{ URL::to('frontend/css/bootstrap.min.css')}}">
-	
-		<script src="{{ URL::to('frontend/js/modernizr-2.6.2.min.js') }}"></script>
-	
-
+	<linl rel="stylesheet" href="{{ URL::to('frontend/css/bootstrap.min.css')}}"> -->
+	<script src="{{ URL::to('frontend/js/modernizr-2.6.2.min.js') }}"></script>
 </head>
 
 <body>
 	<div id="fh5co-page">
-		<header id="fh5co-header" role="banner">
-			<div class="container">
-				<div class="row">
-					<div class="header-inner">
-						<a href="/Vkbooking/public">
-							<img src="{{asset('frontend/images/HomePage/vKirirom.svg')}}" alt="vKirirom logo" title="logo" />
-						</a>
-						<nav role="navigation">
-							<ul>
-								<li class="cta">
-									<a href="contact.html">Contact us</a>
-								</li>
-								<li class="zoom">
-									<a href="https://www.facebook.com/vkirirom" target="_blank">
-										<img src="{{asset('frontend/images/facebook.svg')}}" alt="www.facebook.com" title="facebook" />
-									</a>
-								</li>
-								<li class="zoom">
-									<a href="https://www.youtube.com/channel/UCCIu3JTn0s4UX5Kze5Hse0g" target="_blank">
-										<img src="{{asset('frontend/images/youtube.svg')}}" alt="www.youtube.com" title="youtube" />
-									</a>
-								</li>
-								<li class="zoom">
-									<a href="https://www.instagram.com/vkirirom_pine_resort/" target="_blank">
-										<img src="{{asset('frontend/images/instagram.svg')}}" alt="www.instagram.com" title="instagram" />
-									</a>
-								</li>
-							</ul>
-						</nav>
-					</div>
-				</div>
-			</div>
-		</header>
+		@include('_partial.header')
 
 		<aside id="fh5co-hero" clsas="js-fullheight">
 			<div class="flexslider js-fullheight">
@@ -342,40 +289,7 @@
 				</div>
 			</div>
 		</div>
-
-
-		<footer id="fh5co-footer" role="contentinfo">
-			<div class="container">
-				<div class="col-md-4 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
-					<h3>About vKirirom</h3>
-					<p>vKirirom Pine Resort is located amongst the pine trees of Kirirom Mountain. Here at vKiriom, we try to preserve the
-						natural beauty of the environment. Our building locations are properly studied so that we avoid cutting down many trees.
-					</p>
-				</div>
-				<div class="col-md-4 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
-					<h3>Kirirom Institute of Technology</h3>
-					<div>
-						<label>KIT</label>adapts a new style of learning with an effective new educational techniques as a boarding school.</div>
-					<a href="http://www.kit.edu.kh/contact.php" target="_black">Enroll here !!</a>
-					<div>New university for the future in Kirirom Mountain under the vKririom Project. An educational approach that stands amongst
-						the forest.</div>
-					<a href="http://www.kit.edu.kh/index.php" target="_black"> More about KIT</a>
-				</div>
-				<div class="col-md-4 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
-					<h3>THE MEANING OF OUR LOGO</h3>
-					<p>In the logo of vKirirom - you will find '
-						<span style="color: orange;">v</span>' in orange and
-						<span style="color: green;">'Kirirom'</span> in green. The orange colour represents the people who live in Kirirom. This is the colour of joy and
-						creativity. It also reminds us of the robes monks wear in Cambodia. The green represents the nature and its beauty.</p>
-				</div>
-			</div>
-			<div class="col-md-12 fh5co-copyright text-center">
-				<p>&copy; 2018 Designed by
-					<a href="http://kit.vkirirom.com/" target="_blank"> Kirirom Institute of Technology</a>
-				</p>
-			</div>
-		</footer>
-
+		@include('_partial.footer')
 	</div>
 	<!-- jQuery -->
 	<script src="{{asset('frontend/js/jquery.min.js')}}"></script>
