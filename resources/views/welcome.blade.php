@@ -141,7 +141,7 @@
 				</div>
 			</div>
 		</div>
-		<a href="/payment">
+		<a href="{{route('payment')}}">
 			<div class="button-demo">
 				<button id="myBtn" hidden="true" type="button" class="btn btn-warning waves-effect">Book</button>
 			</div>
