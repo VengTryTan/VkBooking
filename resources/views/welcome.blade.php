@@ -62,9 +62,9 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-9">
+					<div class="col-md-9 col-sm-12 col-xs-12 col-lg-9 float-right">
 						@foreach($user as $key=>$item)
-						<div class="col-md-12 item-block animate-box" style="float: right;" data-animate-effect="fadeIn">
+						<div class="col-md-12 item-block animate-box" data-animate-effect="fadeIn">
 							<div class="card">
 								<div class="row">
 									<div class="fh5co-property">
