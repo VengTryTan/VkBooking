@@ -46,7 +46,7 @@
 		<!— Page Content —>
 		<div class="container" style="margin-top: 75px;margin: 0 auto;">
 			<div style="width: 200px;margin: 0 auto;">
-				<h2>TOTAL: $2.00</h2>
+				<h2>TOTAL: $ {{}}</h2>
 				<input type="button" id="checkout_button" value="Checkout Now">
 			</div>
 		</div>

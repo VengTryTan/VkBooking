@@ -20,7 +20,7 @@
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="{{asset('frontend/css/style.css')}}">
 	<link rel="stylesheet" href="{{asset('frontend/css/jquery-ui.css')}}">
-	
+
 	<link rel="stylesheet" href="{{asset('frontend/css/bootstrap-select.min.css')}}">
 	<script src="{{asset('frontend/js/modernizr-2.6.2.min.js')}}"></script>
 
@@ -39,12 +39,12 @@
 							<ul>
 								<li class="zoom">
 									<a href="https://www.facebook.com/vkirirom" target="_blank">
-									 <img src="{{asset('frontend/images/facebook.svg')}}" alt="www.facebook.com" title="facebook" /> 
+										<img src="{{asset('frontend/images/facebook.svg')}}" alt="www.facebook.com" title="facebook" />
 									</a>
 								</li>
 								<li class="zoom">
 									<a href="https://www.youtube.com/channel/UCCIu3JTn0s4UX5Kze5Hse0g" target="_blank">
-										 <img src="{{asset('frontend/images/youtube.svg')}}" alt="www.youtube.com" title="youtube" /> 
+										<img src="{{asset('frontend/images/youtube.svg')}}" alt="www.youtube.com" title="youtube" />
 									</a>
 								</li>
 								<li class="zoom">
@@ -62,7 +62,8 @@
 		<div id="best-deal">
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-md-3 col-sm-12 col-xs-12 col-lg-3 item-block animate-box fh5co-entry" style="float: left;" data-animate-effect="fadeIn">
+					<div class="col-md-3 col-sm-12 col-xs-12 col-lg-3 item-block animate-box fh5co-entry" style="float: left;"
+					 data-animate-effect="fadeIn">
 						<div class="sidebar-filter">
 							<div class="nice well-small">
 								<ul class="nav nav-list">
@@ -129,7 +130,7 @@
 													<span class="sr-only">Next</span>
 												</a>
 											</div>
-											
+
 										</div>
 										<div class="col-md-5 col-sm-12">
 											<div class="fh5co-property-innter">
@@ -149,7 +150,7 @@
 													</span>
 												</p>
 											</div>
-										</div> 
+										</div>
 										<div class="col-md-3 col-sm-12">
 											<select id="{{$item->id}}" class="show-tick" style="border: none" name="{{$item->name}}" onChange="myFunction()">
 												<option value="0">Rooms</option>
@@ -171,15 +172,13 @@
 					</div>
 					<div class="col-md-1 animate-box" data-animate-effect="fadeIn">
 						<div class="button-demo">
-						<a href="/payment">
 							<button id="myBtn" hidden="true" type="button" class="btn btn-warning waves-effect">Book now</button>
-						</a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<footer id="fh5co-footer" role="contentinfo">	
+		<footer id="fh5co-footer" role="contentinfo">
 			<div class="container">
 				<div class="col-md-4 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
 					<h3>About vKirirom</h3>
@@ -233,49 +232,49 @@
 				$('#myBtn').attr('disabled', true)
 			}
 			// document.getElementById("myBtn").disabled = false;
-		}	
+		}
 
 		var room = [];
 		var room_amount = 0;
-		var update_item_index=0;
+		var update_item_index = 0;
 		var update_status = false;
-		$('select').on('change', function(){
+		$('select').on('change', function () {
 			var item = {
 				'name': $(this).attr('name'),
 				'value': $(this).val()
 			};
 			room_amount = room_amount + $('select').val();
 			console.log(room.length);
-			if(room.length === 0){
+			if (room.length === 0) {
 				room.push(item);
 				console.log(room)
-			}else{
+			} else {
 				var i = room.length;
-				while(i){
-					var a = i-1;
-					i=a;
-					if(a >= 0){
-						if(room[a].name === $(this).attr('name')){
+				while (i) {
+					var a = i - 1;
+					i = a;
+					if (a >= 0) {
+						if (room[a].name === $(this).attr('name')) {
 							update_item_index = a;
 							update_status = true;
 						}
 					}
 				}
 				console.log(update_status);
-				if(update_status){
+				if (update_status) {
 					console.log("HERE!!!!!!")
 					console.log($(this).val());
-					if( parseInt($(this).val()) === 0){
+					if (parseInt($(this).val()) === 0) {
 						console.log("Update status of the room index");
 						room.splice(update_item_index, 1);
 
-					}else{
+					} else {
 						room[update_item_index].value = $(this).val();
 						console.log("****************");
 						console.log(room);
 					}
 					update_status = false;
-				}else{
+				} else {
 					room.push(item);
 				}
 			}
@@ -283,13 +282,13 @@
 			$("#test").val(JSON.stringify(room));
 			console.log($('#test').val())
 			console.log(room.length)
-			if(room.length>0){
+			if (room.length > 0) {
 				$('#myBtn').attr('hidden', false)
-			}else{
+			} else {
 				$('#myBtn').attr('hidden', true)
 			}
 
-		})	
+		})
 	</script>
 	<script>
 		$(document).ready(function () {
@@ -404,37 +403,24 @@
 	</script>
 	<script>
 		$(':radio').mousedown(function (e) {
-			var $self = $(this);
-<<<<<<< HEAD
-			if ($self.is(':checked')) {
-				var uncheck = function () {
-					setTimeout(function () {
-						$self.removeAttr('checked');
-					}, 0);
-=======
-			if( $self.is(':checked') ){
-				var uncheck = function(){
-					setTimeout(function(){
-						$self.removeAttr('checked');
-						},
-					0);
->>>>>>> b07e7271549315681ad9cf92c43a269b6055c391
-				};
-				var unbind = function () {
-					$self.unbind('mouseup', up);
-				};
-<<<<<<< HEAD
-				var up = function () {
-=======
-				var up = function(){
->>>>>>> b07e7271549315681ad9cf92c43a269b6055c391
-					uncheck();
-					unbind();
-				};
-				$self.bind('mouseup', up);
-				$self.one('mouseout', unbind);
-			}
-		});
+					var $self = $(this); 
+					if ($self.is(':checked')) {
+						var uncheck = function () {
+							setTimeout(function () {
+								$self.removeAttr('checked');
+							}, 0);
+								};
+								var unbind = function () {
+									$self.unbind('mouseup', up);
+								}; 
+								var up = function () {
+										uncheck();
+										unbind();
+									};
+									$self.bind('mouseup', up);
+									$self.one('mouseout', unbind);
+								}
+							});
 	</script>
 
 

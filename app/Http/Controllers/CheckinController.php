@@ -118,4 +118,9 @@ class CheckinController extends Controller
     return view('testing', compact(['items', 'nerd']));
     }
 
+    public function payment()
+    {
+        return view('payment');
+    }
+
 }

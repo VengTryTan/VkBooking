@@ -15,7 +15,7 @@ Auth::routes();
 
 // Route Get
 Route::get('/', 'CheckinController@index2');
-Route::get('/payment', 'ReservationController@index');
+Route::get('/payment', 'CheckinController@payment');
 
 // Route Post
 Route::post('test', 'CheckinController@search')->name('checkin'); 
