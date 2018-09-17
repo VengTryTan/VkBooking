@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="header-inner">
-                <a href="/Vkbooking/public">
+                <a href="{{route('home')}}">
                     <img src="{{asset('frontend/images/HomePage/vKirirom.svg')}}" alt="vKirirom logo" title="logo" />
                 </a>
                 <nav role="navigation">

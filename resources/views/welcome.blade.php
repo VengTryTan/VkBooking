@@ -19,8 +19,6 @@
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="{{asset('frontend/css/style.css')}}">
 	<link rel="stylesheet" href="{{asset('frontend/css/jquery-ui.css')}}">
-	<!-- <link rel="stylesheet" href="{{asset('css/multirange.css')}}"> -->
-	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css"> -->
 	<link rel="stylesheet" href="{{asset('frontend/css/bootstrap-select.min.css')}}">
 	<script src="{{asset('frontend/js/modernizr-2.6.2.min.js')}}"></script>
 

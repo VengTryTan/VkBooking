@@ -4,49 +4,28 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>vKirirom Pine Resort</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	
-	<link rel="shortcut icon" href="favicon.ico">
-	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-	
-
 	<link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap-datetimepicker.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap-datetimepicker.min.css')}}">
-
-
-	<!-- Animate.css -->
 	<link rel="stylesheet" href="{{asset('frontend/css/animate.css')}}">
-	<!-- Icomoon Icon Fonts-->
 	<link rel="stylesheet" href="{{asset('frontend/css/icomoon.css')}}">
-	<!-- Bootstrap  -->
 	<link rel="stylesheet" href="{{asset('frontend/css/bootstrap.css')}}">
-	<!-- Flexslider  -->
 	<link rel="stylesheet" href="{{asset('frontend/css/flexslider.css')}}">
-	<!-- Theme style  -->
 	<link rel="stylesheet" href="{{asset('frontend/css/style.css')}}">
-	<!-- Date picker style -->
 	<link rel="stylesheet" href="{{asset('frontend/css/jquery-ui.css')}}">
 
 	<link rel="{{ URL::to('frontend/shortcut icon') }}" href="favicon.ico">
 	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
 	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="{{ URL::to('frontend/css/animate.css') }}">
-	<!-- Icomoon Icon Fonts-->
+	<!-- <link rel="stylesheet" href="{{ URL::to('frontend/css/animate.css') }}">
 	<link rel="stylesheet" href="{{ URL::to('frontend/css/icomoon.css') }}">
-	<!-- Bootstrap  -->
 	<link rel="stylesheet" href="{{ URL::to('frontend/css/bootstrap.css') }}">
-	<!-- Flexslider  -->
 	<link rel="stylesheet" href="{{ URL::to('frontend/css/flexslider.css') }}">
-	<!-- Theme style  -->
 	<link rel="stylesheet" href="{{ URL::to('frontend/css/style.css') }}">
-	<linl rel="stylesheet" href="{{ URL::to('frontend/css/bootstrap.min.css')}}">
-	
-		<script src="{{ URL::to('frontend/js/modernizr-2.6.2.min.js') }}"></script>
-	
-
+	<linl rel="stylesheet" href="{{ URL::to('frontend/css/bootstrap.min.css')}}"> -->
+	<script src="{{ URL::to('frontend/js/modernizr-2.6.2.min.js') }}"></script>
 </head>
 
 <body>
