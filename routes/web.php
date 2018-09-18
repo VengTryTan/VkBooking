@@ -15,7 +15,7 @@ Auth::routes();
 
 // Route Get
 Route::get('/', 'CheckinController@index2')->name('home');
-Route::get('/payment', 'CheckinController@payment')->name('payment');
+Route::get('/payment', 'CheckinController@payment');
 
 // Route Post
 Route::post('test', 'CheckinController@search')->name('checkin'); 
@@ -24,7 +24,6 @@ Route::post('budget', 'CheckinController@searchone')->name('budget');
 // Admin Route
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
-
     Route::get('events', '\App\Http\Controllers\voyager\EventController@index')->name('events.index');
 	Route::post('events', '\App\Http\Controllers\voyager\EventController@addEvent')->name('events.add');
 });
