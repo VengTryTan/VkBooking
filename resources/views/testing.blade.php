@@ -31,7 +31,6 @@
 <body>
 	<div id="fh5co-page">
 		@include('_partial.header')
-
 		<aside id="fh5co-hero" clsas="js-fullheight">
 			<div class="flexslider js-fullheight">
 				<ul class="slides">
@@ -70,50 +69,33 @@
 									</span>
 								</div>
 							</div>
+						</div>
+						<div class="form-group row no-margin">
+							<label for="check-out-time" class="col-sm-3 col-form-label label-xl">
+								Check Out:
+							</label>
+							<div class="col-sm-9">
+								<div class='input-group date' id='datetimepicker-check-out'>
+									<input id="check-out-time" type="text" class="form-control" value="" />
+									<input id="checkout-time" type="hidden" name="checkout_date" />
+									<span class="input-group-addon">
+										<span class="fa fa-calendar" style="font-size:29px;"></span>
+									</span>
+								</div>
 							</div>
-								<div class="form-group row no-margin">
-									<label for="check-out-time" class="col-sm-3 col-form-label label-xl">
-										Check Out:
-									</label>
-									<div class="col-sm-9">
-										<div class='input-group date' id='datetimepicker-check-out'>
-											<input id="check-out-time" type="text" class="form-control" value="" />
-											<input id="checkout-time" type="hidden" name="checkout_date" />
-											<span class="input-group-addon">
-												<span class="fa fa-calendar" style="font-size:29px;"></span>
-											</span>
-										</div>
-									</div>
-								</div>
-								<div>
-									<button class="custombutton butt1">Find Room</button>
-								</div>
+						</div>
+						<div>
+							<button class="custombutton butt1">Find Room</button>
+						</div>
 					</form>
 					<!-- <div class="col-sm-9">
 						<button class="awe-btn awe-btn-13">Find Room</button>
 					</div> -->
 
-					</div>
-					</div>
 				</div>
-
-			<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
-			<!-- jQuery -->
-			<script src="{{ URL::to('frontend/js/jquery.min.js') }}"></script>
-			<!-- jQuery Easing -->
-			<script src="{{ URL::to('frontend/js/jquery.easing.1.3.js') }}"></script>
-			<!-- Bootstrap -->
-			<script src="{{ URL::to('frontend/js/bootstrap.min.js') }}"></script>
-			<!-- Waypoints -->
-			<script src="{{ URL::to('frontend/js/jquery.waypoints.min.js') }}"></script>
-			<!-- Flexslider -->
-			<script src="{{ URL::to('frontend/js/jquery.flexslider-min.js') }}"></script>
+			</div>
 		</div>
-	</div>
-
-	<div class="fh5co-section-with-image">
+		<div class="fh5co-section-with-image">
 		<img src="{{asset('frontend/images/security.png')}}" alt="" class="img-responsive">
 		<div class="fh5co-box animate-box">
 			<h2>Security, Comfort, &amp; Convenience</h2>
@@ -290,6 +272,7 @@
 			</div>
 		</div>
 		@include('_partial.footer')
+	</div>
 	</div>
 	<!-- jQuery -->
 	<script src="{{asset('frontend/js/jquery.min.js')}}"></script>

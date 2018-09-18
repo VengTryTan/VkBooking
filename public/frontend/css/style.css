@@ -2204,6 +2204,5 @@ figure {
   position: fixed;
   right: 5px;
   bottom: 5px;
-  /* top: 200px; */
   z-index: 1002;
 }

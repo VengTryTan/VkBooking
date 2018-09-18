@@ -32,7 +32,7 @@
 		<div id="best-deal">
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-md-3 col-sm-12 col-xs-12 col-lg-3 item-block animate-box fh5co-entry" style="float: left;"
+					<div class="col-md-3 col-sm-12 col-xs-12 col-lg-3 float-left item-block animate-box fh5co-entry" style="float: left;"
 					 data-animate-effect="fadeIn">
 						<div class="sidebar-filter">
 							<div class="nice well-small">
@@ -66,7 +66,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-9 col-sm-12 col-xs-12 col-lg-9 float-right">
+					<div class="col-md-8 col-sm-12 col-xs-12 col-lg-9 float-right">
 						@foreach($user as $key=>$item)
 						<div class="col-md-12 item-block animate-box" data-animate-effect="fadeIn">
 							<div class="card">
@@ -143,7 +143,7 @@
 		</div>
 		<a href="/payment">
 			<div class="button-demo">
-				<button id="myBtn" hidden="true" type="button" class="btn btn-warning waves-effect">Book</button>
+				<button id="myBtn" hidden="true" type="button" class="btn btn-primary waves-effect">Book</button>
 			</div>
 		</a>
 		@include('_partial.footer')
