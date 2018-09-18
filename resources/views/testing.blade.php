@@ -19,12 +19,6 @@
 	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
 	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<!-- <link rel="stylesheet" href="{{ URL::to('frontend/css/animate.css') }}">
-	<link rel="stylesheet" href="{{ URL::to('frontend/css/icomoon.css') }}">
-	<link rel="stylesheet" href="{{ URL::to('frontend/css/bootstrap.css') }}">
-	<link rel="stylesheet" href="{{ URL::to('frontend/css/flexslider.css') }}">
-	<link rel="stylesheet" href="{{ URL::to('frontend/css/style.css') }}">
-	<linl rel="stylesheet" href="{{ URL::to('frontend/css/bootstrap.min.css')}}"> -->
 	<script src="{{ URL::to('frontend/js/modernizr-2.6.2.min.js') }}"></script>
 </head>
 
@@ -95,79 +89,71 @@
 				</div>
 			</div>
 		</div>
-		<div class="fh5co-section-with-image">
-		<img src="{{asset('frontend/images/security.png')}}" alt="" class="img-responsive">
-		<div class="fh5co-box animate-box">
-			<h2>Security, Comfort, &amp; Convenience</h2>
-			<p>We provide you a good service and make sure you have satified with our resort.</p>
-		</div>
-	</div>
-
-	<div id="fh5co-blog">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
-					<h2>Our information</h2>
-					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
-					</p>
+		<div id="fh5co-blog">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
+						<h2>Our information</h2>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+						</p>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-3 animate-box" data-animate-effect="fadeIn">
-					<a class="fh5co-entry" href="#">
-						<figure>
-							<img src="{{asset('frontend/images/bungalow.jpg')}}" alt="Free Website Template, Free HTML5 Bootstrap Template" class="img-responsive">
-						</figure>
-						<div class="fh5co-copy">
-							<h3>Bungalow</h3>
-							<span class="fh5co-date">June 8, 2016</span>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-3 animate-box" data-animate-effect="fadeIn">
-					<a class="fh5co-entry" href="#">
-						<figure>
-							<img src="{{asset('frontend/images/boreyA.jpg')}}" alt="Free Website Template, Free HTML5 Bootstrap Template" class="img-responsive">
-						</figure>
-						<div class="fh5co-copy">
-							<h3>Borey A</h3>
-							<span class="fh5co-date">June 8, 2016</span>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
-							</p>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-3 animate-box" data-animate-effect="fadeIn">
-					<a class="fh5co-entry" href="#">
-						<figure>
-							<img src="{{asset('frontend/images/luxurytent1.jpg')}}" alt="Free Website Template, Free HTML5 Bootstrap Template" class="img-responsive">
-						</figure>
-						<div class="fh5co-copy">
-							<h3>Luxury Tent</h3>
-							<span class="fh5co-date">June 8, 2016</span>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
-							</p>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-3 animate-box" data-animate-effect="fadeIn">
-					<a class="fh5co-entry" href="#">
-						<figure>
-							<img src="{{asset('frontend/images/camping5.JPG')}}" alt="Free Website Template, Free HTML5 Bootstrap Template" class="img-responsive">
-						</figure>
-						<div class="fh5co-copy">
-							<h3>Camping</h3>
-							<span class="fh5co-date">June 8, 2016</span>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
-							</p>
-						</div>
-					</a>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3 animate-box" data-animate-effect="fadeIn">
+						<a class="fh5co-entry" href="#">
+							<figure>
+								<img src="{{asset('frontend/images/bungalow.jpg')}}" alt="Free Website Template, Free HTML5 Bootstrap Template" class="img-responsive">
+							</figure>
+							<div class="fh5co-copy">
+								<h3>Bungalow</h3>
+								<span class="fh5co-date">June 8, 2016</span>
+								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-3 animate-box" data-animate-effect="fadeIn">
+						<a class="fh5co-entry" href="#">
+							<figure>
+								<img src="{{asset('frontend/images/boreyA.jpg')}}" alt="Free Website Template, Free HTML5 Bootstrap Template" class="img-responsive">
+							</figure>
+							<div class="fh5co-copy">
+								<h3>Borey A</h3>
+								<span class="fh5co-date">June 8, 2016</span>
+								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+								</p>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-3 animate-box" data-animate-effect="fadeIn">
+						<a class="fh5co-entry" href="#">
+							<figure>
+								<img src="{{asset('frontend/images/luxurytent1.jpg')}}" alt="Free Website Template, Free HTML5 Bootstrap Template" class="img-responsive">
+							</figure>
+							<div class="fh5co-copy">
+								<h3>Luxury Tent</h3>
+								<span class="fh5co-date">June 8, 2016</span>
+								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+								</p>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-3 animate-box" data-animate-effect="fadeIn">
+						<a class="fh5co-entry" href="#">
+							<figure>
+								<img src="{{asset('frontend/images/camping5.JPG')}}" alt="Free Website Template, Free HTML5 Bootstrap Template" class="img-responsive">
+							</figure>
+							<div class="fh5co-copy">
+								<h3>Camping</h3>
+								<span class="fh5co-date">June 8, 2016</span>
+								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+								</p>
+							</div>
+						</a>
+					</div>
 				</div>
 			</div>
-
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
@@ -176,103 +162,59 @@
 						</p>
 					</div>
 				</div>
+				<div class="col-md-3">
+					<div class="thumbnail">
+						<img src="{{asset('frontend/images/16.jpg')}}" alt="Lights" style="width:100%">
+						<div class="caption">
+							<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+						</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="thumbnail">
+						<img src="{{asset('frontend/images/17.jpg')}}" alt="Lights" style="width:100%">
+						<div class="caption">
+							<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+						</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="thumbnail">
+						<img src="{{asset('frontend/images/18.jpg')}}" alt="Lights" style="width:100%">
+						<div class="caption">
+							<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+						</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="thumbnail">
+						<img src="{{asset('frontend/images/19.jpg')}}" alt="Lights" style="width:100%">
+						<div class="caption">
+							<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+						</div>
+						</a>
+					</div>
+				</div>
 			</div>
 			<div class="container">
 				<div class="row">
-					<div class="col-md-3">
-						<div class="thumbnail">
-							<img src="{{asset('frontend/images/16.jpg')}}" alt="Lights" style="width:100%">
-							<div class="caption">
-								<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-							</div>
-							</a>
-						</div>
-					</div>
-					<div class="col-md-3">
-						<div class="thumbnail">
-							<img src="{{asset('frontend/images/17.jpg')}}" alt="Lights" style="width:100%">
-							<div class="caption">
-								<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-							</div>
-							</a>
-						</div>
-					</div>
-					<div class="col-md-3">
-						<div class="thumbnail">
-							<img src="{{asset('frontend/images/18.jpg')}}" alt="Lights" style="width:100%">
-							<div class="caption">
-								<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-							</div>
-							</a>
-						</div>
-					</div>
-					<div class="col-md-3">
-						<div class="thumbnail">
-							<img src="{{asset('frontend/images/19.jpg')}}" alt="Lights" style="width:100%">
-							<div class="caption">
-								<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-							</div>
-							</a>
-						</div>
+					<div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
+						<h2>Our Location</h2>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+						</p>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-md-3">
-						<div class="thumbnail">
-							<img src="{{asset('frontend/images/12.jpg')}}" alt="Lights" style="width:100%">
-							<div class="caption">
-								<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-							</div>
-							</a>
-						</div>
+				<div class="row-fluid">
+					<div class="span8">
+						<iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d457923.86877925845!2d104.17120771835094!3d11.381808161287738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3108e85207384c83%3A0x1c0dc50984a079a3!2svKirirom+Pine+Resort!5e0!3m2!1sen!2skh!4v1532506013714"></iframe>
 					</div>
-					<div class="col-md-3">
-						<div class="thumbnail">
-							<img src="{{asset('frontend/images/13.jpg')}}" alt="Lights" style="width:100%">
-							<div class="caption">
-								<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-							</div>
-							</a>
-						</div>
-					</div>
-					<div class="col-md-3">
-						<div class="thumbnail">
-							<img src="{{asset('frontend/images/14.jpg')}}" alt="Lights" style="width:100%">
-							<div class="caption">
-								<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-							</div>
-							</a>
-						</div>
-					</div>
-					<div class="col-md-3">
-						<div class="thumbnail">
-							<img src="{{asset('frontend/images/15.jpg')}}" alt="Lights" style="width:100%">
-							<div class="caption">
-								<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-							</div>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-
-		</div>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
-					<h2>Our Location</h2>
-					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
-					</p>
-				</div>
-			</div>
-			<div class="row-fluid">
-				<div class="span8">
-					<iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d457923.86877925845!2d104.17120771835094!3d11.381808161287738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3108e85207384c83%3A0x1c0dc50984a079a3!2svKirirom+Pine+Resort!5e0!3m2!1sen!2skh!4v1532506013714"></iframe>
 				</div>
 			</div>
 		</div>
 		@include('_partial.footer')
-	</div>
 	</div>
 	<!-- jQuery -->
 	<script src="{{asset('frontend/js/jquery.min.js')}}"></script>

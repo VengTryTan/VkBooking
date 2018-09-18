@@ -21,9 +21,6 @@
 	<link rel="stylesheet" href="{{asset('frontend/css/jquery-ui.css')}}">
 	<link rel="stylesheet" href="{{asset('frontend/css/bootstrap-select.min.css')}}">
 	<script src="{{asset('frontend/js/modernizr-2.6.2.min.js')}}"></script>
-
-	<!-- <link href="{{asset('frontend/plugin/plugins/bootstrap-select/css/bootstrap-select.css')}}" rel="stylesheet" /> -->
-
 </head>
 
 <body>
