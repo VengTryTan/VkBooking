@@ -119,6 +119,7 @@ class CheckinController extends Controller
     return view('testing', compact(['items', 'nerd']));
     }
 
+<<<<<<< HEAD
     public function image()
     {
         $images = Image::all();
@@ -130,4 +131,11 @@ class CheckinController extends Controller
 
         return view('images', compact('images'));
     }
+=======
+    public function payment()
+    {
+        return view('payment');
+    }
+
+>>>>>>> dbfe3a6007ddd3cf064d024d430dbd4656018abb
 }

@@ -7,9 +7,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>vKirirom Pine Resort</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	
+
 	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-	
+
 	<link rel="stylesheet" href="{{asset('frontend/css/animate.css')}}">
 	<link rel="stylesheet" href="{{asset('frontend/css/icomoon.css')}}">
 	<link rel="stylesheet" href="{{asset('frontend/css/bootstrap.css')}}">
@@ -19,26 +19,24 @@
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="{{asset('frontend/css/style.css')}}">
 	<link rel="stylesheet" href="{{asset('frontend/css/jquery-ui.css')}}">
-	<!-- <link rel="stylesheet" href="{{asset('css/multirange.css')}}"> -->
-	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css"> -->
 	<link rel="stylesheet" href="{{asset('frontend/css/bootstrap-select.min.css')}}">
 	<script src="{{asset('frontend/js/modernizr-2.6.2.min.js')}}"></script>
-
-	<!-- <link href="{{asset('frontend/plugin/plugins/bootstrap-select/css/bootstrap-select.css')}}" rel="stylesheet" /> -->
-
+	<link rel="SHORTCUT ICON" href="{{asset('frontend/images/HomePage/vKirirom.png')}}">
 </head>
 
 <body>
 	<div id="fh5co-page">
-	@include('_partial.header')
+		@include('_partial.header')
 		<div id="best-deal">
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-md-3 col-sm-12 col-xs-12 col-lg-3 item-block animate-box fh5co-entry" style="float: left;" data-animate-effect="fadeIn">
+					<div class="col-md-3 col-sm-12 col-xs-12 col-lg-3 float-left item-block animate-box fh5co-entry" style="float: left;"
+					 data-animate-effect="fadeIn">
 						<div class="sidebar-filter">
 							<div class="nice well-small">
 								<ul class="nav nav-list">
-									<h4 class="filters-header-text"><img src="{{asset('img/filter.svg')}}" width="20px" height="20px" alt="filter">Filter by :</h4>
+									<h4 class="filters-header-text"><img src="{{asset('img/filter.svg')}}" width="20px" height="20px" alt="filter">Filter
+										by :</h4>
 									<form action="">
 										<div class="col-md-12 col-lg-12 filter-box">
 											<div class="filter-class">
@@ -46,7 +44,8 @@
 											</div>
 											<input type="radio" name="acc-class" value="budget" id="budget"><span id="budget"> budgets</span><br>
 											<input type="radio" name="acc-class" value="luxury" id="luxury"><span id="budget"> Luxury</span><br>
-											<input type="radio" name="acc-class" value="other" id="other"><span id="budget"> Other</span><hr>
+											<input type="radio" name="acc-class" value="other" id="other"><span id="budget"> Other</span>
+											<hr>
 										</div>
 									</form>
 									<form action="">
@@ -57,16 +56,17 @@
 											<input type="radio" name="type-bed" value="single"><span id="budget"> Single bed</span><br>
 											<input type="radio" name="type-bed" value="double"><span id="budget"> Double beds</span><br>
 											<input type="radio" name="type-bed" value="beds"><span id="budget"> 4 beds</span><br>
-											<input type="radio" name="type-bed" value="camp"><span id="budget"> Camping type</span><hr>
+											<input type="radio" name="type-bed" value="camp"><span id="budget"> Camping type</span>
+											<hr>
 										</div>
 									</form>
 								</ul>
 							</div>
 						</div>
 					</div>
-					<div class="col-md-9">
+					<div class="col-md-8 col-sm-12 col-xs-12 col-lg-9 float-right">
 						@foreach($user as $key=>$item)
-						<div class="col-md-12 item-block animate-box" style="float: right;" data-animate-effect="fadeIn">
+						<div class="col-md-12 item-block animate-box" data-animate-effect="fadeIn">
 							<div class="card">
 								<div class="row">
 									<div class="fh5co-property">
@@ -116,7 +116,7 @@
 													</span>
 												</p>
 											</div>
-										</div> 
+										</div>
 										<div class="col-md-3 col-sm-12">
 											<select id="{{$item->id}}" class="show-tick" style="border: none" name="{{$item->name}}" onChange="myFunction()">
 												<option value="0">Rooms</option>
@@ -139,12 +139,20 @@
 				</div>
 			</div>
 		</div>
-		<div class="button-demo">
-			<button id="myBtn" hidden="true" type="button" class="btn btn-warning waves-effect">Book</button>
-		</div>
+		<a href="/payment">
+			<div class="button-demo">
+				<button id="myBtn" hidden="true" type="button" class="btn btn-primary waves-effect">Book</button>
+			</div>
+		</a>
 		@include('_partial.footer')
 	</div>
-	
+
+	<!— Make a copy this javaScript to paste into your site—>
+	<!— Note: these javaScript files are using for only integration testing—>
+	<link rel="stylesheet" href="https://payway-dev.ababank.com/checkout-popup.html?file=css" />
+	<script src="https://payway-dev.ababank.com/checkout-popup.html?file=js"></script>
+
+
 	<script src="{{asset('frontend/js/jquery.min.js')}}"></script>
 	<script src="{{asset('frontend/js/jquery.easing.1.3.js')}}"></script>
 	<!-- <script src="{{asset('frontend/js/bootstrap.js')}}"></script> -->
@@ -154,11 +162,17 @@
 	<script src="{{asset('frontend/js/jquery.flexslider-min.js')}}"></script>
 	<script src="{{asset('frontend/js/main.js')}}"></script>
 	<script src="{{asset('frontend/js/jquery-ui.js')}}"></script>
-
+	<script>
+		$(document).ready(function () {
+			$('#myBtn').click(function () {
+				AbaPayway.checkout();
+			});
+		});
+	</script>
 	<script>
 		function myFunction() {
 			// var type=;
-			
+
 			var e = document.getElementById("type");
 			var strUser = e.options[e.selectedIndex].value;
 			console.log(e.value)
@@ -168,49 +182,49 @@
 				$('#myBtn').attr('disabled', true)
 			}
 			// document.getElementById("myBtn").disabled = false;
-		}	
+		}
 
 		var room = [];
 		var room_amount = 0;
-		var update_item_index=0;
+		var update_item_index = 0;
 		var update_status = false;
-		$('select').on('change', function(){
+		$('select').on('change', function () {
 			var item = {
 				'name': $(this).attr('name'),
 				'value': $(this).val()
 			};
 			room_amount = room_amount + $('select').val();
 			console.log(room.length);
-			if(room.length === 0){
+			if (room.length === 0) {
 				room.push(item);
 				console.log(room)
-			}else{
+			} else {
 				var i = room.length;
-				while(i){
-					var a = i-1;
-					i=a;
-					if(a >= 0){
-						if(room[a].name === $(this).attr('name')){
+				while (i) {
+					var a = i - 1;
+					i = a;
+					if (a >= 0) {
+						if (room[a].name === $(this).attr('name')) {
 							update_item_index = a;
 							update_status = true;
 						}
 					}
 				}
 				console.log(update_status);
-				if(update_status){
+				if (update_status) {
 					console.log("HERE!!!!!!")
 					console.log($(this).val());
-					if( parseInt($(this).val()) === 0){
+					if (parseInt($(this).val()) === 0) {
 						console.log("Update status of the room index");
 						room.splice(update_item_index, 1);
 
-					}else{
+					} else {
 						room[update_item_index].value = $(this).val();
 						console.log("****************");
 						console.log(room);
 					}
 					update_status = false;
-				}else{
+				} else {
 					room.push(item);
 				}
 			}
@@ -218,13 +232,13 @@
 			$("#test").val(JSON.stringify(room));
 			console.log($('#test').val())
 			console.log(room.length)
-			if(room.length>0){
+			if (room.length > 0) {
 				$('#myBtn').attr('hidden', false)
-			}else{
+			} else {
 				$('#myBtn').attr('hidden', true)
 			}
 
-		})	
+		})
 	</script>
 	<script>
 		$(document).ready(function () {
@@ -281,7 +295,7 @@
 	</script>
 	<script type="text/javascript" src="{{asset('js/moment.min.js')}}"></script>
 	<script type="text/javascript" src="{{asset('js/bootstrap-datetimepicker.min.js')}}"></script>
-	
+
 	<!-- Check In Check out implement -->
 	<script>
 		$(document).ready(function () {
@@ -338,26 +352,27 @@
 		});
 	</script>
 	<script>
-		$(':radio').mousedown(function(e){
+		$(':radio').mousedown(function (e) {
 			var $self = $(this);
-			if( $self.is(':checked') ){
-				var uncheck = function(){
-					setTimeout(function(){
-						$self.removeAttr('checked');
+			if ($self.is(':checked')) {
+				var uncheck = function () {
+					setTimeout(function () {
+							$self.removeAttr('checked');
 						},
-					0);
+						0);
 				};
-				var unbind = function(){
-				$self.unbind('mouseup',up);
+				var unbind = function () {
+					$self.unbind('mouseup', up);
 				};
-				var up = function(){
+				var up = function () {
 					uncheck();
 					unbind();
 				};
-				$self.bind('mouseup',up);
+				$self.bind('mouseup', up);
 				$self.one('mouseout', unbind);
 			}
 		});
 	</script>
 </body>
+
 </html>
