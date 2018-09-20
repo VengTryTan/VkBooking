@@ -85,7 +85,7 @@
             var today = new Date($.now());
 
             var defaultEvents = [
-              
+            
             ];
 
             var $this = this;

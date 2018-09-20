@@ -25,7 +25,8 @@ Route::post('budget', 'CheckinController@searchone')->name('budget');
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 
-    Route::get('events', '\App\Http\Controllers\voyager\EventController@index')->name('events.index');
-	Route::post('events', '\App\Http\Controllers\voyager\EventController@addEvent')->name('events.add');
+    Route::get('pricings', '\App\Http\Controllers\voyager\EventController@index')->name('events.index');
+	Route::post('pricings', '\App\Http\Controllers\voyager\EventController@addPrice')->name('events.add');
 });
 
+Route::get('images', 'CheckinController@image');
