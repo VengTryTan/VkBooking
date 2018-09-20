@@ -21,6 +21,7 @@
 	<link rel="stylesheet" href="{{asset('frontend/css/jquery-ui.css')}}">
 	<link rel="stylesheet" href="{{asset('frontend/css/bootstrap-select.min.css')}}">
 	<script src="{{asset('frontend/js/modernizr-2.6.2.min.js')}}"></script>
+	<link rel="SHORTCUT ICON" href="{{asset('frontend/images/HomePage/vKirirom.png')}}">
 </head>
 
 <body>

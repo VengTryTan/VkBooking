@@ -18,8 +18,11 @@
 	<link rel="{{ URL::to('frontend/shortcut icon') }}" href="favicon.ico">
 	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
 
+	<link rel="SHORTCUT ICON" href="{{asset('frontend/images/HomePage/vKirirom.png')}}">
+
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<script src="{{ URL::to('frontend/js/modernizr-2.6.2.min.js') }}"></script>
+	<script src="{{ URL::to('frontend/js/modernizr-2.6.2.min.js') }}">
+	</script>
 </head>
 
 <body>
@@ -96,7 +99,8 @@
 				<div class="row">
 					<div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
 						<h2>Our information</h2>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind
+							texts.
 						</p>
 					</div>
 				</div>
@@ -106,24 +110,28 @@
 					<div class="col-md-3 animate-box" data-animate-effect="fadeIn">
 						<a class="fh5co-entry" href="#">
 							<figure>
-								<img src="{{asset('frontend/images/bungalow.jpg')}}" alt="Free Website Template, Free HTML5 Bootstrap Template" class="img-responsive">
+								<img src="{{asset('frontend/images/bungalow.jpg')}}" alt="Free Website Template, Free HTML5 Bootstrap Template"
+								 class="img-responsive">
 							</figure>
 							<div class="fh5co-copy">
 								<h3>Bungalow</h3>
 								<span class="fh5co-date">June 8, 2016</span>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
+									blind texts.</p>
 							</div>
 						</a>
 					</div>
 					<div class="col-md-3 animate-box" data-animate-effect="fadeIn">
 						<a class="fh5co-entry" href="#">
 							<figure>
-								<img src="{{asset('frontend/images/boreyA.jpg')}}" alt="Free Website Template, Free HTML5 Bootstrap Template" class="img-responsive">
+								<img src="{{asset('frontend/images/boreyA.jpg')}}" alt="Free Website Template, Free HTML5 Bootstrap Template"
+								 class="img-responsive">
 							</figure>
 							<div class="fh5co-copy">
 								<h3>Borey A</h3>
 								<span class="fh5co-date">June 8, 2016</span>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
+									blind texts.
 								</p>
 							</div>
 						</a>
@@ -131,12 +139,14 @@
 					<div class="col-md-3 animate-box" data-animate-effect="fadeIn">
 						<a class="fh5co-entry" href="#">
 							<figure>
-								<img src="{{asset('frontend/images/luxurytent1.jpg')}}" alt="Free Website Template, Free HTML5 Bootstrap Template" class="img-responsive">
+								<img src="{{asset('frontend/images/luxurytent1.jpg')}}" alt="Free Website Template, Free HTML5 Bootstrap Template"
+								 class="img-responsive">
 							</figure>
 							<div class="fh5co-copy">
 								<h3>Luxury Tent</h3>
 								<span class="fh5co-date">June 8, 2016</span>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
+									blind texts.
 								</p>
 							</div>
 						</a>
@@ -144,12 +154,14 @@
 					<div class="col-md-3 animate-box" data-animate-effect="fadeIn">
 						<a class="fh5co-entry" href="#">
 							<figure>
-								<img src="{{asset('frontend/images/camping5.JPG')}}" alt="Free Website Template, Free HTML5 Bootstrap Template" class="img-responsive">
+								<img src="{{asset('frontend/images/camping5.JPG')}}" alt="Free Website Template, Free HTML5 Bootstrap Template"
+								 class="img-responsive">
 							</figure>
 							<div class="fh5co-copy">
 								<h3>Camping</h3>
 								<span class="fh5co-date">June 8, 2016</span>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
+									blind texts.
 								</p>
 							</div>
 						</a>
@@ -160,7 +172,8 @@
 				<div class="row">
 					<div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
 						<h2>Our Meal</h2>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind
+							texts.
 						</p>
 					</div>
 				</div>
@@ -205,7 +218,8 @@
 				<div class="row">
 					<div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
 						<h2>Our Location</h2>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind
+							texts.
 						</p>
 					</div>
 				</div>
