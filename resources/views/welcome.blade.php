@@ -34,8 +34,7 @@
 						<div class="sidebar-filter">
 							<div class="nice well-small">
 								<ul class="nav nav-list">
-									<h4 class="filters-header-text"><img src="{{asset('img/filter.svg')}}" width="20px" height="20px" alt="filter">Filter
-										by :</h4>
+									<h4 class="filters-header-text"><i class="fa fa-filter" width="20px" height="20px" alt="filter"></i> Filter by :</h4>
 									<form action="">
 										<div class="col-md-12 col-lg-12 filter-box">
 											<div class="filter-class">
@@ -339,23 +338,20 @@
 		});
 	</script>
 	<script>
-		$(':radio').mousedown(function (e) {
+		$(':radio').mousedown(function(e){
 			var $self = $(this);
-			if ($self.is(':checked')) {
-				var uncheck = function () {
-					setTimeout(function () {
-							$self.removeAttr('checked');
-						},
-						0);
+			if( $self.is(':checked') ){
+				var uncheck = function(){
+				setTimeout(function(){$self.removeAttr('checked');},0);
 				};
-				var unbind = function () {
-					$self.unbind('mouseup', up);
+				var unbind = function(){
+				$self.unbind('mouseup',up);
 				};
-				var up = function () {
-					uncheck();
-					unbind();
+				var up = function(){
+				uncheck();
+				unbind();
 				};
-				$self.bind('mouseup', up);
+				$self.bind('mouseup',up);
 				$self.one('mouseout', unbind);
 			}
 		});

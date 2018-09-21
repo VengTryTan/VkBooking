@@ -14,7 +14,7 @@
 	<link rel="stylesheet" href="{{asset('frontend/css/flexslider.css')}}">
 	<link rel="stylesheet" href="{{asset('frontend/css/style.css')}}">
 	<link rel="stylesheet" href="{{asset('frontend/css/jquery-ui.css')}}">
-
+	<link rel="stylesheet" href="{{asset('frontend/css/zoomslider.css')}}">
 	<link rel="{{ URL::to('frontend/shortcut icon') }}" href="favicon.ico">
 	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
 	
@@ -25,7 +25,7 @@
 <body>
 	<div id="fh5co-page">
 		@include('_partial.header')
-		<aside id="fh5co-hero" clsas="js-fullheight">
+		<!-- <aside id="fh5co-hero" clsas="js-fullheight">
 			<div class="flexslider js-fullheight">
 				<ul class="slides">
 					<li class="img-responsive" style="background-image: url(frontend/images/1.jpg);" />
@@ -38,7 +38,13 @@
 					<li class="img-responsive" style="background-image: url(frontend/images/resort.jpg);" />
 				</ul>
 			</div>
-		</aside>
+		</aside> -->
+		<div id="demo-1" data-zs-src="[{{ URL::to('frontend/images/1.jpg') }}, {{ URL::to('frontend/images/2.jpg') }}, {{ URL::to('frontend/images/3.jpg') }}]" data-zs-overlay="dots">
+			<div class="demo-inner-content">
+				<h1><span>jQuery</span> . <span>zoomSlider</span></h1>
+				<p>ZoomSlider creates slideshows with zoom effect using background-image and CSS3.</p>
+			</div>
+		</div>
 		<div id="best-deal">
 			<div class="container">
 				<div class="row">
@@ -168,7 +174,6 @@
 						<div class="caption">
 							<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
 						</div>
-						</a>
 					</div>
 				</div>
 				<div class="col-md-3">
@@ -177,7 +182,6 @@
 						<div class="caption">
 							<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
 						</div>
-						</a>
 					</div>
 				</div>
 				<div class="col-md-3">
@@ -186,7 +190,6 @@
 						<div class="caption">
 							<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
 						</div>
-						</a>
 					</div>
 				</div>
 				<div class="col-md-3">
@@ -195,7 +198,6 @@
 						<div class="caption">
 							<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
 						</div>
-						</a>
 					</div>
 				</div>
 			</div>
@@ -231,6 +233,8 @@
 	<script src="{{asset('frontend/js/main.js')}}"></script>
 	<!-- Date Picker Function -->
 	<script src="{{asset('frontend/js/jquery-ui.js')}}"></script>
+
+	<script src="{{asset('frontend/js/jquery.zoomslider.min.js')}}"></script>
 
 	<script>
 		function myFunction() {
