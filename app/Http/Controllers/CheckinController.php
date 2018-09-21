@@ -95,11 +95,11 @@ class CheckinController extends Controller
         $searchDate= $request->checkin_date;
 
         $user = DB::table('hotels')
-        ->select('hotels.id', 'hotels.name','pricings.event_name','pricings.start_date', 'images.picture',  DB::raw('count(images.picture) as total'))
+        ->select('hotels.id', 'hotels.name','pricings.hotels_id','pricings.price','pricings.date', 'images.picture', 'images.images',  DB::raw('count(images.picture) as total'))
         ->join('images', 'hotels.id', '=', 'images.hotels_id')
         ->join('pricings', 'images.hotels_id', '=', 'pricings.hotels_id')
         ->groupBy('pricings.hotels_id')
-        ->where('pricings.start_date', $searchDate)
+        ->where('pricings.date', $searchDate)
         ->get();
         
         return view('welcome',compact(['user','searchDate']));
@@ -111,7 +111,7 @@ class CheckinController extends Controller
     {
         $nerd = Pricing::all();
         $items = DB::table('hotels')
-        ->select('hotels.id', 'hotels.name','pricings.event_name', 'images.picture', 'hotels.description', DB::raw('count(images.picture) as total'))
+        ->select('hotels.id', 'hotels.name','pricings.hotels_id', 'images.picture', 'hotels.description', DB::raw('count(images.picture) as total'))
         ->join('images', 'hotels.id', '=', 'images.hotels_id')
         ->join('pricings', 'images.hotels_id', '=', 'pricings.hotels_id')
         ->groupBy('pricings.hotels_id')
@@ -119,23 +119,22 @@ class CheckinController extends Controller
     return view('testing', compact(['items', 'nerd']));
     }
 
-<<<<<<< HEAD
-    public function image()
-    {
-        $images = Image::all();
+    // public function image()
+    // {
+    //     $images = Image::all();
        
-        // decode string to array
-        // foreach ($images as $image) {
-        //     $array=json_decode($image["images"]);       
-        // }
 
-        return view('images', compact('images'));
-    }
-=======
-    public function payment()
+    //     return view('images', compact('images'));
+    // }
+
+    public function image ()
     {
-        return view('payment');
+        $photos = DB::table('hotels')
+        ->select('hotels.id', 'hotels.name', 'images.picture', 'images.images',  DB::raw('count(images.picture) as total'))
+        ->join('images', 'hotels.id', '=', 'images.hotels_id')
+        ->groupBy('hotels.id')
+        ->get();
+        echo ($photos);
+    return view ('images', compact('photos'));
     }
-
->>>>>>> dbfe3a6007ddd3cf064d024d430dbd4656018abb
 }
