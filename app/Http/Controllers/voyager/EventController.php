@@ -6,17 +6,17 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Hotel;
 use App\Pricing;
-use App\Event;
-
 use Calendar;
 use Validator;
+use PDO;
+
 
 class EventController extends Controller
 {
     public function index()
     {
         $hotels = Hotel::all();
-        $events = Event::get();
+        $events = Pricing::get();
         $event_list = [];
         
         foreach ($events as $key => $event) {
@@ -30,11 +30,13 @@ class EventController extends Controller
         }
 
         $calendar_details = Calendar::addEvents($event_list); 
-        return view('vendor.voyager.pricings.browse', compact(['calendar_details', 'hotels']));
+
+        $pricings = Pricing::all();
+        $than = json_encode($pricings);
+        return view('vendor.voyager.pricings.browse', compact('than'));
+
     }
  
-
-
 
     public function addEvent(Request $request)
     {
@@ -50,12 +52,14 @@ class EventController extends Controller
             return redirect()->route('events.index');
         }
  
-        $event = new Event;
-        $event->event_name = $request['event_name'];
-        $event->start_date = $request['start_date'];
-        $event->end_date = $request['end_date'];
-        $event->hotels_id = $request['hotels_id'];
+        $event = new Pricing;
+        $event->event_name = $request['title'];
+        $event->start_date = $request['start'];
+        $event->end_date = $request['end'];
+        $event->hotels_id = $request['price'];
         $event->save();
+
+        
  
         \Session::flash('success','Event added successfully.');
         return redirect()->route('events.index');

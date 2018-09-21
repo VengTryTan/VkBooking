@@ -4,9 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
-use App\Event;
+use App\Pricing;
 use App\Hotel;
 use App\Image;
+
 
 class CheckinController extends Controller
 {
@@ -94,11 +95,11 @@ class CheckinController extends Controller
         $searchDate= $request->checkin_date;
 
         $user = DB::table('hotels')
-        ->select('hotels.id', 'hotels.name','events.event_name','events.start_date', 'images.picture',  DB::raw('count(images.picture) as total'))
+        ->select('hotels.id', 'hotels.name','pricings.hotels_id','pricings.price','pricings.date', 'images.picture', 'images.images',  DB::raw('count(images.picture) as total'))
         ->join('images', 'hotels.id', '=', 'images.hotels_id')
-        ->join('events', 'images.hotels_id', '=', 'events.hotels_id')
-        ->groupBy('events.hotels_id')
-        ->where('events.start_date', $searchDate)
+        ->join('pricings', 'images.hotels_id', '=', 'pricings.hotels_id')
+        ->groupBy('pricings.hotels_id')
+        ->where('pricings.date', $searchDate)
         ->get();
         
         return view('welcome',compact(['user','searchDate']));
@@ -108,19 +109,32 @@ class CheckinController extends Controller
 
     public function index2()
     {
-        $nerd = Event::all();
+        $nerd = Pricing::all();
         $items = DB::table('hotels')
-        ->select('hotels.id', 'hotels.name','events.event_name', 'images.picture', 'hotels.description', DB::raw('count(images.picture) as total'))
+        ->select('hotels.id', 'hotels.name','pricings.hotels_id', 'images.picture', 'hotels.description', DB::raw('count(images.picture) as total'))
         ->join('images', 'hotels.id', '=', 'images.hotels_id')
-        ->join('events', 'images.hotels_id', '=', 'events.hotels_id')
-        ->groupBy('events.hotels_id')
+        ->join('pricings', 'images.hotels_id', '=', 'pricings.hotels_id')
+        ->groupBy('pricings.hotels_id')
         ->get();
     return view('testing', compact(['items', 'nerd']));
     }
 
-    public function payment()
-    {
-        return view('payment');
-    }
+    // public function image()
+    // {
+    //     $images = Image::all();
+       
 
+    //     return view('images', compact('images'));
+    // }
+
+    public function image ()
+    {
+        $photos = DB::table('hotels')
+        ->select('hotels.id', 'hotels.name', 'images.picture', 'images.images',  DB::raw('count(images.picture) as total'))
+        ->join('images', 'hotels.id', '=', 'images.hotels_id')
+        ->groupBy('hotels.id')
+        ->get();
+        echo ($photos);
+    return view ('images', compact('photos'));
+    }
 }

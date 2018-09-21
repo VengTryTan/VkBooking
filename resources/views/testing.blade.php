@@ -17,9 +17,12 @@
 	<link rel="stylesheet" href="{{asset('frontend/css/zoomslider.css')}}">
 	<link rel="{{ URL::to('frontend/shortcut icon') }}" href="favicon.ico">
 	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-	
+
+	<link rel="SHORTCUT ICON" href="{{asset('frontend/images/HomePage/vKirirom.png')}}">
+
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<script src="{{ URL::to('frontend/js/modernizr-2.6.2.min.js') }}"></script>
+	<script src="{{ URL::to('frontend/js/modernizr-2.6.2.min.js') }}">
+	</script>
 </head>
 
 <body>
@@ -50,8 +53,10 @@
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
 						<h2>'vKirirom' is a new concept for enriching people's lives for the future</h2>
-						<p>We aim to provide services and an atmosphere where everyone enjoys nature while conserving the environment as well.
-							Visit our restaurant and savour our dishes special our chef has to offer and or stay in one of our innovative rooms.</p>
+						<p>We aim to provide services and an atmosphere where everyone enjoys nature while conserving the environment as
+							well.
+							Visit our restaurant and savour our dishes special our chef has to offer and or stay in one of our innovative
+							rooms.</p>
 					</div>
 
 					<form action="{{ route('checkin') }}" method="POST">
@@ -100,7 +105,8 @@
 				<div class="row">
 					<div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
 						<h2>Our information</h2>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind
+							texts.
 						</p>
 					</div>
 				</div>
@@ -110,24 +116,28 @@
 					<div class="col-md-3 animate-box" data-animate-effect="fadeIn">
 						<a class="fh5co-entry" href="#">
 							<figure>
-								<img src="{{asset('frontend/images/bungalow.jpg')}}" alt="Free Website Template, Free HTML5 Bootstrap Template" class="img-responsive">
+								<img src="{{asset('frontend/images/bungalow.jpg')}}" alt="Free Website Template, Free HTML5 Bootstrap Template"
+								 class="img-responsive">
 							</figure>
 							<div class="fh5co-copy">
 								<h3>Bungalow</h3>
 								<span class="fh5co-date">June 8, 2016</span>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
+									blind texts.</p>
 							</div>
 						</a>
 					</div>
 					<div class="col-md-3 animate-box" data-animate-effect="fadeIn">
 						<a class="fh5co-entry" href="#">
 							<figure>
-								<img src="{{asset('frontend/images/boreyA.jpg')}}" alt="Free Website Template, Free HTML5 Bootstrap Template" class="img-responsive">
+								<img src="{{asset('frontend/images/boreyA.jpg')}}" alt="Free Website Template, Free HTML5 Bootstrap Template"
+								 class="img-responsive">
 							</figure>
 							<div class="fh5co-copy">
 								<h3>Borey A</h3>
 								<span class="fh5co-date">June 8, 2016</span>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
+									blind texts.
 								</p>
 							</div>
 						</a>
@@ -135,12 +145,14 @@
 					<div class="col-md-3 animate-box" data-animate-effect="fadeIn">
 						<a class="fh5co-entry" href="#">
 							<figure>
-								<img src="{{asset('frontend/images/luxurytent1.jpg')}}" alt="Free Website Template, Free HTML5 Bootstrap Template" class="img-responsive">
+								<img src="{{asset('frontend/images/luxurytent1.jpg')}}" alt="Free Website Template, Free HTML5 Bootstrap Template"
+								 class="img-responsive">
 							</figure>
 							<div class="fh5co-copy">
 								<h3>Luxury Tent</h3>
 								<span class="fh5co-date">June 8, 2016</span>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
+									blind texts.
 								</p>
 							</div>
 						</a>
@@ -148,12 +160,14 @@
 					<div class="col-md-3 animate-box" data-animate-effect="fadeIn">
 						<a class="fh5co-entry" href="#">
 							<figure>
-								<img src="{{asset('frontend/images/camping5.JPG')}}" alt="Free Website Template, Free HTML5 Bootstrap Template" class="img-responsive">
+								<img src="{{asset('frontend/images/camping5.JPG')}}" alt="Free Website Template, Free HTML5 Bootstrap Template"
+								 class="img-responsive">
 							</figure>
 							<div class="fh5co-copy">
 								<h3>Camping</h3>
 								<span class="fh5co-date">June 8, 2016</span>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
+									blind texts.
 								</p>
 							</div>
 						</a>
@@ -164,7 +178,8 @@
 				<div class="row">
 					<div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
 						<h2>Our Meal</h2>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind
+							texts.
 						</p>
 					</div>
 				</div>
@@ -205,7 +220,8 @@
 				<div class="row">
 					<div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
 						<h2>Our Location</h2>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind
+							texts.
 						</p>
 					</div>
 				</div>
@@ -215,151 +231,148 @@
 					</div>
 				</div>
 			</div>
+			@include('_partial.footer')
 		</div>
-		@include('_partial.footer')
-	</div>
-	<!-- jQuery -->
-	<script src="{{asset('frontend/js/jquery.min.js')}}"></script>
-	<!-- jQuery Easing -->
-	<script src="{{asset('frontend/js/jquery.easing.1.3.js')}}"></script>
-	<!-- Bootstrap -->
-	<script src="{{asset('frontend/js/bootstrap.min.js')}}"></script>
-	<!-- Waypoints -->
-	<script src="{{asset('frontend/js/jquery.waypoints.min.js')}}"></script>
-	<!-- Flexslider -->
-	<script src="{{asset('frontend/js/jquery.flexslider-min.js')}}"></script>
+		<!-- jQuery -->
+		<script src="{{asset('frontend/js/jquery.min.js')}}"></script>
+		<!-- jQuery Easing -->
+		<script src="{{asset('frontend/js/jquery.easing.1.3.js')}}"></script>
+		<!-- Bootstrap -->
+		<script src="{{asset('frontend/js/bootstrap.min.js')}}"></script>
+		<!-- Waypoints -->
+		<script src="{{asset('frontend/js/jquery.waypoints.min.js')}}"></script>
+		<!-- Flexslider -->
+		<script src="{{asset('frontend/js/jquery.flexslider-min.js')}}"></script>
 
-	<!-- MAIN JS -->
-	<script src="{{asset('frontend/js/main.js')}}"></script>
-	<!-- Date Picker Function -->
-	<script src="{{asset('frontend/js/jquery-ui.js')}}"></script>
+		<!-- MAIN JS -->
+		<script src="{{asset('frontend/js/main.js')}}"></script>
+		<!-- Date Picker Function -->
+		<script src="{{asset('frontend/js/jquery-ui.js')}}"></script>
 
-	<script src="{{asset('frontend/js/jquery.zoomslider.min.js')}}"></script>
-
-	<script>
-		function myFunction() {
-			// var type=
-			var e = document.getElementById("type");
-			var strUser = e.options[e.selectedIndex].value;
-			console.log(e.value)
-			if ($('#type').val() > 0) {
-				$('#myBtn').attr('disabled', false)
-			} else {
-				$('#myBtn').attr('disabled', true)
+		<script>
+			function myFunction() {
+				// var type=
+				var e = document.getElementById("type");
+				var strUser = e.options[e.selectedIndex].value;
+				console.log(e.value)
+				if ($('#type').val() > 0) {
+					$('#myBtn').attr('disabled', false)
+				} else {
+					$('#myBtn').attr('disabled', true)
+				}
+				// document.getElementById("myBtn").disabled = false;
 			}
-			// document.getElementById("myBtn").disabled = false;
-		}
-	</script>
-	<script>
-		$(document).ready(function () {
-			$("#DateIn").datepicker({
-				numberOfMonths: 2,
-				onSelect: function (selected) {
-					$("#DateOut").datepicker("option", "minDate", selected)
-				}
-			});
-			$("#DateOut").datepicker({
-				numberOfMonths: 2,
-				onSelect: function (selected) {
-					$("#DateIn").datepicker("option", "maxDate", selected)
-				}
-			});
-		});
-		$(function () {
-			$('#datepicker').datepicker({
-				dateFormat: "YYYY-MM-dd",
-				defaultDate: "+1w",
-				changeMonth: true,
-				numberOfMonths: 1,
-				onSelect: function (selectedDate) {
-					if (this.id == 'datepicker') {
-						var dateMin = $('#datepicker').datepicker("getDate");
-						var rMin = new Date(dateMin.getFullYear(), dateMin.getMonth(), dateMin.getDate() + 1);
-						var rMax = new Date(dateMin.getFullYear(), dateMin.getMonth(), dateMin.getDate() + 2);
-						$('#datepicker2').val($.datepicker.formatDate('YY-MM-dd', new Date(rMax)));
+		</script>
+		<script>
+			$(document).ready(function () {
+				$("#DateIn").datepicker({
+					numberOfMonths: 2,
+					onSelect: function (selected) {
+						$("#DateOut").datepicker("option", "minDate", selected)
 					}
-				}
+				});
+				$("#DateOut").datepicker({
+					numberOfMonths: 2,
+					onSelect: function (selected) {
+						$("#DateIn").datepicker("option", "maxDate", selected)
+					}
+				});
 			});
-		});
-		$(document).ready(function () {
-			$("#DateIn").datepicker({
-				numberOfMonths: 2,
-				onSelect: function (selected) {
-					$("#DateOut").datepicker("option", "minDate", selected)
-				}
+			$(function () {
+				$('#datepicker').datepicker({
+					dateFormat: "YYYY-MM-dd",
+					defaultDate: "+1w",
+					changeMonth: true,
+					numberOfMonths: 1,
+					onSelect: function (selectedDate) {
+						if (this.id == 'datepicker') {
+							var dateMin = $('#datepicker').datepicker("getDate");
+							var rMin = new Date(dateMin.getFullYear(), dateMin.getMonth(), dateMin.getDate() + 1);
+							var rMax = new Date(dateMin.getFullYear(), dateMin.getMonth(), dateMin.getDate() + 2);
+							$('#datepicker2').val($.datepicker.formatDate('YY-MM-dd', new Date(rMax)));
+						}
+					}
+				});
 			});
-			$("#DateOut").datepicker({
-				numberOfMonths: 2,
-				onSelect: function (selected) {
-					$("#DateIn").datepicker("option", "maxDate", selected)
-				}
+			$(document).ready(function () {
+				$("#DateIn").datepicker({
+					numberOfMonths: 2,
+					onSelect: function (selected) {
+						$("#DateOut").datepicker("option", "minDate", selected)
+					}
+				});
+				$("#DateOut").datepicker({
+					numberOfMonths: 2,
+					onSelect: function (selected) {
+						$("#DateIn").datepicker("option", "maxDate", selected)
+					}
+				});
 			});
-		});
-	</script>
-	<script>
-		$(function () {
-			$("#datepicker2").datepicker({
-				dateFormat: "YY-MM-dd"
+		</script>
+		<script>
+			$(function () {
+				$("#datepicker2").datepicker({
+					dateFormat: "YY-MM-dd"
+				});
 			});
-		});
-	</script>
-	<script type="text/javascript" src="{{asset('js/moment.min.js')}}"></script>
-	<script type="text/javascript" src="{{asset('js/bootstrap-datetimepicker.min.js')}}"></script>
+		</script>
+		<script type="text/javascript" src="{{asset('js/moment.min.js')}}"></script>
+		<script type="text/javascript" src="{{asset('js/bootstrap-datetimepicker.min.js')}}"></script>
 
-	<!-- Check In Check out implement -->
-	<script>
-		$(document).ready(function () {
-			var today = moment().add(0, 'days').format('L');
-			var d = moment().add(0, 'days').format('YYYY-MM-DD');
-			var tomorrow = moment().add(1, 'days').format('YYYY-MM-DD');
-			console.log(today);
-			console.log('*********');
+		<!-- Check In Check out implement -->
+		<script>
+			$(document).ready(function () {
+				var today = moment().add(0, 'days').format('L');
+				var d = moment().add(0, 'days').format('YYYY-MM-DD');
+				var tomorrow = moment().add(1, 'days').format('YYYY-MM-DD');
+				console.log(today);
+				console.log('*********');
 
-			$('#datetimepicker-check-in').datetimepicker({
-				minDate: today,
-				defaultDate: today,
-				format: "YYYY-MM-DD",
-				showClear: true,
-				widgetPositioning: {
-					horizontal: 'auto',
-					vertical: 'bottom'
-				}
+				$('#datetimepicker-check-in').datetimepicker({
+					minDate: today,
+					defaultDate: today,
+					format: "YYYY-MM-DD",
+					showClear: true,
+					widgetPositioning: {
+						horizontal: 'auto',
+						vertical: 'bottom'
+					}
 
-			});
+				});
 
-			$('#datetimepicker-check-out').datetimepicker({
-				minDate: tomorrow,
-				defaultDate: tomorrow,
-				format: 'YYYY-MM-DD',
-				showClear: true,
-				widgetPositioning: {
-					horizontal: 'auto',
-					vertical: 'bottom'
-				}
-			});
-			$('#datetimepicker-check-in').on("dp.change", function (e) {
-				var next_day = moment(e.date).add(1, 'days');
-				$('#datetimepicker-check-out').data("DateTimePicker").minDate(next_day);
-				$('#datetimepicker-check-out').data("DateTimePicker").defaultDate(next_day);
-				console.log('---------');
-				console.log(e.date);
-				date_checkin = moment(e.date).format("YYYY-MM-DD");
-				date_checkout = moment(e.date).add(1, 'days').format("YYYY-MM-DD");
-				console.log('+++++++++++++');
-				console.log(date_checkin);
-				console.log(date_checkout);
-				d = moment(e.date).format("YYYY-MM-DD");
-				$('#checkin-time').val(date_checkin);
-				$('#checkinout-time').val(date_checkout);
-			});
+				$('#datetimepicker-check-out').datetimepicker({
+					minDate: tomorrow,
+					defaultDate: tomorrow,
+					format: 'YYYY-MM-DD',
+					showClear: true,
+					widgetPositioning: {
+						horizontal: 'auto',
+						vertical: 'bottom'
+					}
+				});
+				$('#datetimepicker-check-in').on("dp.change", function (e) {
+					var next_day = moment(e.date).add(1, 'days');
+					$('#datetimepicker-check-out').data("DateTimePicker").minDate(next_day);
+					$('#datetimepicker-check-out').data("DateTimePicker").defaultDate(next_day);
+					console.log('---------');
+					console.log(e.date);
+					date_checkin = moment(e.date).format("YYYY-MM-DD");
+					date_checkout = moment(e.date).add(1, 'days').format("YYYY-MM-DD");
+					console.log('+++++++++++++');
+					console.log(date_checkin);
+					console.log(date_checkout);
+					d = moment(e.date).format("YYYY-MM-DD");
+					$('#checkin-time').val(date_checkin);
+					$('#checkinout-time').val(date_checkout);
+				});
 
-			$('#datetimepicker-check-out').on("dp.change", function (e) {
-				$('#checkinout-time').val(moment(e.date).format("YYYY-MM-DD"));
-				console.log('------------------')
-				console.log(moment(e.date).format('L'));
+				$('#datetimepicker-check-out').on("dp.change", function (e) {
+					$('#checkinout-time').val(moment(e.date).format("YYYY-MM-DD"));
+					console.log('------------------')
+					console.log(moment(e.date).format('L'));
+				});
 			});
-		});
-	</script>
+		</script>
 </body>
 
 </html>

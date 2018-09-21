@@ -21,6 +21,7 @@
 	<link rel="stylesheet" href="{{asset('frontend/css/jquery-ui.css')}}">
 	<link rel="stylesheet" href="{{asset('frontend/css/bootstrap-select.min.css')}}">
 	<script src="{{asset('frontend/js/modernizr-2.6.2.min.js')}}"></script>
+	<link rel="SHORTCUT ICON" href="{{asset('frontend/images/HomePage/vKirirom.png')}}">
 </head>
 
 <body>
@@ -62,6 +63,7 @@
 							</div>
 						</div>
 					</div>
+					
 					<div class="col-md-8 col-sm-12 col-xs-12 col-lg-9 float-right">
 						@foreach($user as $key=>$item)
 						<div class="col-md-12 item-block animate-box" data-animate-effect="fadeIn">
@@ -71,20 +73,22 @@
 										<div class="col-md-4 col-sm-12">
 											<div id="roomSlider-{{ $item->id }}" class="carousel slide" data-ride="carousel">
 												<ul class="carousel-indicators">
-													<li data-target="#roomSlider" data-slide-to="0" class="active"></li>
-													<li data-target="#roomSlider" data-slide-to="1"></li>
-													<li data-target="#roomSlider" data-slide-to="2"></li>
+													<li data-slide-to="0" class="active"></li>
+													<li data-slide-to="1"></li>
+													<li data-slide-to="2"></li>
+													<li data-slide-to="3"></li>
+													<li data-slide-to="4"></li>
+													<li data-slide-to="5"></li>
 												</ul>
 												<div class="carousel-inner">
 													<div class="carousel-item active">
-														<img class="d-block w-100" src="{{asset('/frontend/images/slide_1.jpg')}}" alt="First slide">
+														<img class="d-block w-100" src="storage/{{$item->picture}}" alt="First slide">
 													</div>
+													@foreach(json_decode($item->images) as $i)
 													<div class="carousel-item">
-														<img class="d-block w-100" src="{{asset('/frontend/images/slide_2.jpg')}}" alt="Second slide">
+														<img class="d-block w-100" src="storage/{{$i}}" alt="First slide">
 													</div>
-													<div class="carousel-item">
-														<img class="d-block w-100" src="{{asset('/frontend/images/slide_3.jpg')}}" alt="Third slide">
-													</div>
+													@endforeach
 												</div>
 												<a class="carousel-control-prev" href="#roomSlider-{{ $item->id }}" role="button" data-slide="prev">
 													<span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -125,7 +129,7 @@
 												<option value="5">5</option>
 											</select>
 											<div class="price-status">
-												<span class="price">${{$item->event_name}}<span class="per">/night</span></span>
+												<span class="price">${{$item->price}}<span class="per">/night</span></span>
 											</div>
 										</div>
 									</div>
@@ -145,6 +149,12 @@
 		@include('_partial.footer')
 	</div>
 
+	<!— Make a copy this javaScript to paste into your site—>
+	<!— Note: these javaScript files are using for only integration testing—>
+	<link rel="stylesheet" href="https://payway-dev.ababank.com/checkout-popup.html?file=css" />
+	<script src="https://payway-dev.ababank.com/checkout-popup.html?file=js"></script>
+
+
 	<script src="{{asset('frontend/js/jquery.min.js')}}"></script>
 	<script src="{{asset('frontend/js/jquery.easing.1.3.js')}}"></script>
 	<!-- <script src="{{asset('frontend/js/bootstrap.js')}}"></script> -->
@@ -154,7 +164,13 @@
 	<script src="{{asset('frontend/js/jquery.flexslider-min.js')}}"></script>
 	<script src="{{asset('frontend/js/main.js')}}"></script>
 	<script src="{{asset('frontend/js/jquery-ui.js')}}"></script>
-
+	<script>
+		$(document).ready(function () {
+			$('#myBtn').click(function () {
+				AbaPayway.checkout();
+			});
+		});
+	</script>
 	<script>
 		function myFunction() {
 			// var type=;

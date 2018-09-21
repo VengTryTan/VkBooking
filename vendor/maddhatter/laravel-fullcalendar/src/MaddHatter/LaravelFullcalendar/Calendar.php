@@ -33,7 +33,10 @@ class Calendar
             'center' => 'title',
             'right' => 'month,agendaWeek,agendaDay',
         ],
-        'eventLimit' => true,
+        'eventLimit' => 3,
+        'selectable' => true,
+        'editable' => true,
+        
     ];
 
     /**
