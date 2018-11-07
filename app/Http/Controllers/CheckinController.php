@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
-use App\Pricing;
+use App\Rate;
 use App\Hotel;
 use App\Image;
 
@@ -95,11 +95,11 @@ class CheckinController extends Controller
         $searchDate= $request->checkin_date;
 
         $user = DB::table('hotels')
-        ->select('hotels.id', 'hotels.name','pricings.hotels_id','pricings.price','pricings.date', 'images.picture', 'images.images',  DB::raw('count(images.picture) as total'))
+        ->select('hotels.id', 'hotels.name','rates.hotels_id','rates.price','rates.date', 'images.picture', 'images.images',  DB::raw('count(images.picture) as total'))
         ->join('images', 'hotels.id', '=', 'images.hotels_id')
-        ->join('pricings', 'images.hotels_id', '=', 'pricings.hotels_id')
-        ->groupBy('pricings.hotels_id')
-        ->where('pricings.date', $searchDate)
+        ->join('rates', 'images.hotels_id', '=', 'rates.hotels_id')
+        ->groupBy('rates.hotels_id')
+        ->where('rates.date', $searchDate)
         ->get();
         
         return view('welcome',compact(['user','searchDate']));
@@ -109,12 +109,12 @@ class CheckinController extends Controller
 
     public function index2()
     {
-        $nerd = Pricing::all();
+        $nerd = Rate::all();
         $items = DB::table('hotels')
-        ->select('hotels.id', 'hotels.name','pricings.hotels_id', 'images.picture', 'hotels.description', DB::raw('count(images.picture) as total'))
+        ->select('hotels.id', 'hotels.name','rates.hotels_id', 'images.picture', 'hotels.description', DB::raw('count(images.picture) as total'))
         ->join('images', 'hotels.id', '=', 'images.hotels_id')
-        ->join('pricings', 'images.hotels_id', '=', 'pricings.hotels_id')
-        ->groupBy('pricings.hotels_id')
+        ->join('rates', 'images.hotels_id', '=', 'rates.hotels_id')
+        ->groupBy('rates.hotels_id')
         ->get();
     return view('testing', compact(['items', 'nerd']));
     }
@@ -134,7 +134,6 @@ class CheckinController extends Controller
         ->join('images', 'hotels.id', '=', 'images.hotels_id')
         ->groupBy('hotels.id')
         ->get();
-        echo ($photos);
     return view ('images', compact('photos'));
     }
 }
