@@ -28,7 +28,7 @@
 <body>
 	<div id="fh5co-page">
 		@include('_partial.header')
-		<!-- <aside id="fh5co-hero" clsas="js-fullheight">
+		<aside id="fh5co-hero" clsas="js-fullheight">
 			<div class="flexslider js-fullheight">
 				<ul class="slides">
 					<li class="img-responsive" style="background-image: url(frontend/images/1.jpg);" />
@@ -41,13 +41,14 @@
 					<li class="img-responsive" style="background-image: url(frontend/images/resort.jpg);" />
 				</ul>
 			</div>
-		</aside> -->
-		<div id="demo-1" data-zs-src="[{{ URL::to('frontend/images/1.jpg') }}, {{ URL::to('frontend/images/2.jpg') }}, {{ URL::to('frontend/images/3.jpg') }}]" data-zs-overlay="dots">
+		</aside>
+		<!-- @php $my_array = "[".implode(',', ["fronend/image/1.jpg", "fronend/image/2.jpg", "fronend/image/3.jpg"])."]" @endphp
+		<div id="demo-1" data-zs-src='{{$my_array}}' data-zs-overlay="dots">
 			<div class="demo-inner-content">
 				<h1><span>jQuery</span> . <span>zoomSlider</span></h1>
 				<p>ZoomSlider creates slideshows with zoom effect using background-image and CSS3.</p>
 			</div>
-		</div>
+		</div> -->
 		<div id="best-deal">
 			<div class="container">
 				<div class="row">
@@ -96,7 +97,6 @@
 					<!-- <div class="col-sm-9">
 						<button class="awe-btn awe-btn-13">Find Room</button>
 					</div> -->
-
 				</div>
 			</div>
 		</div>
@@ -116,7 +116,7 @@
 					<div class="col-md-3 animate-box" data-animate-effect="fadeIn">
 						<a class="fh5co-entry" href="#">
 							<figure>
-								<img src="{{asset('frontend/images/bungalow.jpg')}}" alt="Free Website Template, Free HTML5 Bootstrap Template"
+								<img src="{{asset('frontend/images/bungalow.jpg')}}" alt="Bangalow"
 								 class="img-responsive">
 							</figure>
 							<div class="fh5co-copy">
@@ -130,7 +130,7 @@
 					<div class="col-md-3 animate-box" data-animate-effect="fadeIn">
 						<a class="fh5co-entry" href="#">
 							<figure>
-								<img src="{{asset('frontend/images/boreyA.jpg')}}" alt="Free Website Template, Free HTML5 Bootstrap Template"
+								<img src="{{asset('frontend/images/boreyA.jpg')}}" alt="Borey A"
 								 class="img-responsive">
 							</figure>
 							<div class="fh5co-copy">
@@ -145,7 +145,7 @@
 					<div class="col-md-3 animate-box" data-animate-effect="fadeIn">
 						<a class="fh5co-entry" href="#">
 							<figure>
-								<img src="{{asset('frontend/images/luxurytent1.jpg')}}" alt="Free Website Template, Free HTML5 Bootstrap Template"
+								<img src="{{asset('frontend/images/luxurytent1.jpg')}}" alt="Luxury Tent"
 								 class="img-responsive">
 							</figure>
 							<div class="fh5co-copy">
@@ -160,7 +160,7 @@
 					<div class="col-md-3 animate-box" data-animate-effect="fadeIn">
 						<a class="fh5co-entry" href="#">
 							<figure>
-								<img src="{{asset('frontend/images/camping5.JPG')}}" alt="Free Website Template, Free HTML5 Bootstrap Template"
+								<img src="{{asset('frontend/images/camping5.JPG')}}" alt="camping"
 								 class="img-responsive">
 							</figure>
 							<div class="fh5co-copy">
@@ -187,7 +187,7 @@
 					<div class="thumbnail">
 						<img src="{{asset('frontend/images/16.jpg')}}" alt="Lights" style="width:100%">
 						<div class="caption">
-							<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+							<p>Our best meal at our Pine View Kitchen Restaurant</p>
 						</div>
 					</div>
 				</div>

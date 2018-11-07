@@ -30,3 +30,4 @@ Route::group(['prefix' => 'admin'], function () {
 });
 
 Route::get('images', 'CheckinController@image');
+Route::get('send','mailController@send');

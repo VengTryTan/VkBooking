@@ -16,7 +16,12 @@ return [
     |
     */
 
-    'driver' => env('MAIL_DRIVER', 'smtp'),
+    // 'driver' => env('MAIL_DRIVER', 'smtp'),
+
+    'mailgun' => [
+        'domain' => 'sandbox69ffbaea3b574be3ac9dc0aa282b24cf.mailgun.org',
+        'secret' => '3545781e49378319ad61ede553d4dd91-c8e745ec-a76c454c',
+    ],
 
     /*
     |--------------------------------------------------------------------------
