@@ -3,12 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Pricing;
+use App\Rate;
 
 class Hotel extends Model
 {
-    public function price()
+    public function rate()
     {
-    	return $this->hasMany('App\Pricing');
+    	return $this->hasMany('App\Rate');
     }
 }
