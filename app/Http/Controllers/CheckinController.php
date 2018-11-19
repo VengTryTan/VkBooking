@@ -91,15 +91,13 @@ class CheckinController extends Controller
      // Search for available hotels
      public function search(Request $request)
      {
-
         $searchDate= $request->checkin_date;
-
         $user = DB::table('hotels')
-        ->select('hotels.id', 'hotels.name','rates.hotels_id','rates.price','rates.date', 'images.picture', 'images.images',  DB::raw('count(images.picture) as total'))
+        ->select('hotels.id', 'hotels.name','rates.hotels_id','rates.price','rates.start', 'images.picture', 'images.images',  DB::raw('count(images.picture) as total'))
         ->join('images', 'hotels.id', '=', 'images.hotels_id')
         ->join('rates', 'images.hotels_id', '=', 'rates.hotels_id')
         ->groupBy('rates.hotels_id')
-        ->where('rates.date', $searchDate)
+        ->where('rates.start', $searchDate)
         ->get();
         
         return view('welcome',compact(['user','searchDate']));
@@ -135,5 +133,9 @@ class CheckinController extends Controller
         ->groupBy('hotels.id')
         ->get();
     return view ('images', compact('photos'));
+    }
+
+    public function payment(){
+        return view('payment');
     }
 }

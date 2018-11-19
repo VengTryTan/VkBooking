@@ -1,7 +1,8 @@
 <tr>
     <td class="header">
         <a href="{{ $url }}">
-            {{ $slot }}
+            {{-- {{ $slot }} --}}
+            vKirirom Pine Resort
         </a>
     </td>
 </tr>

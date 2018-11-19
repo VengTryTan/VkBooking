@@ -16,12 +16,14 @@ return [
     |
     */
 
+    'driver' => env('MAIL_DRIVER', 'smtp'),
+
     // 'driver' => env('MAIL_DRIVER', 'smtp'),
 
-    'mailgun' => [
-        'domain' => 'sandbox69ffbaea3b574be3ac9dc0aa282b24cf.mailgun.org',
-        'secret' => '3545781e49378319ad61ede553d4dd91-c8e745ec-a76c454c',
-    ],
+    // 'mailgun' => [
+    //     'domain' => 'sandbox69ffbaea3b574be3ac9dc0aa282b24cf.mailgun.org',
+    //     'secret' => '3545781e49378319ad61ede553d4dd91-c8e745ec-a76c454c',
+    // ],
 
     /*
     |--------------------------------------------------------------------------
@@ -34,7 +36,7 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+    'host' => env('MAIL_HOST', 'smtp.gmail.com'),
 
     /*
     |--------------------------------------------------------------------------
@@ -61,8 +63,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-        'name' => env('MAIL_FROM_NAME', 'Example'),
+        'address' => env('MAIL_FROM_ADDRESS', 'sereysoksan16@gmail.com'),
+        'name' => env('MAIL_FROM_NAME', 'Soksan'),
     ],
 
     /*

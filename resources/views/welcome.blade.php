@@ -7,16 +7,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>vKirirom Pine Resort</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-
 	<link rel="stylesheet" href="{{asset('frontend/css/animate.css')}}">
 	<link rel="stylesheet" href="{{asset('frontend/css/icomoon.css')}}">
 	<link rel="stylesheet" href="{{asset('frontend/css/bootstrap.css')}}">
 	<link rel="stylesheet" href="{{asset('frontend/css/bootstrap.min.css')}}">
-	<!-- Flexslider  -->
 	<link rel="stylesheet" href="{{asset('frontend/css/flexslider.css')}}">
-	<!-- Theme style  -->
 	<link rel="stylesheet" href="{{asset('frontend/css/style.css')}}">
 	<link rel="stylesheet" href="{{asset('frontend/css/jquery-ui.css')}}">
 	<link rel="stylesheet" href="{{asset('frontend/css/bootstrap-select.min.css')}}">
@@ -141,7 +137,7 @@
 				</div>
 			</div>
 		</div>
-		<a href="/payment">
+		<a href=".payment">
 			<div class="button-demo">
 				<button id="myBtn" hidden="true" type="button" class="btn btn-primary waves-effect">Book</button>
 			</div>

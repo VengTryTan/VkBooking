@@ -63,9 +63,7 @@
 					<form action="{{ route('checkin') }}" method="POST">
 						{{ csrf_field() }}
 						<div class="form-group row no-margin">
-							<label for="check-in-time" class="col-sm-3 col-form-label label-xl">
-								Check In:
-							</label>
+							<label for="check-in-time" class="col-sm-3 col-form-label label-xl">Check In:</label>
 							<div class="col-sm-9">
 								<div class='input-group date' id='datetimepicker-check-in'>
 									<input id="check-in-time" type="text" class="form-control" value="" />
@@ -183,7 +181,7 @@
 						</p>
 					</div>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-3" data-animate-effect="fadeIn">
 					<div class="thumbnail">
 						<img src="{{asset('frontend/images/16.jpg')}}" alt="Lights" style="width:100%">
 						<div class="caption">
@@ -191,7 +189,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-3" data-animate-effect="fadeIn">
 					<div class="thumbnail">
 						<img src="{{asset('frontend/images/17.jpg')}}" alt="Lights" style="width:100%">
 						<div class="caption">
@@ -199,7 +197,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-3" data-animate-effect="fadeIn">
 					<div class="thumbnail">
 						<img src="{{asset('frontend/images/18.jpg')}}" alt="Lights" style="width:100%">
 						<div class="caption">
@@ -207,7 +205,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-3" data-animate-effect="fadeIn">
 					<div class="thumbnail">
 						<img src="{{asset('frontend/images/19.jpg')}}" alt="Lights" style="width:100%">
 						<div class="caption">

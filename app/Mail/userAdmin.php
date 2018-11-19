@@ -28,6 +28,7 @@ class userAdmin extends Mailable
      */
     public function build()
     {
-        return $this->view('view.name');
+        $user = auth()->user();
+        return $this->markdown('mail', ['name' => 'Soksan'])->to('soksan.rangsey@gmail.com')->subject('Invoice');
     }
 }
