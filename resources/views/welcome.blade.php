@@ -144,13 +144,8 @@
 		</a>
 		@include('_partial.footer')
 	</div>
-
-	<!--Make a copy this javaScript to paste into your site-->
-	<!-- Note: these javaScript files are using for only integration testing-->
 	<link rel="stylesheet" href="https://payway-dev.ababank.com/checkout-popup.html?file=css" />
 	<script src="https://payway-dev.ababank.com/checkout-popup.html?file=js"></script>
-
-
 	<script src="{{asset('frontend/js/jquery.min.js')}}"></script>
 	<script src="{{asset('frontend/js/jquery.easing.1.3.js')}}"></script>
 	<!-- <script src="{{asset('frontend/js/bootstrap.js')}}"></script> -->
