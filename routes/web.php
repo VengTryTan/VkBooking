@@ -18,7 +18,7 @@ Route::get('/', 'CheckinController@index2')->name('home');
 Route::get('/payment', 'CheckinController@payment');
 
 // Route Post
-Route::post('test', 'CheckinController@search')->name('checkin'); 
+Route::post('property', 'CheckinController@search')->name('checkin'); 
 Route::post('budget', 'CheckinController@searchone')->name('budget');
 
 // Admin Route
@@ -34,3 +34,6 @@ Route::get('images', 'CheckinController@image');
 Route::get('send','mailController@send');
 
 Route::get('invoice','InvoiceController@index');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
