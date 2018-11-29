@@ -99,7 +99,6 @@ class CheckinController extends Controller
         ->groupBy('rates.hotels_id')
         ->where('rates.start', $searchDate)
         ->get();
-        
         return view('property',compact(['user','searchDate']));
     }
 
@@ -114,7 +113,7 @@ class CheckinController extends Controller
         ->join('rates', 'images.hotels_id', '=', 'rates.hotels_id')
         ->groupBy('rates.hotels_id')
         ->get();
-    return view('home', compact(['items', 'nerd']));
+        return view('home', compact(['items', 'nerd']));
     }
 
     // public function image()
