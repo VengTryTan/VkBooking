@@ -34,8 +34,8 @@
                         <label for="check-in-time" class="col-sm-3 col-form-label label-xl">Check In:</label>
                         <div class="col-sm-9">
                             <div class='input-group date' id='datetimepicker-check-in'>
-                                <input id="check-in-time" type="text" class="form-control" value="" />
-                                <input id="checkin_time" type="hidden" name="checkin_date" />
+                                <input id="checkin_date" type="text" class="form-control" name="checkin_date"/>
+                                <input id="checkin_time" type="hidden"/>
                                 <span class="input-group-addon">
                                     <span class="fa fa-calendar" style="font-size:29px;"></span>
                                 </span>
@@ -48,8 +48,8 @@
                         </label>
                         <div class="col-sm-9">
                             <div class='input-group date' id='datetimepicker-check-out'>
-                                <input id="check-out-time" type="text" class="form-control" value="" />
-                                <input id="checkout-time" type="hidden" name="checkout_date" />
+                                <input id="check-out-time" type="text" class="form-control" name="checkout_date"/>
+                                <input id="checkout-time" type="hidden"  />
                                 <span class="input-group-addon">
                                     <span class="fa fa-calendar" style="font-size:29px;"></span>
                                 </span>
@@ -326,4 +326,4 @@
         });
     });
 </script>
-@endsection
+@stop
