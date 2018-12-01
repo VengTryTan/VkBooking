@@ -14,7 +14,11 @@
 Auth::routes();
 
 // Route Get
-Route::get('/', 'CheckinController@index2')->name('home');
+// Route::get('/', 'CheckinController@index2')->name('home');
+/**
+ * Rathanak Test Route
+ */
+Route::get('/', 'CheckinController@index3')->name('test_home');
 Route::get('/payment', 'CheckinController@payment');
 
 // Route Post
