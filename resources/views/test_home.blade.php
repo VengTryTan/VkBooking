@@ -1,9 +1,9 @@
-@extends('layouts.app')
+@extends('layouts.test_app')
 
 @section('content')
 <div id="fh5co-page">
     @include('_partial.test_header')
-    <aside id="fh5co-hero" clsas="js-fullheight">
+    <!-- <aside id="fh5co-hero" clsas="js-fullheight">
         <div class="flexslider js-fullheight">
             <ul class="slides">
                 <li class="img-responsive" style="background-image: url(frontend/images/1.jpg);" />
@@ -16,12 +16,73 @@
                 <li class="img-responsive" style="background-image: url(frontend/images/resort.jpg);" />
             </ul>
         </div>
-    </aside>
+    </aside> -->
+    <div id="booking" class="section">
+		<div class="section-center">
+			<div class="container">
+				<div class="row">
+					<div class="booking-form">
+						<div class="booking-bg">
+							<div class="form-header">
+								<h2>Make your reservation</h2>
+								<p>Rathanak Rathanak Rathanak Rathanak Rathanak Rathanak Rathanak Rathanak Rathanak</p>
+							</div>
+						</div>
+						<form action="{{ route('checkin') }}" method="POST">
+                            {{ csrf_field() }}
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<span class="form-label">Check In</span>
+										<input class="form-control" type="date" required>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<span class="form-label">Check Out</span>
+										<input class="form-control" type="date" required>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<span class="form-label">GUESTS</span>
+										<select class="form-control" required>
+                                            <option value="" selected hidden>Number of People</option>
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+										</select>
+										<span class="select-arrow"></span>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<span class="form-label">ROOM TYPE</span>
+										<select class="form-control" required>
+                                            <option value="" selected hidden>Select room type</option>
+											<option>Single Bed</option>
+											<option>Two Bed</option>
+										</select>
+										<span class="select-arrow"></span>
+									</div>
+								</div>
+                            </div>
+							<div class="form-btn">
+								<button class="submit-btn">Check availability</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
     <div id="best-deal">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-                    <h2>'vKirirom' is a new concept for enriching people's lives for the future</h2>
+                    <h2>'rKirirom' is a new concept for enriching people's lives for the future</h2>
                     <p>We aim to provide services and an atmosphere where everyone enjoys nature while conserving the environment as
                         well.
                         Visit our restaurant and savour our dishes special our chef has to offer and or stay in one of our innovative
@@ -140,6 +201,57 @@
                 </div>
             </div>
         </div>
+        <div id="courses" class="section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
+                        <h2>Recommended</h2>
+                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind
+                            texts.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 padleft-right">
+                        <figure class="imghvr-fold-up">
+                            <img src="{{asset('frontend/images/bungalow.jpg')}}" class="img-responsive" alt="Bungalow">
+                            <figcaption>
+                                <h3>Bungalow</h3>
+                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
+                                blind texts.</p>
+                            </figcaption>
+                            <a href="#"></a>
+                        </figure>
+                    </div>
+                    <div class="col-md-4 col-sm-6 padleft-right">
+                        <figure class="imghvr-fold-up">
+                            <img src="{{asset('frontend/images/boreyA.jpg')}}" class="img-responsive" alt="Borey A">
+                            <figcaption>
+                                <h3>Borey A</h3>
+                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
+                                blind texts.</p>
+                            </figcaption>
+                            <a href="#"></a>
+                        </figure>
+                    </div>
+                    <div class="col-md-4 col-sm-6 padleft-right">
+                        <figure class="imghvr-fold-up">
+                            <img src="{{asset('frontend/images/luxurytent1.jpg')}}" class="img-responsive" alt="Luxury Tent">
+                            <figcaption>
+                                <h3>Luxury Tent</h3>
+                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
+                                blind texts.</p>
+                            </figcaption>
+                            <a href="#"></a>
+                        </figure>
+                    </div>
+                    <br>
+                </div>
+                <br>
+            </div>
+        </div>
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
@@ -216,6 +328,12 @@
         // document.getElementById("myBtn").disabled = false;
     }
 </script>
+<!--Rathanak Script For Sticky Navigation bar-->
+<script type="text/javascript" src="{{asset('js/jquery.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/jquery.easing.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/custom.js')}}"></script>
+
+<!--End of Rathanak Script For Sticky Navigation bar-->
 <script>
     $(document).ready(function () {
         $("#DateIn").datepicker({
