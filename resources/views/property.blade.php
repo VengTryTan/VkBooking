@@ -41,7 +41,7 @@
 				</div>
 				
 				<div class="col-md-8 col-sm-12 col-xs-12 col-lg-9 float-right">
-					{{-- @foreach($user as $key=>$item)
+					@foreach($user as $key=>$item)
 					<div class="col-md-12 item-block animate-box" data-animate-effect="fadeIn">
 						<div class="card">
 							<div class="row">
@@ -112,7 +112,7 @@
 							</div>
 						</div>
 					</div>
-					@endforeach --}}
+					@endforeach
 
 					{{-- start demo code --}}
 					<div class="col-md-12 item-block animate-box" data-animate-effect="fadeIn">
