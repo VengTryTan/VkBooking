@@ -34,13 +34,13 @@
 								<div class="col-md-6">
 									<div class="form-group">
 										<span class="form-label">Check in</span>
-										<input class="form-control" type="date" required>
+										<input class="form-control" type="date" name="checkin_date" required>
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
 										<span class="form-label">Check out</span>
-										<input class="form-control" type="date" required>
+										<input class="form-control" type="date" name="checkout_date" required>
 									</div>
 								</div>
 							</div>
