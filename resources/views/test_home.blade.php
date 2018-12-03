@@ -33,13 +33,13 @@
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<span class="form-label">Check In</span>
+										<span class="form-label">Check in</span>
 										<input class="form-control" type="date" required>
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
-										<span class="form-label">Check Out</span>
+										<span class="form-label">Check out</span>
 										<input class="form-control" type="date" required>
 									</div>
 								</div>
@@ -47,7 +47,7 @@
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<span class="form-label">GUESTS</span>
+										<span class="form-label">Guests</span>
 										<select class="form-control" required>
                                             <option value="" selected hidden>Number of People</option>
 											<option>1</option>
@@ -59,7 +59,7 @@
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
-										<span class="form-label">ROOM TYPE</span>
+										<span class="form-label">Room type</span>
 										<select class="form-control" required>
                                             <option value="" selected hidden>Select room type</option>
 											<option>Single Bed</option>
@@ -78,55 +78,6 @@
 			</div>
 		</div>
 	</div>
-    <div id="best-deal">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-                    <h2>'rKirirom' is a new concept for enriching people's lives for the future</h2>
-                    <p>We aim to provide services and an atmosphere where everyone enjoys nature while conserving the environment as
-                        well.
-                        Visit our restaurant and savour our dishes special our chef has to offer and or stay in one of our innovative
-                        rooms.</p>
-                </div>
-
-                <form action="{{ route('checkin') }}" method="POST">
-                    {{ csrf_field() }}
-                    <div class="form-group row no-margin">
-                        <label for="check-in-time" class="col-sm-3 col-form-label label-xl">Check In:</label>
-                        <div class="col-sm-9">
-                            <div class='input-group date' id='datetimepicker-check-in'>
-                                <input id="check-in-time" type="text" class="form-control" value="" />
-                                <input id="checkin_time" type="hidden" name="checkin_date" />
-                                <span class="input-group-addon">
-                                    <span class="fa fa-calendar" style="font-size:29px;"></span>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group row no-margin">
-                        <label for="check-out-time" class="col-sm-3 col-form-label label-xl">
-                            Check Out:
-                        </label>
-                        <div class="col-sm-9">
-                            <div class='input-group date' id='datetimepicker-check-out'>
-                                <input id="check-out-time" type="text" class="form-control" value="" />
-                                <input id="checkout-time" type="hidden" name="checkout_date" />
-                                <span class="input-group-addon">
-                                    <span class="fa fa-calendar" style="font-size:29px;"></span>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <button class="custombutton butt1">Find Room</button>
-                    </div>
-                </form>
-                <!-- <div class="col-sm-9">
-                    <button class="awe-btn awe-btn-13">Find Room</button>
-                </div> -->
-            </div>
-        </div>
-    </div>
     <div id="fh5co-blog">
         <div class="container">
             <div class="row">
@@ -222,7 +173,6 @@
                                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
                                 blind texts.</p>
                             </figcaption>
-                            <a href="#"></a>
                         </figure>
                     </div>
                     <div class="col-md-4 col-sm-6 padleft-right">
@@ -233,7 +183,6 @@
                                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
                                 blind texts.</p>
                             </figcaption>
-                            <a href="#"></a>
                         </figure>
                     </div>
                     <div class="col-md-4 col-sm-6 padleft-right">
@@ -244,7 +193,7 @@
                                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
                                 blind texts.</p>
                             </figcaption>
-                            <a href="#"></a>
+                            {{-- <a href="#"></a> --}}
                         </figure>
                     </div>
                     <br>
@@ -298,8 +247,7 @@
             <div class="row">
                 <div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
                     <h2>Our Location</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind
-                        texts.
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
                     </p>
                 </div>
             </div>
@@ -314,7 +262,7 @@
 </div>
 @endsection
 @section('script')
-<script>
+{{-- <script>
     function myFunction() {
         // var type=
         var e = document.getElementById("type");
@@ -326,7 +274,7 @@
             $('#myBtn').attr('disabled', true)
         }
         // document.getElementById("myBtn").disabled = false;
-    }
+    } --}}
 </script>
 <!--Rathanak Script For Sticky Navigation bar-->
 <script type="text/javascript" src="{{asset('js/jquery.min.js')}}"></script>

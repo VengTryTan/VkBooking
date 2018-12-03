@@ -118,6 +118,18 @@ class CheckinController extends Controller
         return view('home', compact(['items', 'nerd']));
     }
 
+    public function index3()
+    {
+        $nerd = Rate::all();
+        $items = DB::table('hotels')
+        ->select('hotels.id', 'hotels.name','rates.hotels_id', 'images.picture', 'hotels.description', DB::raw('count(images.picture) as total'))
+        ->join('images', 'hotels.id', '=', 'images.hotels_id')
+        ->join('rates', 'images.hotels_id', '=', 'rates.hotels_id')
+        ->groupBy('rates.hotels_id')
+        ->get();
+        return view('test_home', compact(['items', 'nerd']));
+    }
+
     // public function image()
     // {
     //     $images = Image::all();

@@ -10,7 +10,7 @@
         </div>
         <div class="col-md-8">
             <br>
-            <h3>'rKirirom' is a new concept for enriching people's lives for the future</h3>
+            <h3>'vKirirom' is a new concept for enriching people's lives for the future</h3>
             <p>We aim to provide services and an atmosphere where everyone enjoys nature while conserving the environment as
                 well.
                 Visit our restaurant and savour our dishes special our chef has to offer and or stay in one of our innovative
@@ -57,7 +57,7 @@
                         {{ __('Logout') }}
                     </a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                        @csrf
+                        {!! csrf_field() !!}
                     </form>
                 </div>
             </li>

@@ -1,6 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.test_app')
 
 @section('content')
+@include('_partial.test_header')
 <div id="fh5co-page">
 	<div id="best-deal">
 		<div class="container-fluid">
@@ -40,7 +41,7 @@
 				</div>
 				
 				<div class="col-md-8 col-sm-12 col-xs-12 col-lg-9 float-right">
-					@foreach($user as $key=>$item)
+					{{-- @foreach($user as $key=>$item)
 					<div class="col-md-12 item-block animate-box" data-animate-effect="fadeIn">
 						<div class="card">
 							<div class="row">
@@ -111,7 +112,165 @@
 							</div>
 						</div>
 					</div>
-					@endforeach
+					@endforeach --}}
+
+					{{-- start demo code --}}
+					<div class="col-md-12 item-block animate-box" data-animate-effect="fadeIn">
+						<div class="card">
+							<div class="row">
+								<div class="fh5co-property">
+									<div class="col-md-4 col-sm-12">
+										<div id="roomSlider-1" class="carousel slide" data-ride="carousel">
+											<ul class="carousel-indicators">
+												<li data-slide-to="0" class="active"></li>
+												<li data-slide-to="1"></li>
+												<li data-slide-to="2"></li>
+												<li data-slide-to="3"></li>
+												<li data-slide-to="4"></li>
+												<li data-slide-to="5"></li>
+											</ul>
+											<div class="carousel-inner">
+												<div class="carousel-item active">
+													<img class="d-block w-100" src="{{asset('frontend/images/boreyR.JPg')}}" alt="First slide">
+												</div>
+												<div class="carousel-item">
+													<img class="d-block w-100" src="{{asset('frontend/images/boreyR.JPg')}}" alt="First slide">
+												</div>
+												<div class="carousel-item">
+													<img class="d-block w-100" src="{{asset('frontend/images/boreyR.JPg')}}" alt="First slide">
+												</div>
+												<div class="carousel-item">
+													<img class="d-block w-100" src="{{asset('frontend/images/boreyR.JPg')}}" alt="First slide">
+												</div>
+												<div class="carousel-item">
+													<img class="d-block w-100" src="{{asset('frontend/images/boreyR.JPg')}}" alt="First slide">
+												</div>
+											</div>
+											<a class="carousel-control-prev" href="#roomSlider-1" role="button" data-slide="prev">
+												<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+												<span class="sr-only">Previous</span>
+											</a>
+											<a class="carousel-control-next" href="#roomSlider-1" role="button" data-slide="next">
+												<span class="carousel-control-next-icon" aria-hidden="true"></span>
+												<span class="sr-only">Next</span>
+											</a>
+										</div>
+									</div>
+									<div class="col-md-5 col-sm-12">
+										<div class="fh5co-property-innter">
+											<h3><label>{{__('Villa Jusmine')}}</label></h3>
+											<p>
+												<span>
+													<strong class="fa fa-wifi">{{__('WiFi')}}</strong>
+												</span>
+												<span>
+													<strong class="fa fa-bed">{{__('Bed')}}</strong>
+												</span>
+												<span>
+													<strong class="fa fa-shower">{{__('Bathroom')}}</strong>
+												</span>
+												<span>
+													<strong class="fa fa-television"> {{__('Television')}}</strong>
+												</span>
+											</p>
+										</div>
+									</div>
+									<div class="col-md-3 col-sm-12">
+										<select id="01" class="show-tick" style="border: none" name="typeR" onChange="myFunction()">
+											<option value="0">Rooms</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+										</select>
+										<div class="price-status">
+											<span class="price">{{__('$50')}}<span class="per">/night</span></span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-12 item-block animate-box" data-animate-effect="fadeIn">
+						<div class="card">
+							<div class="row">
+								<div class="fh5co-property">
+									<div class="col-md-4 col-sm-12">
+										<div id="roomSlider-2" class="carousel slide" data-ride="carousel">
+											<ul class="carousel-indicators">
+												<li data-slide-to="0" class="active"></li>
+												<li data-slide-to="1"></li>
+												<li data-slide-to="2"></li>
+												<li data-slide-to="3"></li>
+												<li data-slide-to="4"></li>
+												<li data-slide-to="5"></li>
+											</ul>
+											<div class="carousel-inner">
+												<div class="carousel-item active">
+													<img class="d-block w-100" src="{{asset('frontend/images/boreyR.JPg')}}" alt="First slide">
+												</div>
+												<div class="carousel-item">
+													<img class="d-block w-100" src="{{asset('frontend/images/boreyR.JPg')}}" alt="First slide">
+												</div>
+												<div class="carousel-item">
+													<img class="d-block w-100" src="{{asset('frontend/images/boreyR.JPg')}}" alt="First slide">
+												</div>
+												<div class="carousel-item">
+													<img class="d-block w-100" src="{{asset('frontend/images/boreyR.JPg')}}" alt="First slide">
+												</div>
+												<div class="carousel-item">
+													<img class="d-block w-100" src="{{asset('frontend/images/boreyR.JPg')}}" alt="First slide">
+												</div>
+											</div>
+											<a class="carousel-control-prev" href="#roomSlider-2" role="button" data-slide="prev">
+												<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+												<span class="sr-only">Previous</span>
+											</a>
+											<a class="carousel-control-next" href="#roomSlider-2" role="button" data-slide="next">
+												<span class="carousel-control-next-icon" aria-hidden="true"></span>
+												<span class="sr-only">Next</span>
+											</a>
+										</div>
+									</div>
+									<div class="col-md-5 col-sm-12">
+										<div class="fh5co-property-innter">
+											<h3><label>{{__('Villa Suite')}}</label></h3>
+											<p>
+												<span>
+													<strong class="fa fa-wifi">{{__('WiFi')}}</strong>
+												</span>
+												<span>
+													<strong class="fa fa-bed">{{__('Bed')}}</strong>
+												</span>
+												<span>
+													<strong class="fa fa-shower">{{__('Bathroom')}}</strong>
+												</span>
+												<span>
+													<strong class="fa fa-television"> {{__('Television')}}</strong>
+												</span>
+											</p>
+										</div>
+									</div>
+									<div class="col-md-3 col-sm-12">
+										<select id="02" class="show-tick" style="border: none" name="typeA" onChange="myFunction()">
+											<option value="0">Rooms</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+										</select>
+										<div class="price-status">
+											<span class="price">{{__('70')}}<span class="per">/night</span></span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					{{-- end of demo code --}}
+					
 				</div>
 			</div>
 		</div>
@@ -123,7 +282,7 @@
 	</a>
 	@include('_partial.footer')
 </div>
-@stop
+@endsection
 @section('script')
 	<link rel="stylesheet" href="https://payway-dev.ababank.com/checkout-popup.html?file=css" />
 	<script src="https://payway-dev.ababank.com/checkout-popup.html?file=js"></script>
@@ -335,4 +494,4 @@
 			}
 		});
 	</script>
-@stop
+@endsection
