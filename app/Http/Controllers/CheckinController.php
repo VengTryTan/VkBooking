@@ -99,7 +99,7 @@ class CheckinController extends Controller
         ->groupBy('rates.hotels_id')
         ->where('rates.start', $searchDate)
         ->get();
-         echo $searchDate;
+        // echo $searchDate;
         // echo $user;
         return view('property',compact(['user','searchDate']));
     }

@@ -11,4 +11,4 @@
     @endif
 @endif
 <div class="clearfix"></div>
-<input @if($row->required == 1) required @endif type="file" name="{{ $row->field }}[]" multiple="multiple" accept="image/*">
+<input @if($row->required == 0) required @endif type="file" name="{{ $row->field }}[]" multiple="multiple" accept="image/*">

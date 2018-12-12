@@ -1,8 +1,28 @@
-@extends('layouts.test_app')
+<!DOCTYPE html>
+<html class="no-js">
 
-@section('content')
-@include('_partial.test_header')
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>vKirirom Pine Resort</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="{{asset('frontend/css/animate.css')}}">
+	<link rel="stylesheet" href="{{asset('frontend/css/icomoon.css')}}">
+	<link rel="stylesheet" href="{{asset('frontend/css/bootstrap.css')}}">
+	<link rel="stylesheet" href="{{asset('frontend/css/bootstrap.min.css')}}">
+	<link rel="stylesheet" href="{{asset('frontend/css/flexslider.css')}}">
+	<link rel="stylesheet" href="{{asset('frontend/css/style.css')}}">
+	<link rel="stylesheet" href="{{asset('frontend/css/jquery-ui.css')}}">
+	<link rel="stylesheet" href="{{asset('frontend/css/bootstrap-select.min.css')}}">
+	<script src="{{asset('frontend/js/modernizr-2.6.2.min.js')}}"></script>
+	<link rel="SHORTCUT ICON" href="{{asset('frontend/images/HomePage/vKirirom.png')}}">
+</head>
+
+<body>
 	<div id="fh5co-page">
+		@include('_partial.header')
 		<div id="best-deal">
 			<div class="container-fluid">
 				<div class="row">
@@ -39,6 +59,7 @@
 							</div>
 						</div>
 					</div>
+					
 					<div class="col-md-8 col-sm-12 col-xs-12 col-lg-9 float-right">
 						@foreach($user as $key=>$item)
 						<div class="col-md-12 item-block animate-box" data-animate-effect="fadeIn">
@@ -51,6 +72,9 @@
 													<li data-slide-to="0" class="active"></li>
 													<li data-slide-to="1"></li>
 													<li data-slide-to="2"></li>
+													<li data-slide-to="3"></li>
+													<li data-slide-to="4"></li>
+													<li data-slide-to="5"></li>
 												</ul>
 												<div class="carousel-inner">
 													<div class="carousel-item active">
@@ -120,82 +144,8 @@
 		</a>
 		@include('_partial.footer')
 	</div>
-	<script>
-		function myFunction() {
-			// var type=;
-			var e = document.getElementById("type");
-			var strUser = e.options[e.selectedIndex].value;
-			console.log(e.value)
-			if ($('#type').val() > 0) {
-				$('#myBtn').attr('disabled', false)
-			} else {
-				$('#myBtn').attr('disabled', true)
-			}
-			// document.getElementById("myBtn").disabled = false;
-		}
-		var room = [];
-		var room_amount = 0;
-		var update_item_index = 0;
-		var update_status = false;
-		$('select').on('change', function () {
-			var item = {
-				'name': $(this).attr('name'),
-				'value': $(this).val()
-			};
-			room_amount = room_amount + $('select').val();
-			console.log(room.length);
-			if (room.length === 0) {
-				room.push(item);
-				console.log(room)
-			} else {
-				var i = room.length;
-				while (i) {
-					var a = i - 1;
-					i = a;
-					if (a >= 0) {
-						if (room[a].name === $(this).attr('name')) {
-							update_item_index = a;
-							update_status = true;
-						}
-					}
-				}
-				console.log(update_status);
-				if (update_status) {
-					console.log($(this).val());
-					if (parseInt($(this).val()) === 0) {
-						console.log("Update status of the room index");
-						room.splice(update_item_index, 1);
-					} else {
-						room[update_item_index].value = $(this).val();
-						console.log("****************");
-						console.log(room);
-					}
-					update_status = false;
-				} else {
-					room.push(item);
-				}
-			}
-			$("#test").val(JSON.stringify(room));
-			console.log($('#test').val())
-			console.log(room.length)
-			if (room.length > 0) {
-				$('#myBtn').attr('hidden', false)
-			} else {
-				$('#myBtn').attr('hidden', true)
-			}
-		})
-	</script>
-@endsection
-@section('script')
 	<link rel="stylesheet" href="https://payway-dev.ababank.com/checkout-popup.html?file=css" />
 	<script src="https://payway-dev.ababank.com/checkout-popup.html?file=js"></script>
-	<script>
-		$(document).ready(function () {
-			$('#myBtn').click(function () {
-				AbaPayway.checkout();
-			});
-		});
-	</script>
 	<script src="{{asset('frontend/js/jquery.min.js')}}"></script>
 	<script src="{{asset('frontend/js/jquery.easing.1.3.js')}}"></script>
 	<!-- <script src="{{asset('frontend/js/bootstrap.js')}}"></script> -->
@@ -205,6 +155,13 @@
 	<script src="{{asset('frontend/js/jquery.flexslider-min.js')}}"></script>
 	<script src="{{asset('frontend/js/main.js')}}"></script>
 	<script src="{{asset('frontend/js/jquery-ui.js')}}"></script>
+	<script>
+		$(document).ready(function () {
+			$('#myBtn').click(function () {
+				AbaPayway.checkout();
+			});
+		});
+	</script>
 	<script>
 		function myFunction() {
 			// var type=;
@@ -396,4 +353,6 @@
 			}
 		});
 	</script>
-@endsection
+</body>
+
+</html>
